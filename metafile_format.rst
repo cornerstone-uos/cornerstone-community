@@ -21,10 +21,10 @@ You can hash the file ``SOI_2x1MMI.gds`` in the "components" directory through:
   - ``sha1sum SOI_2x1MMI.gds`` will produce the key.
 *Online*
   - Couple of online services for file SHA-1 hashing exist, e.g. <https://emn178.github.io/online-tools/sha1_checksum.html>
-Assuming the key of ``814dc1e6ab6ee9eb9155beabaef168225686093c`` is generated, the new key 
-
+Assuming the key of ``814dc1e6ab6ee9eb9155beabaef168225686093c`` is generated, the new filename would be ``SOI_2x1MMI_814dc1e6ab6ee9eb9155beabaef168225686093c.gds``.
 
 Component YAML
 ---------------
 *name*
   Component name, should be identical to the GDS file name of the corresponding. It's a good practice to keep the naming
+
