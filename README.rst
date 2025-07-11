@@ -4,9 +4,9 @@ cs-comm-test: Cornerstone Community Repository
 Aim & Vision
 ~~~~~~~~~~~~~
 Create an environment where community members can:
-(i) Contribute to a public library of components for the benefit of other users
-(ii) Hold discussions over improvements on the designs, or alternative methodologies
-(iii) Form a library of elements that have accessible metadata for easy integration into custom codes.
+  (i) Contribute to a public library of components for the benefit of other users
+  (ii) Hold discussions over improvements on the designs, or alternative methodologies
+  (iii) Form a library of elements that have accessible metadata for easy integration into custom codes.
 
 License
 ~~~~~~~
