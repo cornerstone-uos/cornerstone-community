@@ -8,7 +8,7 @@ Formatting guidelines for the submission files
 
 Component naming convention:
 -----------------------------
-The component names should be appended by a unique identifier. This identifier will be a temporary identifier - so you can hash the GDS file with SHA1, add the hash key to the component name.
+The component names should be appended by a unique identifier. This identifier will be temporary prior to the approval so we can use a basic hash algorithm such as SHA-1. The resultant hash key can be appended to the component name. 
 
 You can hash the file ``SOI_2x1MMI.gds`` in the "components" directory through:
 
@@ -21,7 +21,7 @@ You can hash the file ``SOI_2x1MMI.gds`` in the "components" directory through:
   - ``sha1sum SOI_2x1MMI.gds`` will produce the key.
 *Online*
   - Couple of online services for file SHA-1 hashing exist, e.g. <https://emn178.github.io/online-tools/sha1_checksum.html>
-
+Assuming the key of ``814dc1e6ab6ee9eb9155beabaef168225686093c`` is generated, the new key 
 
 
 Component YAML
