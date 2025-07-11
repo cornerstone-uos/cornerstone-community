@@ -1,19 +1,43 @@
-# cs-comm-test
-Cornerstone Community Repository
+cs-comm-test: Cornerstone Community Repository
+================================
 
-Aim:
-    Create a repository where community members can:
-        - Contribute to a public library of components for the benefit of other users
-        - Hold discussions over improvements on the designs, or alternative methodologies
-        - Form a library of elements that have accessible metadata for easy integration into custom codes
+Aim & Vision
+~~~~~~~~~~~~~
+Create an environment where community members can:
+(i) Contribute to a public library of components for the benefit of other users
+(ii) Hold discussions over improvements on the designs, or alternative methodologies
+(iii) Form a library of elements that have accessible metadata for easy integration into custom codes.
 
-Licenses:
-    Three licenses?
-        Software / Hardware / Documentation
-            Software - This part would be related to the GDSes - TAPR OHL 
-            Hardware - Manufactured chips, again TAPR OHL
-            Documentation - YAML files or jsons. Can create my own format but seems better to use openEPDA?
-                However it would require its own license (CC-BY-SA I think)
-                See https://opensource.stackexchange.com/questions/10320/using-different-licenses-for-different-branches-of-the-same-repository
-            OSHWA - would be nice to get verification from them? Feels like they are more involved with electronics/ Maker community, though.
-            
+License
+~~~~~~~
+The Cornerstone Community repository is licensed with `TAPR Open Hardware License <https://tapr.org/the-tapr-open-hardware-license/>`_
+
+Submission format
+~~~~~~~~~~~~~~~~~~
+We aim to incorporate the Community repository into the Wavephotoncis (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Member to adhere to the WP metafile format, which is explained **through an example**.
+To start, fork the repository. This will give you access to all of the Communiy PDK folders. Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
+(i) Place the new GDS files for your components, with naming convention <Platform>_<Wavelength>_<ComponentName>_<UID>.gds into "components" folder of the platform folder.
+(ii) Create a YAML file for each component. You can base the component YAML on the existing YAMLs of similar components. If a new port cross-section is needed in the YAML, put a placeholder for the new port for now.
+(iii) Create the GDS file for the new cross section in "cross-sections" folder. The GDS file will contain a structure 50um long in x-axis, and has the linear cross section along y-axis. The name of the GDS file will be the name of the cross-section.
+(iv) Append the new cross-section metadata into the "cross-sections.yaml" file.
+(v) Include the ancestry of the component in the Component YAML file. The ancestry should include the component that the new component is based on, and the cross-section that the new component uses.
+
+Submission flow
+~~~~~~~~~~~~~~~~
+
+The initial version is comprised of components that have been previously fabricated and characterised. We aim to make the characterisation results public as soon as possible.
+We expect the new component submissions to follow a verification flow:
+(i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
+(ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
+(iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
+(iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
+(v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
+(vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
+(vii) Inferior components with post-fabrication characterisation results will be rejected, and feedback will be provided to the contributor.
+
+
+
+
+
+The initial contents of this repository are based on a subset of the most recent Cornerstone PDK.
+
