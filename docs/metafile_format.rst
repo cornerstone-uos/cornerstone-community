@@ -41,7 +41,7 @@ Cross-section GDS
 ------------------
 Cross-sections are used by the 
 
-Allowed cross sections :doc:`cross_sections_list`
+`Allowed cross sections <docs/cross_sections_list.rst>`_ 
 
 
 
