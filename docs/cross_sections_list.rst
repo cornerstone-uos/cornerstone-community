@@ -1,4 +1,4 @@
-.. table:: Cross-section list
+.. table:: **Cross-section list**
 
    =================    ============================================================
    Name                 Description
