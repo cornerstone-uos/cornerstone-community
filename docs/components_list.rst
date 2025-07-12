@@ -1,8 +1,8 @@
 .. table:: List of registered components
 
-    __________________________  _____________________________________    
+    ==========================  =====================================    
     Name                        Description       
-    __________________________  _____________________________________
+    ==========================  =====================================
     MMI1x2                      Multi-Mode Interference couplers   
     MMI2x2 
     MMI1x4              
@@ -42,4 +42,4 @@
     BraggReflectorHeater        Heater for Bragg reflectors                
     DFBLaser                    Distributed Feedback Laser
     DBRLaser                    Distributed Bragg Reflector Laser
-    ________________________    _______________________________________
+    ========================    ======================================
