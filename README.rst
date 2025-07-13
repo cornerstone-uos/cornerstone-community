@@ -18,11 +18,11 @@ We aim to incorporate the Community repository into the Wavephotoncis (WP) PDK P
 
 To start, fork the repository. This will give you access to all of the Communiy PDK folders. Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
 
-  (i) Place the new GDS files for your components, with naming convention <Platform>_<Wavelength>_<ComponentName>_<UID>.gds into "components" folder of the platform folder.
-  (ii) Create a YAML file for each component. You can base the component YAML on the existing YAMLs of similar components. If a new port cross-section is needed in the YAML, put a placeholder for the new port for now.
-  (iii) Create the GDS file for the new cross section in "cross-sections" folder. The GDS file will contain a structure 50um long in x-axis, and has the linear cross section along y-axis. The name of the GDS file will be the name of the cross-section.
-  (iv) Append the new cross-section metadata into the "cross-sections.yaml" file.
-  (v) Include the ancestry of the component in the Component YAML file. The ancestry should include the component that the new component is based on, and the cross-section that the new component uses.
+(a) Place the new GDS files for your components, with naming convention <Platform>_<Wavelength>_<ComponentName>_<UID>.gds into "components" folder of the platform folder.
+(b) Create a YAML file for each component. You can base the component YAML on the existing YAMLs of similar components. If a new port cross-section is needed in the YAML, put a placeholder for the new port for now.
+(c) Create the GDS file for the new cross section in "cross-sections" folder. The GDS file will contain a structure 50um long in x-axis, and has the linear cross section along y-axis. The name of the GDS file will be the name of the cross-section.
+(d) Append the new cross-section metadata into the "cross-sections.yaml" file.
+(e) Include the ancestry of the component in the Component YAML file. The ancestry should include the component that the new component is based on, and the cross-section that the new component uses.
 
 Submission flow
 ~~~~~~~~~~~~~~~~
@@ -31,13 +31,13 @@ The initial version is comprised of components that have been previously fabrica
 
 We expect the new component submissions to follow a verification flow:
 
-  (i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
-  (ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
-  (iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
-  (iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
-  (v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
-  (vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
-  (vii) Inferior components with post-fabrication characterisation results will be rejected, and feedback will be provided to the contributor.
+(i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
+(ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
+(iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
+(iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
+(v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
+(vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
+(vii) Inferior components with post-fabrication characterisation results will be rejected, and feedback will be provided to the contributor.
 
 
 
