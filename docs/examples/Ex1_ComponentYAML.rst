@@ -77,23 +77,20 @@ We can demonstrate local mode definition via a common grating YAML. Below is a 1
 
 We defined the first port, an optical port with cross-section ``strip_1550nm_TE`` and facing -x. It is defined for TE_00 mode at 1550nm: ``modes`` went a level down in hierarchy to be a field of ``ports``. The second port is a vertical port, which requires a different set of fields  
 
+.. code-block:: yaml
+
      - center:                                             
        - 325.81                                              
        - 0
-       name: vertical_te                                   # Name of the port (can be vertical_te_e1, for example)
-       port_type: vertical_te                              # It's a vertical TE mode, common with grating couplers
-       orientation: 0.0                                    # It's facing the +x direction
-       width:  10.0                                        # It's 10um-wide. For vertical ports, a cross section is not sensible to define
-                                                           #   but we will need to define a linear footprint nonetheless
-       coupling_angle_cladding: 13.659                     # The injection angle of the free-space beam, defined based on the cladding
-                                                           #   The intended fibre angle in the free space is 20 degrees for this design
-                                                           #   which sets the NA of the beam to sin(20 degrees)*n_air. The angle in the
-                                                           #   cladding is then arcsin(sin(20 degrees)/n_cladding), which is 13.659 for
-                                                           #   this case. If the design was air-clad, coupling_angle_cladding would have been 20.
-       fibre_modes:                                        # The fibre modes defined in this grating coupler.
-       - fibre_type: SMF-28                                  # Adding a new mode, for SMF-28 fibre at 1550nm.
-         wavelength: 1550                                    # If we had a broadband design for 775nm and 1550nm, for example
-                                                             #   then we would have needed another entry here, with a new fibre type and wavelength.
+       name: vertical_te                                  
+       port_type: vertical_te                             
+       orientation: 0.0                                 
+       width:  10.0                                  
+       coupling_angle_cladding: 13.659
+       fibre_modes:                                        
+       - fibre_type: SMF-28                                  
+         wavelength: 1550                                    
+                                                           
 
 Here, ``port_type`` is specified as ``vertical_te`` from the `allowed list of ports <../wp_format/ports_list.rst>`_ . For vertical ports, we are allowed to define a ``width`` instead of a ``cross-section`` - e. g. ``10um`` here. Another important parameter is ``coupling_angle_cladding`` - this is the relative angle of the light travelling within the cladding. This component was designed for a 20 degree fibre angle over SiO2 cladding, hence ``coupling_angle_cladding = arcsind(sind(20)*n_air/n_siox) = 13.659``. Lastly, we defined ``fibre_modes`` to specify the possibly different fibres to be used across different settings; i. e. it is possible to use ``780HP`` for 780nm operation and ``SMF-28`` for 1550nm operation over the same grating coupler by defining an additional entry to ``fibre_modes``.
 
