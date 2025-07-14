@@ -1,38 +1,48 @@
 Here is an example YAML file for a component, a 1x2 MMI, which has one input and two output ports, all optical.  
 
+
+First, let's define the name of the file.
 .. code-block:: yaml
 
    name: SOI220nm_1310nm_TE_RIB_2x1_MMI
 
-Name of the GDS file
+This should be identical to the GDS file name (without the file extension).
+Continuing with the component type,
 
 .. code-block:: yaml
 
-   component_type: MMI1x2                 # Select from the list of components
+   component_type: MMI1x2                 
+
+``component_type`` is not allowed to be arbitrary within the Wavephotonics' YAML format. The list of allowed components can be found `here<../docs/components_list.rst>`_ . Another requirement from Wavephotonics is explicit specification of the modes going through the ports. 
+
+.. code-block:: yaml
+
    modes:                                 # The modes at the ports are uniform, hence they are defined before the ports structure
      - mode_numbers:                        # The first mode is defined (a TE mode)
        - 0                                     # (0,0) will be the TE_00 mode
        - 0
        polarisation: TE                     # it has polarisation TE
        wavelength: 1310                     # and is defined at 1310. 
-   # If there are more than one mode present - locally or globally, for a new polarisation, mode number, or wavelength, make another entry to the modes.
-   ports:                                 # The ports will be defined. This is a 2x1 MMI, and it will have three optical ports with rib cross-sections.
-   - name: o1                                # Defining the first port, which is an input port
-     port_type: optical                      # Select port type from the list of ports
-     center:                                 # The port is centred
-     - 0                                        # x=0, y=0
+
+Here, we have defined ``modes``, which has only one mode entry, TE_00 mode at 1310nm wavelength. When defined globally for the component this way, the ``modes`` field will be assigned to all the ports of the component. We move on to defining the ports:
+
+.. code-block:: yaml
+
+   ports:                                 
+   - name: o1                               
+     port_type: optical                     
+     center:                                 
+     - 0                                      
      - 0
-     orientation: 180                        # and is oriented 180 degrees - meaning the signal will be injected from -x direction.
-     cross_section: rib_1310nm_TE            # and it has "rib_1310nm_TE" cross section, which needs to be defined within the "cross-sections" folder.
-   # new port definition
-   - name: o2                                # Second port (output)                    
-     port_type: optical                      # Optical   
-     center:                                 # Centred at x=123.6, y= -1.525
+     orientation: 180                        
+     cross_section: rib_1310nm_TE
+   - name: o2                                                   
+     port_type: optical                        
+     center:                                 
      - 123.6
      - 1.52500
-     orientation: 0                          # Oriented at 0 degrees - the signal will be leaving towards +x                
-     cross_section: rib_1310nm_TE            # The cross section is defined
-   # and the remaining ports are named
+     orientation: 0                                        
+     cross_section: rib_1310nm_TE         
    - name: o3
      port_type: optical
      center:
@@ -40,3 +50,7 @@ Name of the GDS file
      - -1.525
      orientation: 0
      cross_section: rib_1310nm_TE
+
+Here, we defined the three ports within this MMI. First port ``o1`` is the input port, and is facing the -x direction, hence its ``orientation`` is 180. It has a cross-section ``rib_1310nm_TE``, which will be described in ``*/cross-sections/cross_sections.yaml`` - it will be presented as a cross-section example later on.
+
+
