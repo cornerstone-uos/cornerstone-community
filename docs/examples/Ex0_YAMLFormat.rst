@@ -15,7 +15,7 @@ Below is an example YAML struct for an unnamed footballer, filled with informati
     - country: France
       - Auxerre
       - Marseilles
-      - Montpellier#
+      - Montpellier
       - Nimes
     - country: UK                        
       - Leeds Utd                                      
@@ -29,6 +29,8 @@ Below is an example YAML struct for an unnamed footballer, filled with informati
     married: 2007
     children: 2
 
-Here, ``name``, ``position``, ``clubs`` and ``spouse`` all are fields of this struct. ``name`` and ``position`` are strings or char arrays, while ``clubs`` is a cell array of cells (or list of lists in Python). ``spouse`` is a cell array of structs (or list of dicts), with the possibility of having different structs - the first ``spouse`` has a ``divorced`` field, whereas the second one doesn't. If the ``divorced`` field is mandatory during the parsing of this structure, it will throw an error.
+Here, ``name``, ``position``, ``clubs`` and ``spouse`` all are fields of this struct. ``name`` and ``position`` are strings or char arrays, while ``clubs`` is a cell array of cells (or list of lists in Python). ``spouse`` is a cell array of structs (or list of dicts), with the possibility of having different structs - the first ``spouse`` has a ``divorced`` field, whereas the second one doesn't. If the ``divorced`` field is mandatory during the parsing of this structure, it will throw an error. 
+
+When in doubt, use a parsing tool in your favourite language to see how your YAML file will be processed.
 
   
