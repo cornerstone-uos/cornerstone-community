@@ -5,7 +5,7 @@ YAML is a markup language, similar to JSON or XML. Essentially, it is a represen
 
 Tab order is important, as it determines the hirearchy within the struct. Within our PDK platforms, YAMLs are used for passing meta-data across different code blocks, with their fields representing target wavelength, port locations, simulation parameters, fabrication geometry details, process tolerances, and so on. 
 
-Below is an example YAML struct for an unnamed footballer, filled with information from Wikipedia.
+Below is an example YAML struct for an `unnamed footballer <https://www.flickr.com/photos/87533340@N00/9775464>`_, filled with information from Wikipedia.
 
 .. code-block:: yaml
 
