@@ -14,7 +14,7 @@ Continuing with the component type,
 
    component_type: MMI1x2                 
 
-``component_type`` is not allowed to be arbitrary within the Wavephotonics' YAML format. The list of allowed components can be found `here<../docs/components_list.rst>`_ . Another requirement from Wavephotonics is explicit specification of the modes going through the ports. 
+``component_type`` is not allowed to be arbitrary within the Wavephotonics' YAML format. The list of allowed components can be found `here <../docs/components_list.rst>`_ . Another requirement from Wavephotonics is explicit specification of the modes going through the ports. 
 
 .. code-block:: yaml
 
