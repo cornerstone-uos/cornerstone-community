@@ -2,6 +2,7 @@ Here is an example YAML file for a component, a 1x2 MMI, which has one input and
 
 
 First, let's define the name of the file.
+
 .. code-block:: yaml
 
    name: SOI220nm_1310nm_TE_RIB_2x1_MMI
