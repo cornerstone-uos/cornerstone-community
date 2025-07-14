@@ -6,13 +6,16 @@ Cornerstone collaborates with `Wavephotonics <https://wavephotonics.com>`_ to ex
 Formatting guidelines for the submission files
 ==============================================
 
-A minimal submission would include a component GDS file for an individual component, and a YAML metafile accompanying it for the component description. These component files would need to be placed within the ``components`` directory of the platform folder it belongs to (e. g. ``Si_220nm_active/comonents/``).
+A minimal submission would include a component GDS file for an individual component, and a YAML metafile accompanying it for the component description. These component files would need to be placed within the ``components`` directory of the platform folder it belongs to (e. g. ``Si_220nm_active/components/``). 
+`Component YAML format - Example 1 <./wp_format/ComponentYAML_Ex1.rst>`_
+`Component YAML format - Example 2 <./wp_format/ComponentYAML_Ex2.rst>`_
 
 If the submitted component contains ports that have cross-sections different than the ones defined in ``cross-sections`` folder of the platform (e. g. ``Si_220nm_active/cross-sections/``), then the new cross-section will be required as a GDS file, alongside a new cross-section entry within ``cross-sections/cross_sections.yaml`` metafile.
+`Cross-section YAML format - Example 3 <./wp_format/CrossSectionYAML_Ex3.rst>`_
 
 Beyond these, the Community Members do not need to submit any other files. However, numerical simulations or experimental data submissions in tabular form are welcome, and Members are encouraged to provide them within the component YAMLs as struct fields.
 
-The submitted components must obey to the fabrication process detailed within the Design Guidelines for the specific platform. These details can also be found within the metafiles inside the platform folder, especially in ``process_overview.yaml``, ``drc_rules.lydrc``, ``materials\*.csv``, ``floorplans\floorplans.yaml``.
+The submitted components must obey to the fabrication process detailed within the Design Guidelines for the specific platform. These details can also be found within the metafiles inside the platform folder, especially in ``process_overview.yaml``, ``drc_rules.lydrc``, ``materials\*.csv``, ``floorplans\floorplans.yaml``. The explanation of these metafiles can be found in `Appendix <./wp_format/Appendix.rst>`_
 
 
 Component naming convention:
@@ -49,7 +52,7 @@ Cross-section GDS
 ------------------
 Cross-sections are used by the 
 
-`Allowed cross sections <./cross_sections_list.rst>`_ 
+`Allowed cross sections <./wp_format/cross_sections_list.rst>`_ 
 
 
 
