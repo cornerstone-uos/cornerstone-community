@@ -1,9 +1,13 @@
 Here is an example YAML file for a component, a 1x2 MMI, which has one input and two output ports, all optical.  
 
 .. code-block:: yaml
+
    name: SOI220nm_1310nm_TE_RIB_2x1_MMI
+
 Name of the GDS file
+
 .. code-block:: yaml
+
    component_type: MMI1x2                 # Select from the list of components
    modes:                                 # The modes at the ports are uniform, hence they are defined before the ports structure
      - mode_numbers:                        # The first mode is defined (a TE mode)
