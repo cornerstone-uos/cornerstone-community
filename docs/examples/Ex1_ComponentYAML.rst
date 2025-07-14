@@ -14,16 +14,16 @@ Continuing with the component type,
 
    component_type: MMI1x2                 
 
-``component_type`` is not allowed to be arbitrary within the Wavephotonics' YAML format. The list of allowed components can be found `here <../docs/components_list.rst>`_ . Another requirement from Wavephotonics is explicit specification of the modes going through the ports. 
+``component_type`` is not allowed to be arbitrary within the Wavephotonics' YAML format. The list of allowed components can be found `here <../wp_format/components_list.rst>`_ . Another requirement from Wavephotonics is explicit specification of the modes going through the ports. 
 
 .. code-block:: yaml
 
-   modes:                                 # The modes at the ports are uniform, hence they are defined before the ports structure
-     - mode_numbers:                        # The first mode is defined (a TE mode)
-       - 0                                     # (0,0) will be the TE_00 mode
+   modes:                                 
+     - mode_numbers:                        
+       - 0                                     
        - 0
-       polarisation: TE                     # it has polarisation TE
-       wavelength: 1310                     # and is defined at 1310. 
+       polarisation: TE                     
+       wavelength: 1310                     
 
 Here, we have defined ``modes``, which has only one mode entry, TE_00 mode at 1310nm wavelength. When defined globally for the component this way, the ``modes`` field will be assigned to all the ports of the component. We move on to defining the ports:
 
@@ -52,6 +52,49 @@ Here, we have defined ``modes``, which has only one mode entry, TE_00 mode at 13
      orientation: 0
      cross_section: rib_1310nm_TE
 
-Here, we defined the three ports within this MMI. First port ``o1`` is the input port, and is facing the -x direction, hence its ``orientation`` is 180. It has a cross-section ``rib_1310nm_TE``, which will be described in ``*/cross-sections/cross_sections.yaml`` - it will be presented as a cross-section example later on.
+Here, we defined the three ports within this MMI. First port ``o1`` is the input port, and is facing the -x direction, hence its ``orientation`` is 180. It has a cross-section ``rib_1310nm_TE``, which will be described in ``*/cross-sections/cross_sections.yaml`` - it will be presented as a cross-section example later on. Ports ``o2`` and ``o3`` are outputs, they face +x direction (0 degree orientation), with their centres offset by ``1.525 um`` from ``y=0`` line. 
+
+We can demonstrate local mode definition via a common grating YAML. Below is a 1D grating coupler for c-band operation in SiN.
+
+.. code-block:: yaml
+
+   name: SiN300nm_1550nm_TE_STRIP_Grating_Coupler_v1p2   
+   component_type: GratingCoupler1D                      
+   ports:                                                
+     - center:                                            
+       - 0.0
+       - 0.0
+       name: o1                                            
+       orientation: 180
+       port_type: optical
+       cross_section: strip_1550nm_TE                  
+       modes:                                              
+       - mode_numbers:                                      
+         - 0                                                   
+         - 0
+         polarisation: TE                                      
+         wavelength: 1550                                       
+
+We defined the first port, an optical port with cross-section ``strip_1550nm_TE`` and facing -x. It is defined for TE_00 mode at 1550nm: ``modes`` went a level down in hierarchy to be a field of ``ports``. The second port is a vertical port, which requires a different set of fields  
+
+     - center:                                             
+       - 325.81                                              
+       - 0
+       name: vertical_te                                   # Name of the port (can be vertical_te_e1, for example)
+       port_type: vertical_te                              # It's a vertical TE mode, common with grating couplers
+       orientation: 0.0                                    # It's facing the +x direction
+       width:  10.0                                        # It's 10um-wide. For vertical ports, a cross section is not sensible to define
+                                                           #   but we will need to define a linear footprint nonetheless
+       coupling_angle_cladding: 13.659                     # The injection angle of the free-space beam, defined based on the cladding
+                                                           #   The intended fibre angle in the free space is 20 degrees for this design
+                                                           #   which sets the NA of the beam to sin(20 degrees)*n_air. The angle in the
+                                                           #   cladding is then arcsin(sin(20 degrees)/n_cladding), which is 13.659 for
+                                                           #   this case. If the design was air-clad, coupling_angle_cladding would have been 20.
+       fibre_modes:                                        # The fibre modes defined in this grating coupler.
+       - fibre_type: SMF-28                                  # Adding a new mode, for SMF-28 fibre at 1550nm.
+         wavelength: 1550                                    # If we had a broadband design for 775nm and 1550nm, for example
+                                                             #   then we would have needed another entry here, with a new fibre type and wavelength.
+
+Here, ``port_type`` is specified as ``vertical_te`` from the `allowed list of ports <../wp_format/ports_list.rst>`_ . For vertical ports, we are allowed to define a ``width`` instead of a ``cross-section`` - e. g. ``10um`` here. Another important parameter is ``coupling_angle_cladding`` - this is the relative angle of the light travelling within the cladding. This component was designed for a 20 degree fibre angle over SiO2 cladding, hence ``coupling_angle_cladding = arcsind(sind(20)*n_air/n_siox) = 13.659``. Lastly, we defined ``fibre_modes`` to specify the possibly different fibres to be used across different settings; i. e. it is possible to use ``780HP`` for 780nm operation and ``SMF-28`` for 1550nm operation over the same grating coupler by defining an additional entry to ``fibre_modes``.
 
 
