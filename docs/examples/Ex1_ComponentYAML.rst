@@ -93,6 +93,9 @@ We defined the first port, an optical port with cross-section ``strip_1550nm_TE`
          wavelength: 1550                                    
                                                            
 
-Here, ``port_type`` is specified as ``vertical_te`` from the `allowed list of ports <../wp_format/ports_list.rst>`_ . For vertical ports, we are allowed to define a ``width`` instead of a ``cross-section`` - e. g. ``10um`` here. Another important parameter is ``coupling_angle_cladding`` - this is the relative angle of the light travelling within the cladding. This component was designed for a 20 degree fibre angle over SiO2 cladding, hence ``coupling_angle_cladding = arcsind(sind(20)*n_air/n_siox) = 13.659``. Lastly, we defined ``fibre_modes`` to specify the possibly different fibres to be used across different settings; i. e. it is possible to use ``780HP`` for 780nm operation and ``SMF-28`` for 1550nm operation over the same grating coupler by defining an additional entry to ``fibre_modes``.
+- Here, ``port_type`` is specified as ``vertical_te`` from the `allowed list of ports <../wp_format/ports_list.rst>`_ . 
+- For vertical ports, we are allowed to define a ``width`` instead of a ``cross-section`` - e. g. ``10um`` here. 
+- Another important parameter is ``coupling_angle_cladding`` - this is the relative angle of the light travelling within the cladding. This component was designed for a 20 degree fibre angle over SiO2 cladding, hence ``coupling_angle_cladding = arcsind(sind(20)*n_air/n_siox) = 13.659``. 
+- Lastly, we defined ``fibre_modes`` to specify the possibly different fibres to be used across different settings; i. e. it is possible to use ``780HP`` for 780nm operation and ``SMF-28`` for 1550nm operation over the same grating coupler by defining an additional entry to ``fibre_modes``.
 
 
