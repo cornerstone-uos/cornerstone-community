@@ -78,6 +78,7 @@ We can demonstrate local mode definition via a common grating YAML. Below is a 1
 We defined the first port, an optical port with cross-section ``strip_1550nm_TE`` and facing -x. It is defined for TE_00 mode at 1550nm: ``modes`` went a level down in hierarchy to be a field of ``ports``. The second port is a vertical port, which requires a different set of fields  
 
 .. code-block:: yaml
+
    ports: # Kept here to display the indentation - this line does not exist in the original file
      - center:                                             
        - 325.81                                              
