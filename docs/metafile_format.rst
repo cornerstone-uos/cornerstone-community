@@ -23,13 +23,13 @@ Component naming convention:
    - Go to the "components" directory 
    - Right-Click within the folder, "Open in Terminal". Alternatively, run Command Prompt and change your directory to the "components" directory through command line
    - Run ``CertUtil -hashfile SOI_2x1MMI.gds SHA1``. You can select and copy the key by Ctrl+C.
-**Linux**
+.. **Linux**
    - Open the "components" directory in the terminal
    - ``sha1sum SOI_2x1MMI.gds`` will produce the key, which can be copied (at least in the common distros)
-**Mac**
+.. **Mac**
    - Move to the component directory in the terminal
   - ``shasum SOI_2x1MMI.gds`` would produce the key to be copied.
-**Online**
+.. **Online**
   - Couple of online services for file SHA-1 hashing exist, e.g. <https://emn178.github.io/online-tools/sha1_checksum.html>
 
 .. Assuming the key of ``814dc1e6ab6ee9eb9155beabaef168225686093c`` is generated, the new filename would be ``SOI_2x1MMI_814dc1e6ab6ee9eb9155beabaef168225686093c.gds``.
