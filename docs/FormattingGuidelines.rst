@@ -1,7 +1,7 @@
 Formatting guidelines for the GDS files and metafiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cornerstone collaborates with `Wavephotonics <https://wavephotonics.com>`_ to export its PDKs to EDA libraries. We use the building block verification tools created by Wavephotonics, and require some of the metafiles from the Community Members as part of the submission process.  Multiple metafile format exists within the infividual PDK folders. An explanation of the required files will be given here, and the other metafiles for compliance with Wavephotonics workflow will be explained in the Appendix.
+Cornerstone collaborates with `Wavephotonics <https://wavephotonics.com>`_ to export its PDKs to EDA tools. We use the building block verification tools created by Wavephotonics, and require some of the metafiles from the Community Members as part of the submission process.  Multiple metafile format exists within the infividual PDK folders. An explanation of the required files will be given here, and the other metafiles for compliance with Wavephotonics workflow will be explained in the Appendix.
 
 Formatting guidelines for the submission files
 ==============================================
