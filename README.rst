@@ -31,7 +31,7 @@ We expect the new component submissions to follow a verification flow:
 
 Submission format
 ~~~~~~~~~~~~~~~~~~
-We aim to incorporate the Community repository into the Wavephotoncis (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Member to adhere to the WP metafile format, which is explained within the `examples folder <./docs/examples>`_.
+We aim to incorporate the Community repository into the Wavephotoncis (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Member to adhere to the WP metafile format, which are outlined in the  `formatting guidelines <./docs/FormattingGuidelines.rst>`_.
 
 To start, fork the repository. This will give you access to all of the Communiy PDK folders. Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
 
