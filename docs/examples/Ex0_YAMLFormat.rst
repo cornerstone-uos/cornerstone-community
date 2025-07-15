@@ -12,14 +12,14 @@ Below is an example YAML struct for an `unnamed footballer <https://www.flickr.c
   name: Name Surname
   position: forward                 
   clubs:
-    - country: France
-      - Auxerre
-      - Marseilles
-      - Montpellier
-      - Nimes
-    - country: UK                        
-      - Leeds Utd                                      
-      - Man Utd                  
+  - country: France
+    - Auxerre
+    - Marseilles
+    - Montpellier
+    - Nimes
+  - country: UK                        
+    - Leeds Utd                                      
+    - Man Utd                  
   spouse:                                 
   - name: Name Surname
     married: 1987
