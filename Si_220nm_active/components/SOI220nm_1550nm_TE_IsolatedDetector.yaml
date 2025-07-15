@@ -1,4 +1,4 @@
-name: SOI220nm_1550nm_TE_IsolatedDetector_7646584877cbc2f63f11e904b3e153493aabb03c
+name: SOI220nm_1550nm_TE_IsolatedDetector
 component_type: Photodiode
 modes:
 - mode_numbers:
@@ -22,14 +22,14 @@ ports:
   orientation: 270
   cross_section: detector
 - name: o1
-  port_type: optical
+  port_type: rib
   center:
   - 0
   - 0
   orientation: 180
   cross_section: rib_1550nm_TE
 - name: o2
-  port_type: optical
+  port_type: rib
   center:
   - 1900
   - 0

@@ -44,10 +44,11 @@ ports:
   - fibre_type: SMF-28
     wavelength: 1550.0
 ancestors:
-- name: SOI220nm_1550nm_TE_IsolatedDetector_7646584877cbc2f63f11e904b3e153493aabb03c
+- name: SOI220nm_1550nm_TE_IsolatedDetector
   commit: ReferenceWithinCommit
-- name: SOI220nm_1550nm_TE_RIB_Grating_Coupler_1eb6aacd3dda86c13a24829b87f38fbaea69da0b
+- name: SOI220nm_1550nm_TE_RIB_Grating_Coupler
   commit: ReferenceWithinCommit
 authors:
 - name: H Bilge Yagci
   organisation: Cornerstone / ORC
+  email: hby1r25@soton.ac.uk
