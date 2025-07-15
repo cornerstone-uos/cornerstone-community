@@ -1,6 +1,4 @@
-Example cross-section yaml file from ``Si_220nm_active`` platform.
-Tabs will determine the structure order. The comments will be tabbed to make the hierarchy more visible.
-
+Below is the breakdown of an exemplary YAML file for cross-section definition, for ``Si_220nm_active`` platform in this case. The original file can be found `here <link>`
 
 .. code-block:: yaml
 
