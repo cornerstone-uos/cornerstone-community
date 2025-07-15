@@ -11,6 +11,8 @@ A minimal submission would include a component GDS file for an individual compon
 
 If the submitted component contains ports that have cross-sections different than the ones defined in ``cross-sections`` folder of the platform (e. g. ``Si_220nm_active/cross-sections/``), then the new cross-section will be required as a GDS file, alongside a new cross-section entry within ``cross-sections/cross_sections.yaml`` metafile. An example Cross-section YAML file can be seen in `Cross-section YAML format - Example 2 <./examples/Ex2_CrossSectionYAML.rst>`_.
 
+Additional YAML fields that we would like to see included in the new components within Submissions are described in `Additional YAML Fields <./examples/Additional_YAML_Fields.rst>`_. These fields include a ``description`` for the component, a list of ``ancestor`` building blocks the Component is based on, and ``author`` information for communication and design credits.
+
 .. We would also classify the components based on their Maturity Index within the Component YAML. At the moment, the maturity levels for the components are:
 
 .. * Level 1: Component defined solely based on electromagnetic simulations. Interconnect-level simulations are not required but they are good-to-have.
@@ -27,7 +29,7 @@ If the submitted component contains ports that have cross-sections different tha
 
 .. After Level 2 MI, CORNERSTONE will regularly include the Community Components in their characterisation runs to increase their MI.
 
-Aside from these, the Community Members do not need to include any other files in their submission. However, the inclusigon of numerical and experimental data regarding the functionality of the components are encouraged.
+Aside from these, the Community Members do not need to include any other files in their submission. However, the inclusigon of numerical and experimental data regarding the functionality of the components are encouraged. This can also be made through `contacting us <mailto:pdk.cornerstone@soton.ac.uk>`_ about the Submission.
 
 The submitted components must obey to the fabrication process detailed within the Design Guidelines for the specific platform. These details can also be found within the metafiles inside the platform folder, especially in ``process_overview.yaml``, ``drc_rules.lydrc``, ``materials\*.csv``, ``floorplans\floorplans.yaml``. The explanation of these metafiles can be found in `Appendix <./wp_format/Appendix.rst>`_.
 
