@@ -46,7 +46,7 @@ To start, fork the repository. This will give you access to all of the Communiy 
 Contact
 ~~~~~~~~
 
-`Contact us <mailto:pdkteam.cornerstone@soton.ac.uk>`_ for questions related to the your Community submissions, Community repository contents - or any other issues related to the Community repository.
+`Contact us <mailto:pdk.cornerstone@soton.ac.uk>`_ for questions related to the your Community submissions, Community repository contents - or any other issues related to the Community repository.
 
 
 
