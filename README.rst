@@ -5,29 +5,12 @@ Welcome to CORNERSTONE Community repository!
 
 Aim & Vision
 ~~~~~~~~~~~~~
+
 Create an environment where community members can:
-  (i) Contribute to a public library of components for the benefit of other users
-  (ii) Hold discussions over improvements on the designs, or alternative methodologies
-  (iii) Form a library of elements that have accessible metadata for easy integration into custom codes.
 
-License
-~~~~~~~
-The Cornerstone Community repository is licensed with `TAPR Open Hardware License <https://tapr.org/the-tapr-open-hardware-license/>`_
-
-Submission flow
-~~~~~~~~~~~~~~~~
-
-The initial version is comprised of components that have been previously fabricated and characterised. We aim to make the characterisation results public as soon as possible.
-
-We expect the new component submissions to follow a verification flow:
-
-(i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
-(ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
-(iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
-(iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
-(v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
-(vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
-(vii) Components whose functionalities couldn't be verified will be sent back to the contributor alongside experimental data and feedback.
+* Contribute to a public library of components for the benefit of other users
+* Hold discussions over improvements on the designs, or alternative methodologies
+* Form a library of elements that have accessible metadata for easy integration into custom codes.
 
 Submission format
 ~~~~~~~~~~~~~~~~~~
@@ -42,6 +25,24 @@ To start, fork the repository. This will give you access to all of the Communiy 
 (e) Within the Component YAMLs, specify your name/alias and email as an author. A component or a file can have more than one author.
 (f) Include the ancestry of the component in the Component YAML file. The ancestry should include the prior component(s) that the new component is based on. One level of ancestry is sufficient.
 
+Submission acceptance stages 
+~~~~~~~~~~~~~~~~
+
+The initial version is comprised of components that have been previously fabricated and characterised. We aim to make the characterisation results public as soon as possible.
+
+We expect the new component submissions to follow a verification flow:
+
+(i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
+(ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
+(iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
+(iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
+(v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
+(vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
+(vii) Components whose functionalities couldn't be verified will be sent back to the contributor alongside experimental data and feedback.
+
+License
+~~~~~~~
+The Cornerstone Community repository is licensed with `TAPR Open Hardware License <https://tapr.org/the-tapr-open-hardware-license/>`_
 
 Contact
 ~~~~~~~~
