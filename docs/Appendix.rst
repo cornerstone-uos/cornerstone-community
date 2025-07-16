@@ -37,7 +37,7 @@ Leaving aside the self-explanatory fields, we have:
 *process_name*
   Name of the process platform, must be identical to the name of the containing folder
 *material*
-  Material platform used within the process, must be listed within the `list of allowed material platforms <./wp_format/materials_list>`_
+  Material platform used within the process, must be listed within the `list of allowed material platforms <./wp_format/materials_list.rst>`_
 *gds_type*
   Describes type of components supplied (black-boxed, full component, black-boxed with real component swap at tapeout). CORNERSTONE will always use ``only_real_gds``.
 *includes_heaters*, *includes_rf_layers*
