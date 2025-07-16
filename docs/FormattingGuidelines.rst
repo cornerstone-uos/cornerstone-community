@@ -1,7 +1,7 @@
 Formatting guidelines for the GDS files and metafiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cornerstone collaborates with `Wavephotonics <https://wavephotonics.com>`_ to export its PDKs to EDA tools. We use the building block verification tools created by Wavephotonics, and require some of the metafiles from the Community Members as part of the submission process.  Multiple metafile format exists within the infividual PDK folders. An explanation of the required files will be given here, and the other metafiles for compliance with Wavephotonics workflow will be explained in the Appendix.
+Cornerstone collaborates with `Wavephotonics <https://wavephotonics.com>`_ to export its PDKs to EDA tools. We use the building block verification tools created by Wavephotonics, and require some of the metafiles from the Community Members as part of the submission process.  Multiple metafile format exists within the infividual PDK folders, which are explained below and with provided examples.
 
 Formatting guidelines for the submission files
 ==============================================
@@ -31,7 +31,7 @@ Additional YAML fields that we would like to see included in the new components 
 
 Aside from these, the Community Members do not need to include any other files in their submission. However, the inclusigon of numerical and experimental data regarding the functionality of the components are encouraged. This can also be made through `contacting us <mailto:pdk.cornerstone@soton.ac.uk>`_ about the Submission.
 
-The submitted components must obey to the fabrication process detailed within the Design Guidelines for the specific platform. These details can also be found within the metafiles inside the platform folder, especially in ``process_overview.yaml``, ``drc_rules.lydrc``, ``materials\*.csv``, ``floorplans\floorplans.yaml``. The explanation of these metafiles can be found in `Appendix <./wp_format/Appendix.rst>`_.
+The submitted components must obey to the fabrication process detailed within the Design Guidelines for the specific platform. These details can also be found within the metafiles inside the platform folder, especially in ``process_overview.yaml``, ``drc_rules.lydrc``, ``materials\*.csv``, ``floorplans\floorplans.yaml``. The explanation of these metafiles can be found in `Appendix <./Appendix.rst>`_.
 
 
 
