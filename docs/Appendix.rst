@@ -11,6 +11,8 @@ Besides the files that are included in the `submission guidelines <./FormattingG
 - ``layerstack.png``
 - ``layers.lyp``
 
+Changes within these files, and components/processes that require such changes will not pass the Submission pre-acceptance checks as they are not compatible with the services provided by CORNERSTONE. 
+
 Below, we explain the function of these files for the curious and interested.
 
 process_overview.yaml
