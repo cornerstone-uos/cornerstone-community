@@ -1,7 +1,7 @@
-cs-comm-test: Cornerstone Community Repository
+Cornerstone Community Repository
 ================================================
 
-Welcome to CORNERSTONE Community repository!  The initial contents of this repository are based on a subset of the most recent Cornerstone PDK.
+Welcome to CORNERSTONE Community repository! 
 
 Aim & Vision
 ~~~~~~~~~~~~~
