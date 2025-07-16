@@ -1,7 +1,7 @@
 Appendix
 ~~~~~~~~~
 
-Besides the files that are included in the `submission guidelines <./FormattingGuidelines.rst>`_, the PDK folders also contains the files below for the Wavephotonics (WP) validator to function:
+Besides the files that are included in the `formatting guidelines <./FormattingGuidelines.rst>`_ accompanying the `submission flow <../README.rst#submission-format>`_, the PDK folders also contains the files below for the Wavephotonics (WP) validator to function:
 
 - ``process_overview.yaml`` 
 - ``drc_rules.lydrc``
@@ -45,7 +45,7 @@ Leaving aside the self-explanatory fields, we have:
 *has_a_no_metals_option*
   Logical field that specifies if the platform is offered without heater/metal layer for a reduced price. See `Access Charges <https://www.cornerstone.sotonfab.co.uk/mpw-schedule-costs/>`_.
 
-The GDS layer information is then described within ``gds_layers`` field. For each element, we describe the layer information, depth tolerance, DRC rules assigned to the layer, and any aliases to use within the file later on. Practically, the information within the platform design guidelines (`webpage link <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_) are described within this section in YAML format.
+The GDS layer information is then described within ``gds_layers`` field. For each element, we describe the layer information, depth tolerance, DRC rules assigned to the layer, and any aliases to use within the file later on. Practically, the information within the platform design guidelines (see `Design Rules <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_) are described within this section in YAML format.
 
 .. code-block:: yaml
 
@@ -123,7 +123,7 @@ Here, we are using the ``alias`` es described within the ``gds_layers`` to simpl
 drc_rules.lydrc
 ~~~~~~~~~~~~~~~~
 
-This is a file that describes the DRC rules to be performed by KLayout as part of pre-submission design checks. Each platform folder contains a ``drc_rules.lydrc`` file that is identical in the information content to the DRC script provided within the `Design Rules page <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_.
+This is a file that describes the DRC rules to be performed by KLayout as part of pre-submission design checks. Each platform folder contains a ``drc_rules.lydrc`` file that is identical in the information content to the DRC script provided within `Design Rules <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_.
 
 Material refractive index files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,7 +133,7 @@ Material refractive index values across a wavelength range is required for accur
 Floorplans
 ~~~~~~~~~~~~
 
-The ``floorplans`` folder contains the allowed design area specification for the individual platforms in both YAML and GDS formats. These design area specifications can be found within the `Costs <https://www.cornerstone.sotonfab.co.uk/mpw-schedule-costs/>`_ of the CORNERSTONE website or in the  `Design Guidelines <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_ document of the MPW call.
+The ``floorplans`` folder contains the allowed design area specification for the individual platforms in both YAML and GDS formats. These design area specifications can be found within `Access Charges  <https://www.cornerstone.sotonfab.co.uk/mpw-schedule-costs/>`_ or in the Design Guidelines document of the MPW call in `Design Rules <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_.
 
 Layer formatting file (``layers.lyp``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
