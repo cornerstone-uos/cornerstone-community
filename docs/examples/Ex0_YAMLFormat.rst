@@ -1,7 +1,7 @@
 YAML Format Explanation
 ________________________
 
-YAML is a markup language, similar to JSON or XML. Essentially, it is a representation of a struct, both machine-readable and easy to understand for people.
+`YAML <https://en.wikipedia.org/wiki/YAML>`_ is a markup language, similar to JSON or XML. Essentially, it is a representation of a struct, both machine-readable and easy to understand for people.
 
 Tab order is important, as it determines the hirearchy within the struct. Within our PDK platforms, YAMLs are used for passing meta-data across different code blocks, with their fields representing target wavelength, port locations, simulation parameters, fabrication geometry details, process tolerances, and so on. 
 

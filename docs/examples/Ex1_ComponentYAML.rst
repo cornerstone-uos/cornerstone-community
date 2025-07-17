@@ -1,5 +1,8 @@
 Below is the breakdown of an exemplary YAML file for a component, a 1x2 MMI, which has one input and two output ports, all optical. The original component file can be found `here <../../Si_220nm_active/components/SOI220nm_1310nm_TE_RIB_2x1_MMI.yaml>`_ 
 
+.. image:: ../static/SOI220nm_1310nm_TE_RIB_2x1_MMI.png
+   :width: 300px
+   :align: center
 
 First, let's define the name of the file.
 
@@ -55,6 +58,10 @@ Here, we have defined ``modes``, which has only one mode entry, TE_00 mode at 13
 Here, we defined the three ports within this MMI. First port ``o1`` is the input port, and is facing the -x direction, hence its ``orientation`` is 180. It has a cross-section ``rib_1310nm_TE``, which will be described in ``*/cross-sections/cross_sections.yaml`` - it will be presented as a cross-section example later on. Ports ``o2`` and ``o3`` are outputs, they face +x direction (0 degree orientation), with their centres offset by ``1.525 um`` from ``y=0`` line. 
 
 Below we demonstrate port-level mode definition within a grating coupler's YAML. The component is a 1D grating coupler for c-band operation in SiN - the original component file can be found `here <../../SiN_300nm/components/SiN300nm_1550nm_TE_STRIP_Grating_Coupler_v1p2.yaml>`_ 
+
+.. image:: ../static/SiN300nm_1550nm_TE_STRIP_Grating_Coupler_v1p2.png
+   :width: 300px
+   :align: center
 
 .. code-block:: yaml
 

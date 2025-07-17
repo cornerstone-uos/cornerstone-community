@@ -1,6 +1,10 @@
 Cornerstone Community Repository
 ================================================
 
+.. image:: ../docs/static/CORNERSTONE_Logo_Revised Colours.png
+   :width: 200px
+   :align: center
+
 Welcome to CORNERSTONE Community repository! 
 
 Aim & Vision
