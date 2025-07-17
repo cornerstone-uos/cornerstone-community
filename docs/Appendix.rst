@@ -145,3 +145,7 @@ Others
 
 We also provide ``layerstack.png`` as a visual representation of the cross-section of the supported waveguides of the platform, and ``CHANGELOG.md`` to keep track of the cumulative changes between consecutive stable release versions of the platforms.
 
+.. image:: ../Si_220nm_active/layerstack.png
+   :width: 600px
+   :align: center
+
