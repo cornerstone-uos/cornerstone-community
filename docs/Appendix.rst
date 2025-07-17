@@ -15,7 +15,7 @@ Changes within these files, and components/processes that require such changes w
 
 Below, we explain the function of these files for the curious and interested.
 
-process_overview.yaml
+Process overview file (``process_overview.yaml``)
 ______________________
 
 This file provides metadata about the fabrication process flow, as well as the functional layers. Let's take a look at `SiN_300nm/process_overview.yaml <../SiN_300nm/process_overview.yaml>`_:
@@ -120,17 +120,17 @@ Continuing, we have ``layer_stack``, which is designed to assist WP in simulatin
 
 Here, we are using the ``alias`` es described within the ``gds_layers`` to simplify the categorisation of functional regions. As an example, from the desciption of ``TOX`` layer stack, we can see that everywhere on the design file has silicon dioxide as cladding except the regions defined by the ``Clad_Open_DF``, which corresponds to the ``[22/0]`` layer in the GDS files. By defining ``layer_stack`` field, we combine the 2-D information given to us by the GDS file with the depth information, constructing the physical devices for simulations.
 
-drc_rules.lydrc
+DRC file (``drc_rules.lydrc``)
 ~~~~~~~~~~~~~~~~
 
 This is a file that describes the DRC rules to be performed by KLayout as part of pre-submission design checks. Each platform folder contains a ``drc_rules.lydrc`` file that is identical in the information content to the DRC script provided within `Design Rules <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_.
 
-Material refractive index files
+Material refractive index files (``materials/*.csv``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Material refractive index values across a wavelength range is required for accurate modeling of the components. We provide the refractive index values within a broad spectrum for the materials used in respective platforms in CSV format. These files are located within ``materials`` folder in each platform folder, with file names corresponding to the ``material`` subfield of ``layer_stack`` elements within ``process_overview.yaml`` for the platform.
 
-Floorplans
+Floorplans (``floorplans/floorplans.yaml``)
 ~~~~~~~~~~~~
 
 The ``floorplans`` folder contains the allowed design area specification for the individual platforms in both YAML and GDS formats. These design area specifications can be found within `Access Charges  <https://www.cornerstone.sotonfab.co.uk/mpw-schedule-costs/>`_ or in the Design Guidelines document of the MPW call in `Design Rules <https://www.cornerstone.sotonfab.co.uk/design-rules/>`_.
