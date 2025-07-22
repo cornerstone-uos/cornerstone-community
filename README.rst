@@ -16,7 +16,7 @@ Create an environment where community members can:
 * Hold discussions over improvements on the designs, or alternative methodologies
 * Form a library of elements that have accessible metadata for easy integration into custom codes.
 
-To start contributing, fork the repository. This will give you access to all of the Communiy PDK folders. Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
+To start contributing, fork the repository. This will give you access to all of the Community PDK folders. You can populate your repository without submitting a pull request  Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
 
 We aim to incorporate the Community repository into the Wavephotonics (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Community Members to adhere to the WP metafile format, which are outlined in the  `formatting guidelines <./docs/FormattingGuidelines.rst>`_. Please also see `Examples <./docs/examples>`_.
 
@@ -27,7 +27,7 @@ Submission format
 (b) Create a YAML file for each component. You can base the component YAML on the existing YAMLs of similar components (`see examples <./docs/examples>`_) . If a new port cross-section is needed in the YAML, put a placeholder for the new port for now.
 (c) Create the GDS file for the new cross section in ``cross-sections`` folder. The GDS file will contain a structure 50um long in x-axis, and has the linear cross section along y-axis. The name of the GDS file will be the name of the cross-section.
 (d) Append the new cross-section metadata into the ``cross_sections.yaml`` file within ``cross-sections`` folder.
-(e) Within the Component YAMLs, specify your name/alias and email as an author. A component or a file can have more than one author.
+(e) Within the Component YAMLs, you may specify your name/alias and email as an author - otherwise we can also assign design credits to your GitHub username. A component or a file can have more than one author.
 (f) Include the ancestry of the component in the Component YAML file. The ancestry should include the prior component(s) that the new component is based on. One level of ancestry is sufficient.
 
 Submission acceptance stages 
