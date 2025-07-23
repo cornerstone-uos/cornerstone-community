@@ -1,4 +1,4 @@
-Below is the breakdown of an exemplary YAML file for cross-section definition, for ``Si_220nm_active`` platform in this case. The original file can be found `here <../../Si_220nm_active/cross-sections/cross_sections.yaml>`_.
+Below is the breakdown of an exemplary YAML file for cross-section definition, for ``Si_220nm_active`` platform in this case. The original file can be found `here <../../Si_220nm_active/cross-sections/cross_sections.yaml>`_. The described cross-sections also exist as GDS files with identical names within the same folder (see `cross-sections <../../Si_220nm_active/cross-sections/>`_ folder).
 
 First, we start by defining ``strip_1310nm_TE``, a strip waveguide cross-section designed to work for TE mode at 1310nm.
 
@@ -114,7 +114,7 @@ Next, we define the remaining optical cross-sections:
       polarisation: TE
       wavelength: 1550
 
-We then define the electrical contacts for the heaters (see `Heater <../../Si_220nm_active/components/Heater.gds>`_ component) and the detectors (see `Heater <../../Si_220nm_active/components/SOI220nm_1550nm_TE_IsolatedDetector.gds>`_ component). For metal layers, we use ``minimum_bend_radius: 0``.
+We then define the electrical contacts for the heaters (see `Heater <../../Si_220nm_active/components/Heater.gds>`_ component) and the detectors (see `Isolated Detector <../../Si_220nm_active/components/SOI220nm_1550nm_TE_IsolatedDetector.gds>`_ component). For metal layers, we use ``minimum_bend_radius: 0``.
 
 .. code-block:: yaml
 
@@ -171,4 +171,4 @@ Lastly, we define the modulator connections, which are expected to support the m
       offset: 100
       width: 69
 
-All of the cross-sections defined here have corresponding GDS files to help with parsing the YAML files. The GDS file for a cross-section should contain a 50 micron-long structure along x-axis, with the profile alongside y-axis is defined by the corresponding cross-section. Please see the GDS files that are used within this cross-section YAML in `cross-sections <../../Si_220nm_active/cross-sections/>`_ folder.
+All of the cross-sections defined here have corresponding GDS files to help with parsing the YAML files. The GDS file for a cross-section should contain a 50 micron-long structure along x-axis, with the profile alongside y-axis is defined by the corresponding cross-section. 
