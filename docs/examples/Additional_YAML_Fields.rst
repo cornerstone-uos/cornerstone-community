@@ -9,10 +9,10 @@ As part of the submission, we require the Contributors to specify two additional
   ancestors:
   - name: Ancestor_Component_Name_1
     commit: HashKey_of_SourceCommit
-    modifications: none
+    modifications: Any sort of modifications
   - name: Ancestor_Component_Just_Included
     commit: ReferenceWithinCommit
-    modifications: Any sort of modifications
+    modifications: changed linear taper coefficient from -0.5um/10um to -0.35um/10um
   authors:
   - name: Name Surname or Alias
     organisation: Organisation Formal Name, is Optional
@@ -24,7 +24,7 @@ An ``ancestor`` is the closest relative(s) of the contributed Component, i. e. t
 
 ``authors`` are practically the Contributors and any other people who can claim design credits about the component. While the ``organisation`` field is optional, an ``email`` field is required for communication purposes. If the Contributors desire to do so, they can specify an alias (like a GitHub user name) as the ``name`` field.
   
-Below is an example, a standalone light detector within ``Si_220nm_active`` platform that is built with a grating coupler and a defect detector (`SOI220nm_1150nm_TE_Defect_Detector <../../Si_220nm_active/components/SOI220nm_1150nm_TE_Defect_Detector.yaml>`_)
+Below is an example, a standalone light detector within ``Si_220nm_active`` platform that is built with a grating coupler and a defect detector (`SOI220nm_1550nm_TE_Defect_Detector <../../Si_220nm_active/components/SOI220nm_1550nm_TE_Defect_Detector.yaml>`_)
 
 .. code-block:: yaml
 
