@@ -1,4 +1,4 @@
-Cornerstone Community Repository
+CORNERSTONE Community Repository
 ================================================
 
 .. image:: ./docs/static/CORNERSTONE_Logo.png
@@ -38,16 +38,15 @@ The initial version is comprised of components that have been previously fabrica
 We expect the new component submissions to follow a verification flow:
 
 (i) Community member submits a new design file, either an original file made publicly available by the user, or a modification to an already-existing component within the Community repository.
-(ii) The submission will be reviewed by the Cornerstone team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
-(iii) The pre-approved submission will be cross-referenced with the already-existing, NDA-gated libraries to confirm no IP infringement has taken place.
-(iv) A pre-release without functionality confirmation will be made available in the repository for the use of the Community as an alpha version.
-(v) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
-(vi) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
-(vii) Components whose functionalities couldn't be verified will be sent back to the contributor alongside experimental data and feedback.
+(ii) The submission will be reviewed by the CORNERSTONE team for compliancy with the licensing and export policies. If the submission is rejected, a detailed feedback will be provided to the contributor.
+(iii) If the designs are accepted, they will be will be made available in the repository for the use of the Community as an alpha version, without experimental verification.
+(iv) A test batch will be fabricated alongside confirmed components for characterisation of the new submission.
+(v) Provided the functionality of the components is confirmed, it will be incorporated into the stable version of the Community.
+(vi) Components whose functionalities couldn't be verified will be sent back to the contributor alongside experimental data and feedback.
 
 License
 ~~~~~~~
-The Cornerstone Community repository is licensed with `TAPR Open Hardware License <https://tapr.org/the-tapr-open-hardware-license/>`_
+The CORNERSTONE Community repository is licensed with `TAPR Open Hardware License <https://tapr.org/the-tapr-open-hardware-license/>`_
 
 Contact
 ~~~~~~~~
