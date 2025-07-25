@@ -1,0 +1,277 @@
+name: SiN300nm_1550nm_EduKit
+component_type: PackagingTemplate
+modes:
+- mode_numbers:
+  - 0
+  - 0
+  polarisation: TE
+  wavelength: 1550
+ports:
+- name: w_vertical_te1
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 952.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te2
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 825.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te3
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 698.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te4
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 571.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te5
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 444.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te6
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 317.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te7
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 190.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te8
+  port_type: vertical_te
+  center:
+  - -977.98
+  - 63.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te9
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -63.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te10
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -190.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te11
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -317.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te12
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -444.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te13
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -571.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te14
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -698.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te15
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -825.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+- name: w_vertical_te16
+  port_type: vertical_te
+  center:
+  - -977.98
+  - -952.5
+  orientation: 180
+  width: 10
+  coupling_angle_cladding: 13.659
+  fibre_modes:
+  - fibre_type: SMF-28
+    wavelength: 1550
+
+- name: n_e1
+  port_type: electrical_dc
+  center:
+  - -675.00000
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e2
+  port_type: electrical_dc
+  center:
+  - -525.00000
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e3
+  port_type: electrical_dc
+  center:
+  - -375
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e4
+  port_type: electrical_dc
+  center:
+  - -225
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e5
+  port_type: electrical_dc
+  center:
+  - -75
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e6
+  port_type: electrical_dc
+  center:
+  - 75
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e7
+  port_type: electrical_dc
+  center:
+  - 225
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e8
+  port_type: electrical_dc
+  center:
+  - 375
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e9
+  port_type: electrical_dc
+  center:
+  - 525
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+- name: n_e10
+  port_type: electrical_dc
+  center:
+  - 675
+  - 1250.00000
+  orientation: 90
+  cross_section: dc
+ancestors:
+- name: SiN300nm_1550nm_EduKit_DelayLine
+  commit: ReferenceWithinCommit
+- name: SiN300nm_1550nm_EduKit_GratingCoupler
+  commit: ReferenceWithinCommit
+- name: SiN300nm_1550nm_TE_STRIP_Crossing
+  commit: 872839ed66e5b4b024aa70d65cd2f714ac62f273
+- name: SiN300nm_1550nm_TE_STRIP_2x1_MMI
+  commit: 872839ed66e5b4b024aa70d65cd2f714ac62f273
+- name: SiN300nm_1550nm_TE_STRIP_2x2_MMI
+  commit: 872839ed66e5b4b024aa70d65cd2f714ac62f273
+- name: Heater
+  commit: 872839ed66e5b4b024aa70d65cd2f714ac62f273
+  
+authors:
+- name: Dr Shengqi Yin
+  organisation: Cornerstone / ORC
+  email: Shengqi.Yin@soton.ac.uk
+- name: Dr Francesco Floris
+  organisation: University of Pavia
+  email: francesco.floris@unipv.it
