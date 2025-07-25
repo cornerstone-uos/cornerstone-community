@@ -1,5 +1,11 @@
 name: SiN300nm_1550nm_EduKit_GratingCoupler
 component_type: GratingCoupler1D
+modes:
+- mode_numbers:
+  - 0
+  - 0
+  polarisation: TE
+  wavelength: 1550
 ports:
   - center:
     - 0.0
@@ -8,13 +14,6 @@ ports:
     orientation: 180
     port_type: optical
     cross_section: strip_1550nm
-    modes:
-    - mode_numbers:
-      - 0
-      - 0
-      polarisation: TE
-      wavelength: 1550
-
   - center:
     - 38.762
     - 0
@@ -26,4 +25,11 @@ ports:
     fibre_modes:
     - fibre_type: SMF-28
       wavelength: 1550
+authors:
+- name: Dr Shengqi Yin
+  organisation: Cornerstone / ORC
+  email: Shengqi.Yin@soton.ac.uk
+- name: Dr Francesco Floris
+  organisation: University of Pavia
+  email: francesco.floris@unipv.it
 
