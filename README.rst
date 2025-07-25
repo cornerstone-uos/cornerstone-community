@@ -16,9 +16,9 @@ Create an environment where community members can:
 * Hold discussions over improvements on the designs, or alternative methodologies
 * Form a library of elements that have accessible metadata for easy integration into custom codes.
 
-To start contributing, fork the repository. This will give you access to all of the Community PDK folders. You can populate your repository without submitting a pull request  Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
+To start contributing, fork the repository (see the guidance on forks & pull requests through an exemplary submission `here <./docs/examples/Ex3_Fork-PR-into-CSComm.rst>`_). This will give you access to all of the Community PDK folders. You can populate your repository without submitting a pull request. Instructions below are suitable for submission to a single platform. For multi-platform submissions, cycle through the instructions for each platform.
 
-We aim to incorporate the Community repository into the Wavephotonics (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Community Members to adhere to the WP metafile format, which are outlined in the  `formatting guidelines <./docs/FormattingGuidelines.rst>`_. Please also see `Examples <./docs/examples>`_.
+We aim to incorporate the Community repository into the Wavephotonics (WP) PDK Portal. WP has provided guidelines and tests for validation of the components and supporting metafiles. It is expected from the Community Members to adhere to the WP metafile format, which are outlined in the  `formatting guidelines <./docs/FormattingGuidelines.rst>`_. Please also see `Examples <./docs/examples>`_ for commentary on the WP YAML fields.
 
 Submission format
 ~~~~~~~~~~~~~~~~~~
