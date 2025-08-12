@@ -27,7 +27,7 @@ First, we start by defining `strip_1310nm_TE`, a strip waveguide cross-section d
     wavelength: 1310
 ```
 
-`xs_type` needs to be chosen from the [allowed list of cross sections](../wp_format/cross_sections_list.rst). We define the total width of the cross-section `width`, the materials and minimum bend radius. The `layers` field involves the geometries (position and width) of the layers that constitute the cross-section. For this strip cross-section, we only have GDS Layer 3/0 (the `layer` entry), 0.4 microns long (`width: 0.4`), sitting at the centre of the cross section (`offset: 0`).
+`xs_type` needs to be chosen from the [allowed list of cross sections](../wp_format/cross_sections_list.md). We define the total width of the cross-section `width`, the materials and minimum bend radius. The `layers` field involves the geometries (position and width) of the layers that constitute the cross-section. For this strip cross-section, we only have GDS Layer 3/0 (the `layer` entry), 0.4 microns long (`width: 0.4`), sitting at the centre of the cross section (`offset: 0`).
 
 We move on to define `modes`, this will include all the modes that this cross-section supports. A certain cross-section will be able to support across a broad wavelength regime, of course, but we are only interested in the wavelengths that are interesting to simulate (extract the s-parameters for). Usually this boils down to a short spectral range around the design wavelengths of the component set, here the o-band. This cross-section supports a TE and TM mode at 1310nm, hence we define two mode entries for TE_00 and TM_00 at 1310nm.
 
