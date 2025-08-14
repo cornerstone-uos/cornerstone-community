@@ -18,7 +18,7 @@ myst_enable_extensions = [
     "deflist",
 ]
 
-#templates_path = ['_templates']
+templates_path = ['docs/_templates']
 exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
@@ -31,4 +31,10 @@ html_theme_options = {
     "use_edit_page_button": True,
 }
 
-html_static_path = ['_static']
+html_static_path = ['docs/_static']
+html_css_files = ['custom.css']
+
+source_suffix = {
+    '.md': 'markdown',
+}
+
