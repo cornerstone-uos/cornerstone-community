@@ -31,6 +31,15 @@ html_theme_options = {
     "use_edit_page_button": True,
 }
 
+html_sidebars = {
+    "**": [
+        "localtoc.html",
+        "relations.html",
+        "sourcelink.html",
+        "searchbox.html",
+    ]
+}
+
 html_static_path = ['docs/_static']
 html_css_files = ['custom.css']
 
