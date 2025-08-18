@@ -41,7 +41,7 @@ has_a_no_metals_option: true
 Leaving aside the self-explanatory fields, we have:
 
 - **process_name**: Name of the process platform, must be identical to the name of the containing folder
-- **material**: Material platform used within the process, must be listed within the [list of allowed material platforms](./wp_format/materials_list.md)
+- **material**: Material platform used within the process, must be listed within the [list of allowed material platforms](./references/materials_list.md)
 - **gds_type**: Describes type of components supplied (black-boxed, full component, black-boxed with real component swap at tapeout). CORNERSTONE will always use `only_real_gds`.
 - **includes_heaters**, **includes_rf_layers**: Logical fields for the existence of heaters and RF layers within the platform.
 - **has_a_no_metals_option**: Logical field that specifies if the platform is offered without heater/metal layer for a reduced price. See [Access Charges](https://www.cornerstone.sotonfab.co.uk/mpw-schedule-costs/).
@@ -176,5 +176,5 @@ cross-section of the supported waveguides of the platform, and
 `CHANGELOG.md` to keep track of the cumulative changes between
 consecutive stable release versions of the platforms.
 
-<img src="./_static/_images/Si_220nm_active/layerstack.png" class="align-center"
+<img src="./_static/Si_220nm_active/layerstack.png" class="align-center"
 width="600" alt="image" />

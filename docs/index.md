@@ -1,6 +1,6 @@
 # CORNERSTONE Community Repository
 
-<img src="./_static/_images/CORNERSTONE_Logo.png" class="align-center"
+<img src="./_static/CORNERSTONE_Logo.png" class="align-center"
 width="600" alt="image" />
 
 Welcome to CORNERSTONE Community repository!
@@ -16,17 +16,7 @@ Create an environment where community members can:
 - Form a library of elements that have accessible metadata for easy
   integration into custom codes.
 
-## Repository content
-
-The initial repository content was created from the core CORNERSTONE PDK portfolio, arranged and modified to accommodate the library export undertaken by Wavephotonics. 
-
-The repository consists of folders for each PDK platform (e.g. ```Si_220nm_active```), containing the GDS files for the individual cells alongside supplementary files (`*.yaml`,`*.lydrc`,`*.csv`,`*.lyp`). 
-
-
-
-## Contributing
-
-To start contributing, fork the repository.  (see the guidance on forks &
+To start contributing, fork the repository (see the guidance on forks &
 pull requests through an exemplary submission
 [here](./examples/Ex3_Fork-PR-into-CSComm.md)). This will give you
 access to all of the Community PDK folders. You can populate your
