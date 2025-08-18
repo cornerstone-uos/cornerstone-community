@@ -1,6 +1,6 @@
 # CORNERSTONE Community Repository
 
-<img src="./docs/static/CORNERSTONE_Logo.png" class="align-center"
+<img src="./_static/_images/CORNERSTONE_Logo.png" class="align-center"
 width="600" alt="image" />
 
 Welcome to CORNERSTONE Community repository!
@@ -16,9 +16,19 @@ Create an environment where community members can:
 - Form a library of elements that have accessible metadata for easy
   integration into custom codes.
 
-To start contributing, fork the repository (see the guidance on forks &
+## Repository content
+
+The initial repository content was created from the core CORNERSTONE PDK portfolio, arranged and modified to accommodate the library export undertaken by Wavephotonics. 
+
+The repository consists of folders for each PDK platform (e.g. ```Si_220nm_active```), containing the GDS files for the individual cells alongside supplementary files (`*.yaml`,`*.lydrc`,`*.csv`,`*.lyp`). 
+
+
+
+## Contributing
+
+To start contributing, fork the repository.  (see the guidance on forks &
 pull requests through an exemplary submission
-[here](./docs/examples/Ex3_Fork-PR-into-CSComm.md)). This will give you
+[here](./examples/Ex3_Fork-PR-into-CSComm.md)). This will give you
 access to all of the Community PDK folders. You can populate your
 repository without submitting a pull request. Instructions below are
 suitable for submission to a single platform. For multi-platform
@@ -29,8 +39,8 @@ We aim to incorporate the Community repository into the Wavephotonics
 the components and supporting metafiles. It is expected from the
 Community Members to adhere to the WP metafile format, which are
 outlined in the [formatting
-guidelines](./docs/FormattingGuidelines.md). Please also see
-[Examples](./docs/examples) for commentary on the WP YAML fields.
+guidelines](./FormattingGuidelines.md). Please also see
+[Examples](./examples) for commentary on the WP YAML fields.
 
 ## Submission format
 
@@ -39,7 +49,7 @@ guidelines](./docs/FormattingGuidelines.md). Please also see
     folder of the platform folder.
 2.  Create a YAML file for each component. You can base the component
     YAML on the existing YAMLs of similar components ([see
-    examples](./docs/examples)) . If a new port cross-section is needed
+    examples](./examples)) . If a new port cross-section is needed
     in the YAML, put a placeholder for the new port for now.
 3.  Create the GDS file for the new cross section in `cross-sections`
     folder. The GDS file will contain a structure 50um long in x-axis,

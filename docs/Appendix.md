@@ -176,5 +176,5 @@ cross-section of the supported waveguides of the platform, and
 `CHANGELOG.md` to keep track of the cumulative changes between
 consecutive stable release versions of the platforms.
 
-<img src="../Si_220nm_active/layerstack.png" class="align-center"
+<img src="./_static/_images/Si_220nm_active/layerstack.png" class="align-center"
 width="600" alt="image" />
