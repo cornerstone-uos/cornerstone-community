@@ -1,6 +1,6 @@
 # CORNERSTONE Community Repository
 
-<img src="../../_static/CORNERSTONE_Logo.png" class="align-center"
+<img src="_static/CORNERSTONE_Logo.png" class="align-center"
 width="600" alt="image" />
 
 Welcome to CORNERSTONE Community repository!
