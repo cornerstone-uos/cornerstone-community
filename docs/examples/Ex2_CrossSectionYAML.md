@@ -1,3 +1,5 @@
+# Wavephonotics YAMLs: cross-section
+
 Below is the breakdown of an exemplary YAML file for cross-section definition, for `Si_220nm_active` platform in this case. The original file can be found [here](../../Si_220nm_active/cross-sections/cross_sections.yaml). The described cross-sections also exist as GDS files with identical names within the same folder (see [cross-sections](../../Si_220nm_active/cross-sections/) folder).
 
 First, we start by defining `strip_1310nm_TE`, a strip waveguide cross-section designed to work for TE mode at 1310nm.

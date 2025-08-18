@@ -1,6 +1,6 @@
 # CORNERSTONE Community Repository
 
-<img src="![_static/CORNERSTONE_Logo.png](https://github.com/cornerstone-uos/cornerstone-community/blob/main/docs/static/CORNERSTONE_Logo.png)" class="align-center"
+<img src="https://github.com/cornerstone-uos/cornerstone-community/blob/main/docs/_static/CORNERSTONE_Logo.png)" class="align-center"
 width="600" alt="image" />
 
 
@@ -92,3 +92,35 @@ Hardware License](https://tapr.org/the-tapr-open-hardware-license/)
 [Contact us](mailto:pdk.cornerstone@soton.ac.uk) for questions related
 to the your Community submissions, Community repository contents - or
 any other issues related to the Community repository.
+
+```{toctree}
+:maxdepth: 1
+:caption: Formatting Guidelines
+
+FormattingGuidelines.md
+
+```{toctree}
+:maxdepth: 1
+:caption: Examples
+
+examples/Ex0_YAMLFormat.md
+examples/Ex1_ComponentYAML.md
+examples/Ex2_CrossSectionYAML
+examples/Ex3_Fork-PR-into-CSComm.md
+
+```{toctree}
+:maxdepth: 1
+:caption: Extras
+
+examples/Additional_YAML_Fields.md
+Appendix.md
+
+```{toctree}
+:maxdepth: 1
+:caption: References
+
+references/components_list.md
+references/cross_sections_list.md
+references/ports_list.md
+references/fibres_list.md
+references/materials_list.md

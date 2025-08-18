@@ -1,3 +1,5 @@
+# Wavephotonics YAMLs: component
+
 Below is the breakdown of an exemplary YAML file for a component, a 1x2 MMI, which has one input and two output ports, all optical. The original component file can be found [here](../../Si_220nm_active/components/SOI220nm_1310nm_TE_RIB_2x1_MMI.yaml)
 
 <img src="./_static/SOI220nm_1310nm_TE_RIB_2x1MMI.png" class="align-center" width="600" alt="image" />
