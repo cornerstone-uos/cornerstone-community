@@ -33,7 +33,7 @@ We move on to define `modes`, this will include all the modes that this cross-se
 
 Moving on to a rib cross-section, we have:
 
-<img src="../_static/rib_1310nm_TE.png" class="align-center" width="600" alt="image" />
+<img src="./_static/rib_1310nm_TE.png" class="align-center" width="600" alt="image" />
 
 ``` yaml
 - name: rib_1310nm_TE
@@ -140,7 +140,7 @@ We then define the electrical contacts for the heaters (see [Heater](../../Si_22
 
 Lastly, we define the modulator connections, which are expected to support the modulator for 28 Gb/s operation - hence deeply in the RF regime. RF contact are usually defined together to allow for custom routing options that preserve path differences. We use `xs_type: png` because the port has a `positive - negative - ground` geometry. We also define the three contact regions under the cross-section through setting different offsets - (see [SOI220nm_1310nm_TE_MZI_Modulator](../../Si_220nm_active/components/SOI220nm_1310nm_TE_MZI_Modulator.gds))
 
-<img src="../_static/modulator_tri.png" class="align-center" width="600" alt="image" />
+<img src="./_static/modulator_tri.png" class="align-center" width="600" alt="image" />
 
 ``` yaml
 - name: modulator_tri
