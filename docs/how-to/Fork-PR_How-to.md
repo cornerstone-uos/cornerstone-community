@@ -1,4 +1,4 @@
-# Guide on forking and submitting a pull request to CORNERSTONE Community Repository
+# How-to guide on forking and submitting a pull request to CORNERSTONE Community Repository
 
 Here, we have a visual guide on the submission process flow within CORNERSTONE Community Repository over the web interface of GitHub.
 

@@ -95,32 +95,9 @@ any other issues related to the Community repository.
 
 ```{toctree}
 :maxdepth: 1
-:caption: Formatting Guidelines
+:caption: Overview
 
-FormattingGuidelines.md
-
-```{toctree}
-:maxdepth: 1
-:caption: Examples
-
-examples/Ex0_YAMLFormat.md
+guidelines/index.md
+how-to/Fork-PR_How-to.md
 examples/Ex1_ComponentYAML.md
-examples/Ex2_CrossSectionYAML
-examples/Ex3_Fork-PR-into-CSComm.md
 
-```{toctree}
-:maxdepth: 1
-:caption: Extras
-
-examples/Additional_YAML_Fields.md
-Appendix.md
-
-```{toctree}
-:maxdepth: 1
-:caption: References
-
-references/components_list.md
-references/cross_sections_list.md
-references/ports_list.md
-references/fibres_list.md
-references/materials_list.md
