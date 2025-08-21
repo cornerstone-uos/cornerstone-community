@@ -11,14 +11,22 @@ release = '0.1.0'
 # -- General configuration ---------------------------------------------------
 extensions = [
     'myst_parser',
+    'sphinx_design',
+
 ]
 
 myst_enable_extensions = [
     "colon_fence",
     "deflist",
+    "html_admonition",
+    "html_image",
+    "linkify",
+    "substitution",
+    "tasklist",
 ]
 
-templates_path = ['docs/_templates']
+
+templates_path = ['_templates']
 exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
@@ -33,10 +41,12 @@ html_theme_options = {
 
 master_doc = 'index'
 
-html_static_path = ['docs/_static']
+html_static_path = ['_static']
 html_css_files = ['custom.css']
 
 source_suffix = {
     '.md': 'markdown',
 }
+
+
 

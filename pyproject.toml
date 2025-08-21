@@ -14,6 +14,8 @@ docs = [
     "sphinx>=8.2.3",
     "myst-parser>=4.0.1",
     "sphinx-book-theme>=1.1.4",
+    "linkify-it-py>=2.0.3",
+    "sphinx-design",
 ]
 validator = [
     "pdk-data-verifier>=0.6.3",

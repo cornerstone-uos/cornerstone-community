@@ -10,3 +10,5 @@ Here you can find information regarding the YAML files used for Wavephotonics in
 ../examples/Ex1_ComponentYAML.md
 ../examples/Ex2_CrossSectionYAML.md
 ../examples/Additional_YAML_Fields.md
+../references/index.md
+```

@@ -1,8 +1,8 @@
 # Appendix
 
 Besides the files that are included in the [formatting
-guidelines](./FormattingGuidelines.md) accompanying the [submission
-flow](../README.md#submission-format), the PDK folders also contains
+guidelines](./guidelines/FormattingGuidelines.md) accompanying the [submission
+flow](./readme.md#submission-format), the PDK folders also contains
 the files below for the Wavephotonics (WP) validator to function:
 
 - `process_overview.yaml`
@@ -176,5 +176,5 @@ cross-section of the supported waveguides of the platform, and
 `CHANGELOG.md` to keep track of the cumulative changes between
 consecutive stable release versions of the platforms.
 
-<img src="./_static/Si_220nm_active/layerstack.png" class="align-center"
+<img src="../Si_220nm_active/layerstack.png" class="align-center"
 width="600" alt="image" />

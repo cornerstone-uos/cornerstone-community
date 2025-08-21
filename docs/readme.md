@@ -32,8 +32,10 @@ the components and supporting metafiles. It is expected from the
 Community Members to adhere to the WP metafile format, which are
 outlined in the [formatting
 guidelines](./guidelines/FormattingGuidelines.md). Please also see
-[Examples](./examples) for commentary on the WP YAML fields.
+[Examples](./examples/index.md) for commentary on the WP YAML fields.
 
+
+(submission-format)=
 ## Submission format
 
 1.  Place the new GDS files for your components, with naming convention
@@ -41,7 +43,7 @@ guidelines](./guidelines/FormattingGuidelines.md). Please also see
     folder of the platform folder.
 2.  Create a YAML file for each component. You can base the component
     YAML on the existing YAMLs of similar components ([see
-    examples](./examples)) . If a new port cross-section is needed
+    examples](./examples/index.md)) . If a new port cross-section is needed
     in the YAML, put a placeholder for the new port for now.
 3.  Create the GDS file for the new cross section in `cross-sections`
     folder. The GDS file will contain a structure 50um long in x-axis,

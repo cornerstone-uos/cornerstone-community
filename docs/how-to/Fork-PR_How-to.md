@@ -20,7 +20,7 @@ For this example submission, we are going to add an educational template kit bui
 
 <img src="../_static/SiN300nm_1550nm_EduKit.png" class="align-center" width="600" alt="image" />
 
-In line with the [formatting guidelines](../FormattingGuidelines.md), we include the author and ancestry information in the template file, and the author information in the standalone cells. For the referenced cells in the original repository, we provide the hash key of the latest original repository commit that contains the referenced files in the exact shape. The hash key (`872839ed66e5b4b024aa70d65cd2f714ac62f273` in this case) can be copied by accessing the list of commits (visible in the first image, just below `Create a new fork`) in the original repository and copying from the corresponding entry:
+In line with the [formatting guidelines](../guidelines/FormattingGuidelines.md), we include the author and ancestry information in the template file, and the author information in the standalone cells. For the referenced cells in the original repository, we provide the hash key of the latest original repository commit that contains the referenced files in the exact shape. The hash key (`872839ed66e5b4b024aa70d65cd2f714ac62f273` in this case) can be copied by accessing the list of commits (visible in the first image, just below `Create a new fork`) in the original repository and copying from the corresponding entry:
 
 <img src="../_static/VersionHash.png" class="align-center" width="900" alt="image" />
 

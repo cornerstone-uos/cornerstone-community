@@ -1,4 +1,7 @@
-
+---
+title: CORNERSTONE Community
+---
+# CORNERSTONE-Community
 ::::{grid} 2
 :reverse:
 
@@ -15,16 +18,20 @@
 :class: sd-fs-3
 Open-source, license-free silicon photonics prototyping foundry, supplemented by community contributions
 
-## Getting started
+:::
 
 ::::
+
+
+## Getting started
+
 
 ::::{grid} 1 1 2 3
 :class-container: text-center
 :gutter: 3
 
 :::{grid-item-card}
-:link: how-to/Fork-PR_How-to.md
+:link: how-to/Fork-PR_How-to
 :link-type: doc
 :class-header: bg-light
 
@@ -47,7 +54,7 @@ View our components and test results
 :::
 
 :::{grid-item-card}
-:link: guidelines/index.md
+:link: guidelines/index
 :link-type: doc
 :class-header: bg-light
 
@@ -57,6 +64,8 @@ Guidelines
 View the contribution guidelines
 
 :::
+
+::::
 
 The documentation is organised into how-to guides, component reference and repository information.
 - **How-to guides** demonstrate contribution workflows and metadata preparation
@@ -83,3 +92,4 @@ any other issues related to the Community repository.
 how-to/index.md
 comp_ref/index.md
 rep_ref/index.md
+```
