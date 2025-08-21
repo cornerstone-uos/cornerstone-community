@@ -31,7 +31,7 @@ html_theme_options = {
     "use_edit_page_button": True,
 }
 
-master_doc = 'intro'
+master_doc = 'index.md'
 
 html_static_path = ['docs/_static']
 html_css_files = ['custom.css']
