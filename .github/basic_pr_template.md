@@ -1,4 +1,4 @@
-## Description
+## Pull request template - Basic
 
 Please include a list of changed components, changed cross-sections, new components and new cross-sections.
 
@@ -8,19 +8,17 @@ Please include a list of changed components, changed cross-sections, new compone
 
 Please delete options that are not relevant.
 
-- [ ] Bug fix
-- [ ] New component/cross-section 
-- [ ] Modified component/cross-section 
-- [ ] Documentation update 
-- [ ] New feature 
+- [ ] New component
+- [ ] Modified component
 - [ ] Other (please describe):
+
+If the submitted designs operate with a specific mode or involves a different cross-section than the existing ones, please provide additional details here.
 
 ## User verification
 
 Please specify if you have passed  
 
 - [ ] Platform-specific DRC scripts
-- [ ] (Optional) WP Validator
 
 ## Screenshots (if applicable)
 
