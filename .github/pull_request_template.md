@@ -1,5 +1,10 @@
 ## Pull request template - Basic
 
+**If you are submitting an Advanced pull request or a PR for documentation update, please go to `Preview` tab and select the respective template:**
+* [Advanced PR](?expand=1&template=advanced_pr_template.md)
+* [Documentation PR](?expand=1&template=docs_pr_template.md)
+
+
 Please include a list of changed components, changed cross-sections, new components and new cross-sections.
 
 (Optional) If you are submitting in response to an issue, please specify the issue number in the comments.

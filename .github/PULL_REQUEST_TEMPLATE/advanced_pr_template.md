@@ -1,4 +1,4 @@
-## APull request template - Advanced submission
+## Pull request template - Advanced submission
 
 Please include a list of changed components, changed cross-sections, new components and new cross-sections.
 
