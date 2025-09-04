@@ -1,0 +1,15 @@
+name: Assign Reviewers
+on:
+  pull_request:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hkusu/review-assign-action@v1
+        with:
+          reviewers: "@hby1r25"
+          max-num-of-reviewers: 2
