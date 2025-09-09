@@ -31,7 +31,7 @@ Open-source, license-free silicon photonics prototyping foundry, supplemented by
 :gutter: 3
 
 :::{grid-item-card}
-:link: how-to/Fork-PR_How-to
+:link: how-to/index
 :link-type: doc
 :class-header: bg-light
 
@@ -49,7 +49,7 @@ Fork the repository in GitHub
 PDK library
 ^^^
 
-View our components and test results
+(Coming soon) View the components and test results
 
 :::
 

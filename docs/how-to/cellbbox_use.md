@@ -1,4 +1,4 @@
-# How to use "cell_bbox" macro in KLayout?
+# Cell bounding box macro
 
 This macro is useful in instances where the centre-off-mass for multiple selected polygons are to be found (e.g. for gratings).
 

@@ -10,18 +10,16 @@ By contributing to and benefiting from the contents of CORNERSTONE Community rep
 
 We accept contributions in two tiers:
 
-- **Basic submission**: Submissions that aim to populate the repository with ready-to-use, purpose-built templates that involve .GDS files, with little to no circuit-level metadata information.
-- **Advanced submission**: Submissions that aim to provide building blocks and intermediary components that can be used within other building blocks. Circuit-level information regarding the ports and modes are mandatory.
+- **Basic**: Submissions that aim to populate the repository with ready-to-use, purpose-built templates that involve .GDS files, with little to no circuit-level metadata information.
+- **Advanced**: Submissions that aim to provide building blocks and intermediary components that can be used within other building blocks. Circuit-level information regarding the ports and modes are mandatory.
 
 For both submission types, we encourage the inclusion of simulation and experimental data, either in a raw or post-processed data format, or as a DOI link to an open-access publication that holds such information.
-
-For a detailed formatting guideline, please see the [Formatting Guidelines](./FormattingGuidelines.md)
 
 ## Submission guidelines
 
 CORNERSTONE Community repository is based on GitHub and we accept submissions through forks and pull requests. If you are new to the forks and to GitHub in general, we provide a visual how-to-guide on forking the repository and submitting a pull request through GitHub Web interface:
 
-[How to fork and submit a pull request](../how-to/Fork-PR_How-to.md)
+[How to fork and submit a pull request](../how-to/index.md)
 
 For an extended documentation, please visit the [section on pull requests](https://docs.github.com/en/pull-requests) on GitHub Docs.
 
@@ -29,6 +27,6 @@ For an extended documentation, please visit the [section on pull requests](https
 :maxdepth: 1
 :caption: Guidelines
 
-FormattingGuidelines.md
-../how-to/Fork-PR_How-to.md
+Guidelines_Basic.md
+Guidelines_Advanced.md
 ```

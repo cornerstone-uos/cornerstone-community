@@ -32,5 +32,5 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools.packages.find]
-exclude = ["SiN_300nm", "Si_220nm_active", "docs"]
+exclude = ["SiN_300nm", "Si_220nm_active", "docs", "Off_the_shelf_designs"]
 

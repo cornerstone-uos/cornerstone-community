@@ -20,7 +20,7 @@ Create an environment where community members can:
 
 To start contributing, fork the repository (see the guidance on forks &
 pull requests through an exemplary submission
-[here](./how-to/Fork-PR_How-to.md). This will give you
+[here](./how-to/index.md). This will give you
 access to all of the Community PDK folders. You can populate your
 repository without submitting a pull request. Instructions below are
 suitable for submission to a single platform. For multi-platform
@@ -31,7 +31,7 @@ We aim to incorporate the Community repository into the Wavephotonics
 the components and supporting metafiles. It is expected from the
 Community Members to adhere to the WP metafile format, which are
 outlined in the [formatting
-guidelines](./guidelines/FormattingGuidelines.md). Please also see
+guidelines](./guidelines/index.md). Please also see
 [Examples](./examples/index.md) for commentary on the WP YAML fields.
 
 
@@ -100,6 +100,6 @@ any other issues related to the Community repository.
 :caption: Overview
 
 guidelines/index.md
-how-to/Fork-PR_How-to.md
-examples/Ex1_ComponentYAML.md
+how-to/index.md
+examples/index.md
 

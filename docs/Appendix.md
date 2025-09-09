@@ -1,7 +1,7 @@
 # Appendix
 
 Besides the files that are included in the [formatting
-guidelines](./guidelines/FormattingGuidelines.md) accompanying the [submission
+guidelines](./guidelines/index.md) accompanying the [submission
 flow](./readme.md#submission-format), the PDK folders also contains
 the files below for the Wavephotonics (WP) validator to function:
 

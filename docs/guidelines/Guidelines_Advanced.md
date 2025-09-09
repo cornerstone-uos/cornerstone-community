@@ -1,14 +1,13 @@
-# Formatting guidelines for the GDS files and metafiles
+# Formatting guidelines: advanced
+
+**Tip**: If you aim to submit an off-the-shelf design, use the [basic submission route](../guidelines/Guidelines_Basic.md) instead.
 
 Cornerstone collaborates with [Wavephotonics](https://wavephotonics.com)
 to export its PDKs to EDA tools. We use the building block verification
 tools created by Wavephotonics, and require some of the metafiles from
-the Community Members as part of the submission process. Multiple
-metafile format exists within the infividual PDK folders, which are
+the Community Members as part of the advanced submission process. Multiple
+metafile format exists within the individual PDK folders, which are
 explained below and with provided examples.
-
-## Formatting guidelines for the submission files
-
 A minimal submission would include a component GDS file for an
 individual component, and a YAML metafile accompanying it for the
 component description. These component files would need to be placed
@@ -34,15 +33,16 @@ Fields](../examples/Additional_YAML_Fields.md). These fields include a
 the Component is based on, and `author` information for communication
 and design credits.
 
-Aside from these, the Community Members do not need to include any other
-files in their submission. However, the inclusigon of numerical and
-experimental data regarding the functionality of the components are
-encouraged. This can also be made through [contacting
-us](mailto:pdk.cornerstone@soton.ac.uk) about the Submission.
-
 The submitted components must obey to the fabrication process detailed
 within the Design Guidelines for the specific platform. These details
 can also be found within the metafiles inside the platform folder,
 especially in `process_overview.yaml`, `drc_rules.lydrc`,
 `materials\*.csv`, `floorplans\floorplans.yaml`. The explanation of
 these metafiles can be found in [Appendix](../Appendix.md).
+
+Aside from these, the Community Members do not need to include any other
+files in the basic submission. However, the inclusion of numerical and
+experimental data regarding the functionality of the components are
+encouraged. Relevant files and information can be provided while submitting a pull request, or by [contacting
+us](mailto:pdk.cornerstone@soton.ac.uk) about the submission.
+

@@ -1,4 +1,4 @@
-# How to prepare the YAML for a component GDS?
+# Advanced submission: Preparing the component YAML
 
 Below is a step-by-step guide for preparing the YAML file for a component.
 
@@ -145,7 +145,7 @@ Notice the differences in ```vertical_te``` port definitions:
 - A coupling angle is defined for the cladding. As this component is expected to couple light to a 10°-inclined fibre over a silicon dioxide cladding (n ~ 1.448), the coupling angle is now defined as ```arcsin(sin(10°)/1.448)=6.886°``` 
 - Instead of ```modes```, we have ```fibre_modes```, which contains ```fibre_type``` and ```wavelength``` as sub-fields (see [fibre types](../references/fibres_list.md))
 
-Regarding the centre position of a grating coupler, we usually define as the centre of mass for the gratings. This can be calculated automatically during cell generation, or can be found using the cell bounding box macro in KLayout. For details on setting up this macro and its use, please see [Cell bounding box macro](../cellbbox_use.md)
+Regarding the centre position of a grating coupler, we usually define as the centre of mass for the gratings. This can be calculated automatically during cell generation, or can be found using the cell bounding box macro in KLayout. For details on setting up this macro and its use, please see [Cell bounding box macro](./cellbbox_use.md)
 
 ## Derived component example
 
@@ -160,9 +160,9 @@ ancestors:
   modifications: Any sort of modifications
 - name: Ancestor_Component_Just_Included
   commit: ReferenceWithinCommit
-authors:
+authors: #is Optional
 - name: Name Surname or Alias
-  organisation: Organisation Formal Name, is Optional
+  organisation: Organisation Formal Name, 
   email: Contributor Email
 ```
 
@@ -224,19 +224,19 @@ ports:
 ancestors:
 - name: SOI220nm_1550nm_TE_IsolatedDetector
   commit: ReferenceWithinCommit
-  modification: none
+  modification: 
 - name: SOI220nm_1550nm_TE_RIB_Grating_Coupler
   commit: ReferenceWithinCommit
-  modification: none
+  modification: 
 authors:
 - name: H Bilge Yagci
   organisation: Cornerstone / ORC
   email: hby1r25@soton.ac.uk
 ```
 
-Here, we see that the `SOI220nm_1550nm_TE_Defect_Detector` is built on `SOI220nm_1550nm_TE_IsolatedDetector` and `SOI220nm_1550nm_TE_RIB_Grating_Coupler`. As these ancestors are submitted within the same commit as `SOI220nm_1550nm_TE_Defect_Detector`, the `commit` field for both ancestors were set to `ReferenceWithinCommit`. The ancestors were incorporated directly without modification, hence the `modification` fields are set to `none` (alternatively these can be removed, as queries for `modification` field will return `None`)
+Here, we see that the `SOI220nm_1550nm_TE_Defect_Detector` is built on `SOI220nm_1550nm_TE_IsolatedDetector` and `SOI220nm_1550nm_TE_RIB_Grating_Coupler`. As these ancestors are submitted within the same commit as `SOI220nm_1550nm_TE_Defect_Detector`, the `commit` field for both ancestors were set to `ReferenceWithinCommit`. The ancestors were incorporated directly without modification, hence the `modification` fields are left empty. Alternatively these can be removed, as queries for `modification` field in the parser will return `None`.
 
-We require the inclusion of the ancestor information and author information as it is dictated by our license. By tracking the ancestors across commits, we satisfy the Contributor responsibility to provide before/after versions of the "documentation" files (GDS and metafiles), as well as the modification changes.
+We require the inclusion of the ancestor information as it is dictated by our license. By tracking the ancestors across commits, we satisfy the Contributor responsibility to provide before/after versions of the "documentation" files (GDS and metafiles), as well as the modification changes. The author information is for user association and bragging rights, and hence is optional. We will associate the file to the contributing user through the GitHub account in case this field is omitted.
 
 
 
