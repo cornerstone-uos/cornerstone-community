@@ -1,4 +1,4 @@
-# Cell bounding box macro
+# Advanced submision: Cell bounding box macro
 
 This macro is useful in instances where the centre-off-mass for multiple selected polygons are to be found (e.g. for gratings).
 
