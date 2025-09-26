@@ -24,8 +24,8 @@ repository without submitting a pull request. Instructions below are
 suitable for submission to a single platform. For multi-platform
 submissions, cycle through the instructions for each platform.
 
-We aim to incorporate the Community repository into the Wavephotonics
-(WP) PDK Portal. WP has provided guidelines and tests for validation of
+We aim to incorporate the Community repository into the Wave Photonics
+(WP) PDK Management Platfrom. WP has provided guidelines and tests for validation of
 the components and supporting metafiles. It is expected from the
 Community Members to adhere to the WP metafile format, which are
 outlined in the [formatting
