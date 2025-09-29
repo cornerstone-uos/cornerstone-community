@@ -25,6 +25,12 @@ Please specify if you have passed
 
 - [ ] Platform-specific DRC scripts
 
+## Relevant publication
+
+If your contributions are used in or described within a publication, please attach the DOI of the publication here. 
+
+Alternatively, you can attach related data directly as a comment to the request after submitting the pull request.
+
 ## Screenshots (if applicable)
 
 You can include any relevant screenshots or recordings here.
