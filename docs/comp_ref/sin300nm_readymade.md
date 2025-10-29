@@ -1,0 +1,7 @@
+# SiN 300nm - Ready-made
+
+| FileName                                      | SHA256Hash                                                              | Contributor               | Organisation               | Version | LastEdited                  |
+|-----------------------------------------------|-------------------------------------------------------------------------|---------------------------|----------------------------|---------|-----------------------------|
+| SiN300nmEduKit+TyndallPackaging.gds           | 9F809D5DB1D8C1C67D0CFDF882F3D0978B459033A8262671A66B512FFB4B2D66        | Dr James R. O'Callaghan   | Tyndall National Institute | v1      | 2025-10-10 15:13:53 +0100   |
+| SiN300nm_1550nm_TE_Education_Kit.gds          | 62AA04CDB9457FCF48BFB3CFD0ED05B384024EC077196154E354A41556D77E12        | Dr Francesco Floris       | University of Pavia        | v1      | 2025-10-10 15:13:53 +0100   |
+| SiN300_CS_OtS_March_2025_v1p0.gds             | 843F64BF831A2CF0337D9D8D3F1B7A825EAE77AFF317FF736E2FF6A5F919E235        | Dr Shengqi Yin            | CORNERSTONE                | v1      | 2025-10-10 15:13:53 +0100   |
