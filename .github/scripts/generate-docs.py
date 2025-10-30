@@ -1,6 +1,7 @@
 import os
 import yaml
 import subprocess
+import shutil
 from pathlib import Path
 
 PLATFORMS = ["Si_220nm_active", "SiN_300nm"]
@@ -57,7 +58,9 @@ def generate_docs():
 
     for platform in PLATFORMS:
         folder_path = Path(platform)
-        comp_md_path = COMP_REF_DIR / f"{platform}.md"
+        comp_md_dir = COMP_REF_DIR / f"{platform}"
+        comp_md_dir.mkdir(parents=True, exist_ok= True)
+        comp_md_path = comp_md_dir / "index.md"
         sub_md_str = [] 
         with comp_md_path.open("w", encoding="utf-8") as md:
             md.write(f"# Platform information for \"{platform}\"\n\n")
@@ -69,8 +72,7 @@ def generate_docs():
             md_path = folder_path / "docs" / "comp-ref" / f"{subfolder}.md"
             md_path.parent.mkdir(parents=True, exist_ok=True)
             
-            relative_path = os.path.relpath(md_path,start=comp_md_path.parent)
-            sub_md_str.append(relative_path)
+            sub_md_str.append(f"{subfolder}.md")
             
             with md_path.open("w", encoding="utf-8") as md:
                 md.write(f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n")
@@ -114,8 +116,9 @@ def generate_docs():
                         md.write(f"{line}\n")
                     md.write(f"- Last Modified: {last_modified}\n")
                     md.write(f"- SHA256 Hash: {sha256}\n\n")
+            shutil.copy(md_path,comp_md_dir / md_path.name)
         overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = ":caption: Platform reference")
-    compref_appx = [f"{platform}.md" for platform in PLATFORMS]
+    compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
     overwrite_after_marker(md_path = COMP_DIR_IDX,new_lines = compref_appx, marker = ":caption: Component reference")
     
     
