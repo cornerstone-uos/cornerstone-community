@@ -10,8 +10,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout code
+      
+      - name: Checkout code with PAT
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GHA_PAT_TEST }}
 
       - name: Install PowerShell YAML module
         shell: pwsh
@@ -47,11 +50,17 @@ jobs:
                   }
               }
           }
+      
+      - name: Check Git remote
+        shell: pwsh
+        run: git remote -v
+        
+
       - name: Push changes
+        shell: pwsh
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GHA_PAT_TEST }}@github.com/${{ github.repository }}
           git add docs/
-          git commit -m "Auto-generated documentation"
+          git commit -m "Auto-generated documentation" || echo "No changes to commit"
           git push
