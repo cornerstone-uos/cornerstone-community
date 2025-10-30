@@ -3,6 +3,7 @@ component_type: ContactPadDC
 authors:
 - name: CORNERSTONE
   organisation: CORNERSTONE
+last_updated: 28/07/2025
 ports:
 - name: e1
   port_type: electrical_dc

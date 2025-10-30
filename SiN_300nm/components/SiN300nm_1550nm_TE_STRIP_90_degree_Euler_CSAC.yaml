@@ -3,6 +3,7 @@ component_type: Bend
 authors:
 - name: Thomas Parker
   organisation: CSA Catapult
+last_updated: 23/09/2025
 modes:
 - mode_numbers:
   - 0

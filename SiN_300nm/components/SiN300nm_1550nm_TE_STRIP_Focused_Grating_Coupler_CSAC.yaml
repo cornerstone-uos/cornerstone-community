@@ -3,6 +3,7 @@ component_type: GratingCoupler1D
 authors:
 - name: Thomas Parker
   organisation: CSA Catapult
+last_updated: 26/09/2025
 ports:
   - center:
     - 0.0

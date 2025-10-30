@@ -3,6 +3,7 @@ component_type: GratingCoupler1D
 authors:
 - name: CORNERSTONE
   organisation: CORNERSTONE
+last_updated: 28/07/2025
 ports:
 - name: o1
   port_type: optical

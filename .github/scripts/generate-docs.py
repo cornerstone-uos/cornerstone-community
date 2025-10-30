@@ -16,17 +16,13 @@ CONTRIB_PATH = DOCS_DIR / "contributor-list.md"
 def get_git_info(file_path):
     rel_path = os.path.relpath(file_path)
     try:
-        last_modified = subprocess.check_output(
-            ["git", "log", "-1", "--pretty=format:%ci", "--", rel_path],
-            text=True
-        ).strip()
         sha256 = subprocess.check_output(
             ["git", "hash-object", file_path],
             text=True
         ).strip()
-        return last_modified, sha256
+        return sha256
     except subprocess.CalledProcessError:
-        return "Unknown", "Unknown"
+        return "Unknown"
 def overwrite_after_marker(md_path: Path, new_lines: list[str], marker: str = ":caption: Reference"):
     """
     Overwrites the contents of a Markdown file starting from the line after the marker.
@@ -87,6 +83,7 @@ def generate_docs():
                         with yaml_file.open("r", encoding="utf-8") as yf:
                             data = yaml.safe_load(yf)
                         authors = data.get("authors", [])
+                        last_updated = data.get("last_updated",[]).strip()
                         for author in authors:
                             name = author.get("name", "").strip()
                             org = author.get("organisation", "").strip()
@@ -95,7 +92,8 @@ def generate_docs():
                                 unique_authors.add((name, org))
                     else:
                         authors = []
-                        print(f"YAML file not found for {gds_file.name}. Using default author info.")
+                        last_updated=["Unknown"]
+                        print(f"YAML file not found for {gds_file.stem}. Using default author info.")
 
                     # Format authors section
                     if not authors:
@@ -108,13 +106,13 @@ def generate_docs():
                             author_lines.append(f"  - {name} ({org})")
 
                     # Get Git info
-                    last_modified, sha256 = get_git_info(gds_file)
+                    sha256 = get_git_info(gds_file)
 
                     # Write to Markdown
-                    md.write(f"## {gds_file.name}\n")
+                    md.write(f"## {gds_file.stem}\n")
                     for line in author_lines:
                         md.write(f"{line}\n")
-                    md.write(f"- Last Modified: {last_modified}\n")
+                    md.write(f"- Last updated: {last_updated}\n")
                     md.write(f"- SHA256 Hash: {sha256}\n\n")
             shutil.copy(md_path,comp_md_dir / md_path.name)
         overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = ":caption: Platform reference")

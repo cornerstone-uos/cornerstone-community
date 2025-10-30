@@ -3,6 +3,7 @@ component_type: AmplitudeModulator
 authors:
 - name: Dr Imad Faruque
   organisation: University of Sheffield
+last_updated: 01/10/2025
 modes:
 - mode_numbers:
   - 0
