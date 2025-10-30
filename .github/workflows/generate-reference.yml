@@ -1,0 +1,58 @@
+name: Generate Docs from GDS/YAML
+
+on:
+  push:
+    branches:
+      - tidy-folders
+
+jobs:
+  generate-docs:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install PowerShell YAML module
+        shell: pwsh
+        run: Install-Module -Name powershell-yaml -Force -Scope CurrentUser
+
+      - name: Run documentation generator
+        shell: pwsh
+        run: |
+          $folders = @("Si_220nm_active", "SiN_300nm")
+          foreach ($folder in $folders) {
+              $mdPath = "docs/comp_ref/$folder_autogen.md"
+              Set-Content -Path $mdPath -Value "# Documentation for $folder`n"
+
+              Get-ChildItem -Path $folder -Filter *.gds | ForEach-Object {
+                  $gdsFile = $_.Name
+                  $yamlFile = "$folder/$($gdsFile -replace '\.gds$', '.yaml')"
+
+                  if (Test-Path $yamlFile) {
+                      $yamlContent = Get-Content $yamlFile | ConvertFrom-Yaml
+                      $contributor = $yamlContent.contributor ?? "N/A"
+                      $organisation = $yamlContent.organisation ?? "N/A"
+
+                      $result = & ./.github/scripts/gds-infos.ps1 -FilePath $_.FullName
+                      $parts = $result -split '\|'
+                      $lastModified = $parts[0]
+                      $sha256 = $parts[1]
+
+                      Add-Content -Path $mdPath -Value "## $gdsFile`n"
+                      Add-Content -Path $mdPath -Value "- Contributor: $contributor"
+                      Add-Content -Path $mdPath -Value "- Organisation: $organisation`n"
+                      Add-Content -Path $mdPath -Value "- Last Modified: $lastModified"
+                      Add-Content -Path $mdPath -Value "- SHA256 Hash: $sha256"
+                  }
+              }
+          }
+
+      - name: Commit generated docs
+        shell: pwsh
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add docs/
+          git commit -m "Auto-generated documentation"
+          git push
