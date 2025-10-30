@@ -1,5 +1,8 @@
 name: SOI220nm_1310nm_TE_MZI_Modulator
 component_type: MZM
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
 modes:
 - mode_numbers:
   - 0

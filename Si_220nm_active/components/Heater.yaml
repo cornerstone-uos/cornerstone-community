@@ -1,5 +1,8 @@
 name: Heater
 component_type: ContactPadDC
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
 ports:
 - name: e1
   port_type: electrical_dc

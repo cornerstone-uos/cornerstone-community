@@ -3,7 +3,7 @@ name: Generate Docs from GDS/YAML
 on:
   push:
     branches:
-      - tidy-folders
+      - docupdate # I'll change this later - I don't want to run the workflow now.
 
 jobs:
   generate-docs:
@@ -15,50 +15,23 @@ jobs:
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GHA_PAT_TEST }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-      - name: Install PowerShell YAML module
-        shell: pwsh
-        run: Install-Module -Name powershell-yaml -Force -Scope CurrentUser
+      - name: Install dependencies
+        run: pip install pyyaml
 
       - name: Run documentation generator
-        shell: pwsh
-        run: |
-          $folders = @("Si_220nm_active/components", "SiN_300nm/components", "Si_220nm_active/ready-made", "SiN_300nm/ready-made")
-          foreach ($folder in $folders) {
-              mkdir -Force "docs/comp_ref/$folder"
-              $mdPath = "docs/comp_ref/$folder/autogen_doc.md"
-              Set-Content -Path $mdPath -Value "# Documentation for $folder`n"
+        run: python scripts/generate_docs.py
 
-              Get-ChildItem -Path $folder -Filter *.gds | ForEach-Object {
-                  $gdsFile = $_.Name
-                  $yamlFile = "$folder/$($gdsFile -replace '\.gds$', '.yaml')"
-
-                  if (Test-Path $yamlFile) {
-                      $yamlContent = Get-Content $yamlFile | ConvertFrom-Yaml
-                      $contributor = $yamlContent.contributor ?? "N/A"
-                      $organisation = $yamlContent.organisation ?? "N/A"
-
-                      $result = & ./.github/scripts/gds-infos.ps1 -FilePath $_.FullName
-                      $parts = $result -split '\|'
-                      $lastModified = $parts[0]
-                      $sha256 = $parts[1]
-
-                      Add-Content -Path $mdPath -Value "## $gdsFile`n"
-                      Add-Content -Path $mdPath -Value "- Contributor: $contributor"
-                      Add-Content -Path $mdPath -Value "- Organisation: $organisation`n"
-                      Add-Content -Path $mdPath -Value "- Last Modified: $lastModified"
-                      Add-Content -Path $mdPath -Value "- SHA256 Hash: $sha256"
-                  }
-              }
-          }
       
       - name: Check Git remote
-        shell: pwsh
         run: git remote -v
         
 
       - name: Push changes
-        shell: pwsh
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"

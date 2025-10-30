@@ -1,5 +1,8 @@
 name: SOI220nm_1550nm_SingleQubitGate_IIF_UoSheffield
 component_type: AmplitudeModulator
+authors:
+- name: Dr Imad Faruque
+  organisation: University of Sheffield
 modes:
 - mode_numbers:
   - 0

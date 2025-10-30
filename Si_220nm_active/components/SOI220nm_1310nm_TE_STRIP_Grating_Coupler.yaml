@@ -1,5 +1,8 @@
 name: SOI220nm_1310nm_TE_STRIP_Grating_Coupler
 component_type: GratingCoupler1D
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
 ports:
 - name: o1
   port_type: optical

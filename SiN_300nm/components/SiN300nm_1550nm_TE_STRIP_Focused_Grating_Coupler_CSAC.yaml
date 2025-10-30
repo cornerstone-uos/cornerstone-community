@@ -1,5 +1,8 @@
 name: SiN300nm_1550nm_TE_STRIP_Focused_Grating_Coupler_CSAC
 component_type: GratingCoupler1D
+authors:
+- name: Thomas Parker
+  organisation: CSA Catapult
 ports:
   - center:
     - 0.0

@@ -1,5 +1,8 @@
 name: SOI220nm_1550nm_TE_STRIP_Waveguide
 component_type: Waveguide
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
 modes:
   - mode_numbers:
     - 0

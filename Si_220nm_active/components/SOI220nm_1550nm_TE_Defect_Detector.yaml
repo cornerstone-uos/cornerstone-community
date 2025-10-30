@@ -1,5 +1,9 @@
 name: SOI220nm_1550nm_TE_Defect_Detector
 component_type: Photodiode
+authors:
+- name: H Bilge Yagci
+  organisation: CORNERSTONE
+  email: hby1r25@soton.ac.uk
 modes:
 - mode_numbers:
   - 0
@@ -48,7 +52,4 @@ ancestors:
   commit: ReferenceWithinCommit
 - name: SOI220nm_1550nm_TE_RIB_Grating_Coupler
   commit: ReferenceWithinCommit
-authors:
-- name: H Bilge Yagci
-  organisation: Cornerstone / ORC
-  email: hby1r25@soton.ac.uk
+

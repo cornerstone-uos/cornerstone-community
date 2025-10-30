@@ -1,5 +1,8 @@
 name: SiN300nm_1550nm_TE_STRIP_90_Degree_Euler_CSAC
 component_type: Bend
+authors:
+- name: Thomas Parker
+  organisation: CSA Catapult
 modes:
 - mode_numbers:
   - 0
