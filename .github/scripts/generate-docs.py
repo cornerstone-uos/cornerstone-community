@@ -26,7 +26,7 @@ def get_git_info(file_path):
         return last_modified, sha256
     except subprocess.CalledProcessError:
         return "Unknown", "Unknown"
-def overwrite_after_marker(md_path: Path, new_lines: list[str], marker: str = "[//]: # (EOF)"):
+def overwrite_after_marker(md_path: Path, new_lines: list[str], marker: str = ":caption: Reference"):
     """
     Overwrites the contents of a Markdown file starting from the line after the marker.
     """
@@ -45,7 +45,7 @@ def overwrite_after_marker(md_path: Path, new_lines: list[str], marker: str = "[
     preserved = lines[:eof_index + 1]
 
     # Add new content after the marker
-    updated = preserved + [line + "\n" for line in new_lines]
+    updated = preserved + ["\n"] + [line + "\n" for line in new_lines]
 
     with md_path.open("w", encoding="utf-8") as f:
         f.writelines(updated)
@@ -114,9 +114,9 @@ def generate_docs():
                         md.write(f"{line}\n")
                     md.write(f"- Last Modified: {last_modified}\n")
                     md.write(f"- SHA256 Hash: {sha256}\n\n")
-        overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = "[//]: # (EOF)")
+        overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = ":caption: Platform reference")
     compref_appx = [f"{platform}.md" for platform in PLATFORMS]
-    overwrite_after_marker(md_path = COMP_DIR_IDX,new_lines = compref_appx, marker = "[//]: # (Platforms)")
+    overwrite_after_marker(md_path = COMP_DIR_IDX,new_lines = compref_appx, marker = ":caption: Component reference")
     
     
     

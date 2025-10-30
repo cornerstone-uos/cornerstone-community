@@ -6,6 +6,5 @@ Here you can find information regarding the available platforms, such as compone
 :maxdepth: 2
 :caption: Component reference
 
-[//]: # (Platforms)
 Si_220nm_active.md
 SiN_300nm.md

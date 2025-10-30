@@ -3,7 +3,7 @@ name: Generate Docs from GDS/YAML
 on:
   push:
     branches:
-      - docupdate # I'll change this later - I don't want to run the workflow now.
+      - tidy-folders # I'll change this later - I don't want to run the workflow now.
 
 jobs:
   generate-docs:
