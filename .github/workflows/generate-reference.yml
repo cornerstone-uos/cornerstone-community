@@ -25,7 +25,7 @@ jobs:
         run: |
           $folders = @("Si_220nm_active", "SiN_300nm")
           foreach ($folder in $folders) {
-              $mdPath = "docs/comp_ref/$folder_autogen.md"
+              $mdPath = "docs/comp_ref/$folder/autogen_doc.md"
               Set-Content -Path $mdPath -Value "# Documentation for $folder`n"
 
               Get-ChildItem -Path $folder -Filter *.gds | ForEach-Object {
