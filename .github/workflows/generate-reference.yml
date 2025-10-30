@@ -47,12 +47,11 @@ jobs:
                   }
               }
           }
-
-      - name: Commit generated docs
-        shell: pwsh
+      - name: Push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GHA_PAT_TEST }}@github.com/${{ github.repository }}
           git add docs/
           git commit -m "Auto-generated documentation"
           git push
