@@ -25,6 +25,7 @@ jobs:
         run: |
           $folders = @("Si_220nm_active", "SiN_300nm")
           foreach ($folder in $folders) {
+              mkdir -Force "docs/comp_ref/$folder"
               $mdPath = "docs/comp_ref/$folder/autogen_doc.md"
               Set-Content -Path $mdPath -Value "# Documentation for $folder`n"
 
