@@ -23,7 +23,7 @@ jobs:
       - name: Run documentation generator
         shell: pwsh
         run: |
-          $folders = @("Si_220nm_active", "SiN_300nm")
+          $folders = @("Si_220nm_active/components", "SiN_300nm/components", "Si_220nm_active/ready-made", "SiN_300nm/ready-made")
           foreach ($folder in $folders) {
               mkdir -Force "docs/comp_ref/$folder"
               $mdPath = "docs/comp_ref/$folder/autogen_doc.md"
