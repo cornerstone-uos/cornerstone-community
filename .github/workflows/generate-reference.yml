@@ -24,7 +24,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Run documentation generator
-        run: python scripts/generate_docs.py
+        run: python scripts/generate-docs.py
 
       
       - name: Check Git remote
