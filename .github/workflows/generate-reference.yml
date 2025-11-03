@@ -23,12 +23,6 @@ jobs:
 
       - name: Install uv
         run: pip install uv
-      
-      - name: Install klayout system-wide
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y klayout
-
 
       - name: Create venv
         run: uv venv .venv
@@ -41,11 +35,6 @@ jobs:
       
       - name: Check Git remote
         run: git remote -v
-
-        
-      - name: Check klayout availability
-        run: python -c "import klayout.db; print('KLayout is available')"
-
         
 
       - name: Push changes
