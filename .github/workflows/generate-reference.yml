@@ -24,10 +24,10 @@ jobs:
       - name: Install uv
         run: pip install uv
       
-
-      - name: Install klayout Python bindings
-        run: pip install https://www.klayout.org/downloads/Ubuntu-22/klayout-0.30.4-cp311-cp311-manylinux_2_28_x86_64.whl
-
+      - name: Install klayout system-wide
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y klayout
 
 
       - name: Create venv
