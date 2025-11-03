@@ -30,7 +30,7 @@ jobs:
 
 
       - name: Run documentation generator
-        run: python .github/scripts/generate-docs.py
+        run: python .github/scripts/generate-plots.py
 
       
       - name: Check Git remote
