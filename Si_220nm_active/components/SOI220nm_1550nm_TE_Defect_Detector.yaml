@@ -22,7 +22,7 @@ ports:
 - name: e2
   port_type: electrical_rf
   center:
-  - 742
+  - 692
   - -92.5
   orientation: 270
   cross_section: detector
