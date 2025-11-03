@@ -21,8 +21,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install uv
+        run: pip install uv
+
       - name: Install dependencies
-        run: pip install pyyaml
+        run: uv pip install .[docs,validator]
 
       
       - name: List files
