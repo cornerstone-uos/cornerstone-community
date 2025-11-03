@@ -24,11 +24,13 @@ jobs:
       - name: Install uv
         run: pip install uv
       
-      - name: create venv
-        run: uv venv
+      
+      - name: Create venv
+        run: uv venv .venv
+
 
       - name: Install dependencies
-        run: uv pip install .[docs,validator]
+        run: .venv/bin/uv pip install .[docs,validator]
 
       
       - name: Check installed packages
