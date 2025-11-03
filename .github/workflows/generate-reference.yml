@@ -19,19 +19,26 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: '3.12'
+
+      - name: Install uv
+        run: pip install uv
+      
+      
+      - name: Create venv
+        run: uv venv .venv
+
 
       - name: Install dependencies
-        run: pip install pyyaml
+        run: .venv/bin/uv pip install .[docs,validator]
 
       
-      - name: List files
-        run: ls -R
+      - name: Check installed packages
+        run: .venv/bin/pip list
 
-
+      
       - name: Run documentation generator
-        run: python .github/scripts/generate-docs.py
-
+        run: .venv/bin/python .github/scripts/generate-plots.py
       
       - name: Check Git remote
         run: git remote -v
