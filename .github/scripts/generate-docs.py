@@ -74,7 +74,7 @@ def generate_docs():
                 md.write(f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n")
                 
                 
-                for gds_file in full_path.glob("*.gds"):
+                for gds_file in sorted(full_path.glob("*.gds")):
                     yaml_file = gds_file.with_suffix(".yaml")
                     authors = []
                     

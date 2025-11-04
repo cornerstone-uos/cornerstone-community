@@ -3,7 +3,7 @@ name: Generate Docs from GDS/YAML
 on:
   push:
     branches:
-      - tidy-folders # I'll change this later - I don't want to run the workflow now.
+      - tidy-folders 
 
 jobs:
   generate-docs:
@@ -29,8 +29,11 @@ jobs:
 
       - name: Install dependencies
         run: uv sync --extra docs
+      
+#      - name: Generate birdseye plots
+#        run: .venv/bin/python .github/scripts/generate-plots.py
 
-      - name: Run documentation generator
+      - name: Generate documentation
         run: .venv/bin/python .github/scripts/generate-docs.py
       
       - name: Check Git remote

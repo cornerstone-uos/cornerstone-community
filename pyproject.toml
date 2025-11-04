@@ -18,6 +18,7 @@ docs = [
     "sphinx-book-theme>=1.1.4",
     "linkify-it-py>=2.0.3",
     "sphinx-design",
+    "matplotlib>=3.10.7",
 ]
 validator = [
     "pdk-data-verifier>=0.8.0",

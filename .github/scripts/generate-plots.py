@@ -109,13 +109,10 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
     
     width = x_max - x_min
     height = y_max - y_min
-    aspect_ratio = width / height if height != 0 else 1.0
-    if aspect_ratio<0.2: 
-        aspect_ratio=0.2
-    if aspect_ratio>5:
-        aspect_ratio=5
-    aspect_ratio =1
-
+    if width/height>5 or width/height<0.2:
+        aspect_ratio = np.sqrt(height/width)
+    else:
+        aspect_ratio = height/width
     
     x_pad = width * zoom_factor
     y_pad = height * zoom_factor
@@ -137,7 +134,7 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
 
     ax.set_xlim(x_min_zoomed, x_max_zoomed)
     ax.set_ylim(y_min_zoomed, y_max_zoomed)
-    ax.set_aspect(aspect_ratio)
+    ax.set_box_aspect(aspect_ratio)
 
     ax.grid(True)
 
@@ -188,19 +185,23 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
         layer_info = layout.get_info(layer_index)
         layer_num = layer_info.layer
         datatype = layer_info.datatype
-        label = next((l['name'] for l in lyp_layers if l['source'] == (layer_num, datatype)), f"{layer_num}/{datatype}")
+
         colour = layer_to_colour[layer_index]
+        #label = next((l['name'] for l in lyp_layers if l['source'] == (layer_num, datatype)), f"{layer_num}/{datatype}")
+        #legend_entries.append((label, colour))
 
+        
+        label = f"{layer_num}/{datatype}"
         legend_entries.append((label, colour))
-
+        
         shapes = top_cell.shapes(layer_index)
         for shape in shapes.each():
             if shape.is_box():
                 box = shape.box
                 x0, y0 = box.left * dbu, box.bottom * dbu
                 x1, y1 = box.right * dbu, box.top * dbu
-                rect = plt.Rectangle((x0, y0), x1 - x0, y1 - y0,
-                                    edgecolor='black', facecolor=colour, linewidth=0.2)
+                rect = plt.Rectangle((x0, y0), x1 - x0, y1 - y0, # type: ignore
+                                    edgecolor='none', facecolor=colour, linewidth=0.2)
                 ax.add_patch(rect)
 
             elif shape.is_polygon():
@@ -208,15 +209,13 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
                 pts = [(pt.x * dbu, pt.y * dbu) for pt in polygon.each_point_hull()]
                 if pts and pts[0] != pts[-1]:
                     pts.append(pts[0])
-                poly = plt.Polygon(pts, edgecolor='black', facecolor=colour, linewidth=0.2)
+                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
                 ax.add_patch(poly)
 
+    legend_entries.sort(key=lambda entry: tuple(map(int, entry[0].split('/'))))
     
-    handles = [Patch(facecolor=colour, edgecolor='black', label=label)
-            for label, colour in legend_entries]
-
-    # Add legend outside the plot
-    ax.legend(handles=handles, loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0., fontsize=8)
+    
+    #ax.legend(handles=handles, loc='upper left', bbox_to_anchor=(1.05, 1), borderaxespad=0., fontsize=8)
             
     # Define colours for port types
     port_colours = {
@@ -232,14 +231,31 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
 
     for idx, port in enumerate(ports):
         x, y = port["center"]
+        marker_size =4
         port_type = port.get("port_type", "unknown")
         port_angle = port.get("orientation",0.0)
         port_angle = int(np.mod(port_angle/90.0,4))
-        offsets = np.round([(x_pad/2,0),(0,y_pad/2),(-x_pad/2,0),(0,-y_pad/2)])
+        #offsets = np.round([(x_pad/2,0),(0,y_pad/2),(-x_pad/2,0),(0,-y_pad/2)])
+        offsets = [(2*marker_size,0),(0,2*marker_size),(-2*marker_size,0),(0,-2*marker_size)]
 
         colour = port_colours.get(port_type)
-        ax.plot(x, y, marker='o', markersize=4, color=colour)
-        ax.text(x+offsets[port_angle][0], y+offsets[port_angle][1], str(idx), fontsize=8, ha='center', va='center', color=colour)
+        fcolour = colour if port_type not in ["vertical_te", "vertical_tm"] else 'none'
+        ax.plot(x, y, marker='o', markersize=marker_size, markeredgecolor=colour, markerfacecolor=fcolour)
+        #ax.text(x+offsets[port_angle][0], y+offsets[port_angle][1], str(idx), fontsize=12, ha='center', va='center', color=colour)
+        
+        ax.annotate(str(idx), (x, y),
+                    textcoords="offset points", xytext=offsets[port_angle], ha='center',va='center',color=colour)
+
+        
+    handles = [Patch(facecolor=colour, edgecolor='none', label=label)
+            for label, colour in legend_entries]
+
+    # Add legend outside the plot
+    
+    fig.tight_layout(rect=(0, 0.05, 1, 1))  # Reserve bottom space
+    fig.legend(handles=handles, loc='lower center', ncol=min(len(handles), 4))
+    
+
 
     #plt.show()
     # Save to JPEG
@@ -252,8 +268,8 @@ for folder in FOLDERS:
     tmp_path = ROOT_DIR / folder / "components"
     output_dir = SAVE_ROOT_DIR / f"{folder}" / "birdseye"
     output_dir.mkdir(parents=True,exist_ok=True)
-    for gds_file in tmp_path.glob("*.gds"):
+    for gds_file in sorted(tmp_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
-        output_file = output_dir /  gds_file.stem / ".jpg"
+        output_file = output_dir /  f"{gds_file.stem}.jpg"
         plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
         print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
