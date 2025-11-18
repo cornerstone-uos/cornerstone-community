@@ -48,17 +48,17 @@
 - Last updated: 20/07/2025
 - SHA256 Hash: 98d7f328a3d948413870068e56a5dee3bf41f934
 
-## SOI340nm_1550nm_TE_RIB_to_STRIP
-- Authors:
-  - CORNERSTONE (CORNERSTONE)
-- Last updated: 20/07/2025
-- SHA256 Hash: a307a05576786d0624a3ead00dcb05b06b6deca9
-
 ## SOI340nm_1550nm_TE_RIB_Waveguide
 - Authors:
   - CORNERSTONE (CORNERSTONE)
 - Last updated: 20/07/2025
 - SHA256 Hash: 5cd7ff8a2dbb86595179e57117947ffc5ea761e3
+
+## SOI340nm_1550nm_TE_RIB_to_STRIP
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: a307a05576786d0624a3ead00dcb05b06b6deca9
 
 ## SOI340nm_1550nm_TE_STRIP_2x1_MMI
 - Authors:

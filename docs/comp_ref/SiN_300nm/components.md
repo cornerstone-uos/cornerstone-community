@@ -61,9 +61,8 @@
 - SHA256 Hash: 61ab6727f249e56361c34e87195a26e0096a9e46
 
 ## SiN300nm_1550nm_TE_STRIP_90_Degree_Euler_CSAC
-- Authors:
-  - Thomas Parker (CSA Catapult)
-- Last updated: 23/09/2025
+- Authors: N/A
+- Last updated: ['Unknown']
 - SHA256 Hash: a7c19c769bfc37e51f59f2e51590e6bf833f665f
 
 ## SiN300nm_1550nm_TE_STRIP_Crossing
