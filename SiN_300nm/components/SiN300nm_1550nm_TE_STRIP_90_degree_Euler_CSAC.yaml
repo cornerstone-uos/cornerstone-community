@@ -1,5 +1,9 @@
 name: SiN300nm_1550nm_TE_STRIP_90_Degree_Euler_CSAC
-component_type: Euler Bend
+component_type: Bend
+authors:
+- name: Thomas Parker
+  organisation: CSA Catapult
+last_updated: 23/09/2025
 modes:
 - mode_numbers:
   - 0
@@ -7,7 +11,6 @@ modes:
   polarisation: TE
   wavelength: 1550
 ports:
-
   - center:
     - 0.0
     - 0.0

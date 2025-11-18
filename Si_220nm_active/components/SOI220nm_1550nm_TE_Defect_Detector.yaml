@@ -1,5 +1,10 @@
 name: SOI220nm_1550nm_TE_Defect_Detector
 component_type: Photodiode
+authors:
+- name: H Bilge Yagci
+  organisation: CORNERSTONE
+  email: hby1r25@soton.ac.uk
+last_updated: 28/07/2025
 modes:
 - mode_numbers:
   - 0
@@ -17,7 +22,7 @@ ports:
 - name: e2
   port_type: electrical_rf
   center:
-  - 742
+  - 692
   - -92.5
   orientation: 270
   cross_section: detector
@@ -48,7 +53,4 @@ ancestors:
   commit: ReferenceWithinCommit
 - name: SOI220nm_1550nm_TE_RIB_Grating_Coupler
   commit: ReferenceWithinCommit
-authors:
-- name: H Bilge Yagci
-  organisation: Cornerstone / ORC
-  email: hby1r25@soton.ac.uk
+

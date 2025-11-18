@@ -1,5 +1,9 @@
 name: SOI220nm_1310nm_TE_STRIP_90_Degree_Bend
 component_type: Bend
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
+last_updated: 28/07/2025
 modes:
   - mode_numbers:
     - 0

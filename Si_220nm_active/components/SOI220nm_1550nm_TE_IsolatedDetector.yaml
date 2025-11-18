@@ -1,5 +1,9 @@
 name: SOI220nm_1550nm_TE_IsolatedDetector
 component_type: Photodiode
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
+last_updated: 28/07/2025
 modes:
 - mode_numbers:
   - 0
@@ -10,15 +14,15 @@ ports:
 - name: e1
   port_type: electrical_rf
   center:
-  - 220
+  - 145
   - -142.50000
   orientation: 270
   cross_section: detector
 - name: e2
   port_type: electrical_rf
   center:
-  - 742
-  - -92.5
+  - 295
+  - -142.50000
   orientation: 270
   cross_section: detector
 - name: o1

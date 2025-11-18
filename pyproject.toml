@@ -2,11 +2,13 @@
 name = "cornerstone-community"
 version = "0.1.0"
 description = "CORNERSTONE Community repository, uses Wavephotonics validator"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = [
     "ipykernel>=6.29.5",
+    "klayout>=0.30.4",
     "pre-commit>=4.2.0",
     "pytest>=8.3.5",
+    "pyyaml>=6.0.2",
 ]
 
 [project.optional-dependencies]
@@ -16,6 +18,7 @@ docs = [
     "sphinx-book-theme>=1.1.4",
     "linkify-it-py>=2.0.3",
     "sphinx-design",
+    "matplotlib>=3.10.7",
 ]
 validator = [
     "pdk-data-verifier>=0.8.0",
@@ -35,5 +38,5 @@ build-backend = "setuptools.build_meta"
 
 
 [tool.setuptools.packages.find]
-exclude = ["SiN_300nm", "Si_220nm_active", "docs", "Off_the_shelf_designs"]
+exclude = ["SiN_300nm", "Si_220nm_active", "docs"]
 

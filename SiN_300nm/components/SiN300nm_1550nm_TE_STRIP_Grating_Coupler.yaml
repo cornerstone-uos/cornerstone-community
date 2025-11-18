@@ -1,5 +1,9 @@
 name: SiN300nm_1550nm_TE_STRIP_Grating_Coupler
 component_type: GratingCoupler1D
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
+last_updated: 28/07/2025
 ports:
   - center:
     - 0.0

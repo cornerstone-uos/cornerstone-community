@@ -1,0 +1,69 @@
+name: SOI220nm_1550nm_SingleQubitGate_IIF_UoSheffield
+component_type: AmplitudeModulator
+authors:
+- name: Dr Imad Faruque
+  organisation: University of Sheffield
+last_updated: 01/10/2025
+modes:
+- mode_numbers:
+  - 0
+  - 0
+  polarisation: TE
+  wavelength: 1550
+ports:
+- name: e1
+  port_type: electrical_dc
+  center:
+  - 110.02500
+  - 123.00700
+  orientation: 90
+  cross_section: dc
+- name: e2
+  port_type: electrical_dc
+  center:
+  - 200.02500
+  - 123.00700
+  orientation: 90
+  cross_section: dc
+- name: e3
+  port_type: electrical_dc
+  center:
+  - 315.06700
+  - 123.00700
+  orientation: 90
+  cross_section: dc
+- name: e4
+  port_type: electrical_dc
+  center:
+  - 405.06700
+  - 123.00700
+  orientation: 90
+  cross_section: dc
+- name: o1
+  port_type: optical
+  center:
+  - 0
+  - 30.565
+  orientation: 180
+  cross_section: strip_1550nm
+- name: o2
+  port_type: optical
+  center:
+  - 0
+  - 42.565
+  orientation: 180
+  cross_section: strip_1550nm
+- name: o3
+  port_type: optical
+  center:
+  - 404.08400
+  - 42.565
+  orientation: 0.0
+  cross_section: strip_1550nm
+- name: o4
+  port_type: optical
+  center:
+  - 404.08400
+  - 30.565
+  orientation: 0.0
+  cross_section: strip_1550nm

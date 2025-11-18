@@ -1,5 +1,9 @@
 name: SOI220nm_1550nm_TE_RIB_2x1_MMI
 component_type: MMI1x2
+authors:
+- name: CORNERSTONE
+  organisation: CORNERSTONE
+last_updated: 28/07/2025
 modes:
   - mode_numbers:
     - 0
