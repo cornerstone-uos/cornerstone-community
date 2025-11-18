@@ -1,0 +1,176 @@
+# Component information for "Si_220nm_passive", subfolder "components" 
+
+## Cell0_SOI220_Full_1550nm_Packaging_Template
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 63b0ea4c15c9403611bf3f0a28a80a6bc424fe45
+
+## Heater
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 1310b51f3781a5b7f37bf6af61b77e4f55c7faf0
+
+## SOI220nm_1310nm_TE_RIB_2x1_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 746bfb798dd679d40b26be6987045f8a8be93f5a
+
+## SOI220nm_1310nm_TE_RIB_2x2_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: a55dcb0513f830fd4fe77a5c6ecf8ae5d1ccd91f
+
+## SOI220nm_1310nm_TE_RIB_90_Degree_Bend
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 19ca0f27c653104e7ad650874243bd870c28ec3d
+
+## SOI220nm_1310nm_TE_RIB_Grating_Coupler
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 525c0d9567bf3eea42c3836bd93073b347054166
+
+## SOI220nm_1310nm_TE_RIB_Waveguide
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 9a24a54a27970fb9c3864c93f425fe40802a563b
+
+## SOI220nm_1310nm_TE_RIB_Waveguide_Crossing
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 87900bd1739f1471938219aa37be70f92220f8b3
+
+## SOI220nm_1310nm_TE_STRIP_2x1_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 08159b1d9734440038daf6f18d9d1c7621e8b6ac
+
+## SOI220nm_1310nm_TE_STRIP_2x2_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 3da3f1d1402e81983455397f623e513c003c38e1
+
+## SOI220nm_1310nm_TE_STRIP_90_Degree_Bend
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: ad44e385ac90b6ad62d2d83edc6347f099aa2314
+
+## SOI220nm_1310nm_TE_STRIP_Grating_Coupler
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 0b98e1319f45ee219a89e7a17f455a8bee989b47
+
+## SOI220nm_1310nm_TE_STRIP_Waveguide
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 50ccb77b52d77430d4d134a8ed9cb3690110f888
+
+## SOI220nm_1310nm_TE_STRIP_Waveguide_Crossing
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 69f46cfe8c6e74eec8fcd044cffae8ca49b6ddbe
+
+## SOI220nm_1550nm_TE_RIB_2x1_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 6dad0f30ed4c3501791897604cef077fa0a0eff8
+
+## SOI220nm_1550nm_TE_RIB_2x2_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 8807fcc1a8cc7703701a7ee9962712481d5862b5
+
+## SOI220nm_1550nm_TE_RIB_90_Degree_Bend
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 624a8f69960dac6831d05d97af492bd2af1227bb
+
+## SOI220nm_1550nm_TE_RIB_EBL_Apodised_Grating_Coupler
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 63bd27a69a9382d587f13778f0563f2a84abf691
+
+## SOI220nm_1550nm_TE_RIB_Grating_Coupler
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: c8085156b27cd88604ca0aa8a003480aa5bd74e6
+
+## SOI220nm_1550nm_TE_RIB_MZI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 207ae825de9edb3fb56ef0ccec38b2b3399714f1
+
+## SOI220nm_1550nm_TE_RIB_Waveguide
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: b5575802299819942c7ceed0d6c4c12aed24dec4
+
+## SOI220nm_1550nm_TE_RIB_Waveguide_Crossing
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 2823c8b10d0d12e55c61d3140eabc92c9d698a86
+
+## SOI220nm_1550nm_TE_STRIP_2x1_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 543c739726788a089c33225620fa05cb06143f7b
+
+## SOI220nm_1550nm_TE_STRIP_2x2_MMI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 5139612c640c8166e2c5d032872d76c78c295770
+
+## SOI220nm_1550nm_TE_STRIP_90_Degree_Bend
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 5fc2f359928ef426f8f20be4c4fabb6c17659d8d
+
+## SOI220nm_1550nm_TE_STRIP_Grating_Coupler
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: ac3644ee3dee449b409f32927e85470c49e988e7
+
+## SOI220nm_1550nm_TE_STRIP_MZI
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: d6a49e1a9e4b6d11b0c2e7bee306cd5ef1ec5566
+
+## SOI220nm_1550nm_TE_STRIP_Waveguide
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: d5bf68f0a7d13137b320d8198e63c9b2c80380bd
+
+## SOI220nm_1550nm_TE_STRIP_Waveguide_Crossing
+- Authors:
+  - CORNERSTONE (CORNERSTONE)
+- Last updated: 20/07/2025
+- SHA256 Hash: 68f04d6cbefd5ec42b93198a34c45e43e2ce27a7
+

@@ -76,7 +76,7 @@
 - Authors:
   - Thomas Parker (CSA Catapult)
 - Last updated: 26/09/2025
-- SHA256 Hash: 98f82d7b2ca2e3e416597c87f1926d7cf83fa33d
+- SHA256 Hash: 4787396ef2480cb31c117c236804d4f083dbf5c4
 
 ## SiN300nm_1550nm_TE_STRIP_Grating_Coupler
 - Authors:

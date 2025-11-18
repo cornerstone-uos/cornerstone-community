@@ -3,7 +3,7 @@ name: Generate Docs from GDS/YAML
 on:
   push:
     branches:
-      - tidy-folders 
+      - new-platforms
 
 jobs:
   generate-docs:

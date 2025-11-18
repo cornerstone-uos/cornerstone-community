@@ -4,7 +4,7 @@ import subprocess
 import shutil
 from pathlib import Path
 
-PLATFORMS = ["Si_220nm_active", "SiN_300nm"]
+PLATFORMS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","SiN_200nm"]
 SUBFOLDERS = ["components", "ready-made"]
 DOCS_DIR = Path("docs")
 COMP_REF_DIR = Path("docs/comp_ref")
