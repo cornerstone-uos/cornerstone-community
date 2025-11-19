@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 import html
 
 ROOT_DIR = Path(".")
-FOLDERS = ["Si_220nm_active","SiN_300nm"]
+FOLDERS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
 SAVE_ROOT_DIR = Path("docs/comp_ref")
 
 
@@ -62,23 +62,29 @@ def parse_lyp_file(filepath):
 
 #custom precedence from top (drawn last) to bottom (drawn first)
 custom_precedence = [
-    (6, 0),   # si etch 1 (dark) for SOI220A
-    (3, 0),   # si etch 2 (light)
-    (4, 0),   # si etch 2 (dark)
-    (5, 0),   # si etch 3 (light)
-    (204, 0),   #SiN etch, dark
-    (203, 0),   #SiN etch, light
-    (7, 0),   # low p-type doping (dark)
-    (8, 0),     # low n-type, dark
-    (9, 0),     # high p-type, dark
-    (11, 0),    # high n-type, dark
-    (23, 0),    # defect detector, dark
-    (39, 0),    # heater filaments, light
-    (41, 0),    # heater pads, light
-    (12, 0),    # vias, dark
-    (13, 0),    # electrodes, light
-    (22, 0),    # cladding opening, dark
-
+    (60,0),     #   EBL gratings
+    (6, 0),     #   si etch 1 (dark) for SOI220A
+    (3, 0),     #   si etch 2 (light)
+    (4, 0),     #   si etch 2 (dark)
+    (5, 0),     #   si etch 3 (light)
+    (204, 0),   #   SiN etch, dark
+    (203, 0),   #   SiN etch, light
+    (303, 0),   #   Ge etch, light
+    (304, 0),   #   Ge etch, dark
+    (404, 0),   #   Si etch (suspended) for grating/wg, dark
+    (405, 0),   #   Si etch (suspended) for ribs, light
+    (7, 0),     #   low p-type doping (dark)
+    (8, 0),     #   low n-type, dark
+    (9, 0),     #   high p-type, dark
+    (11, 0),    #   high n-type, dark
+    (23, 0),    #   defect detector, dark
+    (39, 0),    #   heater filaments, light
+    (41, 0),    #   heater pads, light
+    (12, 0),    #   vias, dark
+    (13, 0),    #   electrodes, light
+    (22, 0),    #   cladding opening, dark
+    (46, 0),    #   heater isolation trench (dark)
+    (98, 0),    #   edge bleed
 ]
 
 def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zoom_factor = 0.1):
