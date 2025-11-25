@@ -87,8 +87,6 @@ custom_precedence = [
     (98, 0),    #   edge bleed
     {99, 0},    #   floorplan
 ]
-def discretize_cell(new_dbu, top_cell):
-    bbox = top_cell.bbox()
 
 def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zoom_factor = 0.1):
     # Load GDS file
@@ -203,44 +201,35 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
         
         label = f"{layer_num}/{datatype}"
         legend_entries.append((label, colour))
-
-        if max(width,height)>1500:
-            discretize_flag = True
-            new_dbu = 0.5
-        else:
-            discretize_flag = False
         
         shapes = top_cell.shapes(layer_index)
         for shape in shapes.each():
             if shape.is_box():
                 box = shape.box
-                if discretize_flag:
-                    pts = [
+                pts = [
                         (box.left * dbu, box.bottom * dbu),
                         (box.right * dbu, box.bottom * dbu),
                         (box.right * dbu, box.top * dbu),
                         (box.left * dbu, box.top * dbu)
-                    ]
-                else:
-                    pts = [
-                        (round(box.left * dbu / new_dbu), round(box.bottom * dbu / new_dbu)),
-                        (round(box.right * dbu / new_dbu), round(box.bottom * dbu / new_dbu)),
-                        (round(box.right * dbu / new_dbu), round(box.top * dbu / new_dbu)),
-                        (round(box.left * dbu / new_dbu), round(box.top * dbu / new_dbu))
                     ]
                 poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2)
                 ax.add_patch(poly)
 
             elif shape.is_polygon():
                 polygon = shape.polygon
-                if discretize_flag:
-                    pts = [(round(pt.x * dbu / new_dbu), round(pt.y * dbu / new_dbu)) for pt in polygon.each_point_hull()]
-                else:
-                    pts = [(pt.x * dbu, pt.y * dbu) for pt in polygon.each_point_hull()]
+                pts = [(pt.x * dbu, pt.y * dbu) for pt in polygon.each_point_hull()]
                 if pts and pts[0] != pts[-1]:
                     pts.append(pts[0])
                 poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
                 ax.add_patch(poly)
+            elif shape.is_path():
+                polygon = shape.path.simple_polygon()
+                pts = [(pt.x * dbu, pt.y * dbu) for pt in polygon.each_point()]
+                if pts and pts[0] != pts[-1]:
+                    pts.append(pts[0])
+                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
+                ax.add_patch(poly)
+                
 
     legend_entries.sort(key=lambda entry: tuple(map(int, entry[0].split('/'))))
     
@@ -289,7 +278,7 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
 
     #plt.show()
     # Save to JPEG
-    plt.savefig(output_path, dpi=300)
+    plt.savefig(output_path, dpi=600)
     plt.close()
     print(f"Saved layout with shapes and ports to {output_path}")
 
@@ -299,11 +288,11 @@ for folder in FOLDERS:
     output_dir.mkdir(parents=True,exist_ok=True)
     comp_path = ROOT_DIR / folder / "components"
     readymade_path = ROOT_DIR / folder / "ready-made"
-#    for gds_file in sorted(comp_path.glob("*.gds")):
-#        yaml_file = gds_file.with_suffix(".yaml")
-#        output_file = output_dir /  f"{gds_file.stem}.jpg"
-#        plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
-#        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
+    for gds_file in sorted(comp_path.glob("*.gds")):
+        yaml_file = gds_file.with_suffix(".yaml")
+        output_file = output_dir /  f"{gds_file.stem}.jpg"
+        plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
+        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
     for gds_file in sorted(readymade_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
         output_file = output_dir /  f"{gds_file.stem}.jpg"
