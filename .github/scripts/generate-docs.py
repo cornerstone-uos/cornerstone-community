@@ -60,8 +60,7 @@ def generate_docs():
         sub_md_str = [] 
         with comp_md_path.open("w", encoding="utf-8") as md:
             md.write(f"# Platform information for \"{platform}\"\n\n")
-            md.write("```{toctree}\n:maxdepth: 2\n:caption: Platform reference\n\n")
-            md.write("[//]: # (EOF) \n")
+            md.write("```{toctree}\n:maxdepth: 2\n:caption: Platform reference\n")
            
         for subfolder in SUBFOLDERS:
             full_path = folder_path / f"{subfolder}"
@@ -72,6 +71,7 @@ def generate_docs():
             
             with md_path.open("w", encoding="utf-8") as md:
                 md.write(f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n")
+                md.write("```{toctree}\n:maxdepth: 1\n:caption: Component reference\n\n")
                 
                 
                 for gds_file in sorted(full_path.glob("*.gds")):
@@ -121,15 +121,20 @@ def generate_docs():
                     component_md.write("| Field | Value |\n")
                     component_md.write("|:---------|:-----|\n")
                     # Write authors and file info
-                    component_md.write(f"| Authors|{authors_cell}|\n")
+                    component_md.write(f"| Authors|{authors_cell}|\n") # type: ignore
                     component_md.write(f"| Last Updated | {last_updated} |\n")
-                    component_md.write(f"| SHA256 Hash | `{sha256}` |\n")
+                    component_md.write(f"| SHA256 Hash | `{sha256}` |\n\n")
                     # Import plot
-                    component_md.write("## Preview\n")
                     component_md.write(f"![Preview](./birdseye/{gds_file.stem}.jpg)\n")
 
                     # Write to Markdown
-                    md.write(f"## {gds_file.stem}\n")
+                    #compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
+                    #overwrite_after_marker(md_path=md_path, new_lines = compref_appx, marker = ":caption: Component reference")
+                
+            commponents_list_for_text = [f"{gds_file.stem}.md" for gds_file in sorted(full_path.glob("*.gds"))]
+            overwrite_after_marker(md_path=md_path, new_lines = commponents_list_for_text, marker = ":caption: Component reference")
+            with md_path.open("a", encoding="utf-8") as md:
+                md.write("```")
                     
             shutil.copy(md_path,comp_md_dir / md_path.name)
         overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = ":caption: Platform reference")

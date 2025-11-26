@@ -212,7 +212,7 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
                         (box.right * dbu, box.top * dbu),
                         (box.left * dbu, box.top * dbu)
                     ]
-                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2)
+                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
                 ax.add_patch(poly)
 
             elif shape.is_polygon():
