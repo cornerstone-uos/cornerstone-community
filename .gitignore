@@ -3,3 +3,4 @@ cornerstone_community.egg*
 build/
 uv.lock
 .github/workflows/test-runner.yml
+.vscode/
