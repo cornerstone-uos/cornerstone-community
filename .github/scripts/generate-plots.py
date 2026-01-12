@@ -10,7 +10,7 @@ import xml.etree.ElementTree as ET
 import html
 
 ROOT_DIR = Path(".")
-FOLDERS = ["Si_220nm_active","SiN_300nm"]
+FOLDERS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
 SAVE_ROOT_DIR = Path("docs/comp_ref")
 
 
@@ -62,23 +62,30 @@ def parse_lyp_file(filepath):
 
 #custom precedence from top (drawn last) to bottom (drawn first)
 custom_precedence = [
-    (6, 0),   # si etch 1 (dark) for SOI220A
-    (3, 0),   # si etch 2 (light)
-    (4, 0),   # si etch 2 (dark)
-    (5, 0),   # si etch 3 (light)
-    (204, 0),   #SiN etch, dark
-    (203, 0),   #SiN etch, light
-    (7, 0),   # low p-type doping (dark)
-    (8, 0),     # low n-type, dark
-    (9, 0),     # high p-type, dark
-    (11, 0),    # high n-type, dark
-    (23, 0),    # defect detector, dark
-    (39, 0),    # heater filaments, light
-    (41, 0),    # heater pads, light
-    (12, 0),    # vias, dark
-    (13, 0),    # electrodes, light
-    (22, 0),    # cladding opening, dark
-
+    (60,0),     #   EBL gratings
+    (6, 0),     #   si etch 1 (dark) for SOI220A
+    (3, 0),     #   si etch 2 (light)
+    (4, 0),     #   si etch 2 (dark)
+    (5, 0),     #   si etch 3 (light)
+    (204, 0),   #   SiN etch, dark
+    (203, 0),   #   SiN etch, light
+    (303, 0),   #   Ge etch, light
+    (304, 0),   #   Ge etch, dark
+    (404, 0),   #   Si etch (suspended) for grating/wg, dark
+    (405, 0),   #   Si etch (suspended) for ribs, light
+    (7, 0),     #   low p-type doping (dark)
+    (8, 0),     #   low n-type, dark
+    (9, 0),     #   high p-type, dark
+    (11, 0),    #   high n-type, dark
+    (23, 0),    #   defect detector, dark
+    (39, 0),    #   heater filaments, light
+    (41, 0),    #   heater pads, light
+    (12, 0),    #   vias, dark
+    (13, 0),    #   electrodes, light
+    (22, 0),    #   cladding opening, dark
+    (46, 0),    #   heater isolation trench (dark)
+    (98, 0),    #   edge bleed
+    {99, 0},    #   floorplan
 ]
 
 def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zoom_factor = 0.1):
@@ -86,6 +93,7 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
     layout = pya.Layout()
     layout.read(gds_path)
     top_cell = layout.top_cell()
+    top_cell.flatten(-1,True)
     dbu = layout.dbu
     
     lyp_layers = parse_lyp_file(lyp_path)
@@ -198,11 +206,14 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
         for shape in shapes.each():
             if shape.is_box():
                 box = shape.box
-                x0, y0 = box.left * dbu, box.bottom * dbu
-                x1, y1 = box.right * dbu, box.top * dbu
-                rect = plt.Rectangle((x0, y0), x1 - x0, y1 - y0, # type: ignore
-                                    edgecolor='none', facecolor=colour, linewidth=0.2)
-                ax.add_patch(rect)
+                pts = [
+                        (box.left * dbu, box.bottom * dbu),
+                        (box.right * dbu, box.bottom * dbu),
+                        (box.right * dbu, box.top * dbu),
+                        (box.left * dbu, box.top * dbu)
+                    ]
+                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
+                ax.add_patch(poly)
 
             elif shape.is_polygon():
                 polygon = shape.polygon
@@ -211,6 +222,14 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
                     pts.append(pts[0])
                 poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
                 ax.add_patch(poly)
+            elif shape.is_path():
+                polygon = shape.path.simple_polygon()
+                pts = [(pt.x * dbu, pt.y * dbu) for pt in polygon.each_point()]
+                if pts and pts[0] != pts[-1]:
+                    pts.append(pts[0])
+                poly = plt.Polygon(pts, edgecolor='none', facecolor=colour, linewidth=0.2) # type: ignore
+                ax.add_patch(poly)
+                
 
     legend_entries.sort(key=lambda entry: tuple(map(int, entry[0].split('/'))))
     
@@ -227,24 +246,24 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
         "edge": "green"
     }
 # Plot ports as arrows and collect index-name mapping
-    index_name_map = []
+    if ports: 
+        index_name_map = []
+        for idx, port in enumerate(ports):
+            x, y = port["center"]
+            marker_size =4
+            port_type = port.get("port_type", "unknown")
+            port_angle = port.get("orientation",0.0)
+            port_angle = int(np.mod(port_angle/90.0,4))
+            #offsets = np.round([(x_pad/2,0),(0,y_pad/2),(-x_pad/2,0),(0,-y_pad/2)])
+            offsets = [(2*marker_size,0),(0,2*marker_size),(-2*marker_size,0),(0,-2*marker_size)]
 
-    for idx, port in enumerate(ports):
-        x, y = port["center"]
-        marker_size =4
-        port_type = port.get("port_type", "unknown")
-        port_angle = port.get("orientation",0.0)
-        port_angle = int(np.mod(port_angle/90.0,4))
-        #offsets = np.round([(x_pad/2,0),(0,y_pad/2),(-x_pad/2,0),(0,-y_pad/2)])
-        offsets = [(2*marker_size,0),(0,2*marker_size),(-2*marker_size,0),(0,-2*marker_size)]
-
-        colour = port_colours.get(port_type)
-        fcolour = colour if port_type not in ["vertical_te", "vertical_tm"] else 'none'
-        ax.plot(x, y, marker='o', markersize=marker_size, markeredgecolor=colour, markerfacecolor=fcolour)
-        #ax.text(x+offsets[port_angle][0], y+offsets[port_angle][1], str(idx), fontsize=12, ha='center', va='center', color=colour)
-        
-        ax.annotate(str(idx), (x, y),
-                    textcoords="offset points", xytext=offsets[port_angle], ha='center',va='center',color=colour)
+            colour = port_colours.get(port_type)
+            fcolour = colour if port_type not in ["vertical_te", "vertical_tm"] else 'none'
+            ax.plot(x, y, marker='o', markersize=marker_size, markeredgecolor=colour, markerfacecolor=fcolour)
+            #ax.text(x+offsets[port_angle][0], y+offsets[port_angle][1], str(idx), fontsize=12, ha='center', va='center', color=colour)
+            
+            ax.annotate(str(idx), (x, y),
+                        textcoords="offset points", xytext=offsets[port_angle], ha='center',va='center',color=colour)
 
         
     handles = [Patch(facecolor=colour, edgecolor='none', label=label)
@@ -259,16 +278,22 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
 
     #plt.show()
     # Save to JPEG
-    plt.savefig(output_path, dpi=300)
+    plt.savefig(output_path, dpi=600)
     plt.close()
     print(f"Saved layout with shapes and ports to {output_path}")
 
 for folder in FOLDERS:
     lyp_file = ROOT_DIR / folder / "layers.lyp"
-    tmp_path = ROOT_DIR / folder / "components"
     output_dir = SAVE_ROOT_DIR / f"{folder}" / "birdseye"
     output_dir.mkdir(parents=True,exist_ok=True)
-    for gds_file in sorted(tmp_path.glob("*.gds")):
+    comp_path = ROOT_DIR / folder / "components"
+    readymade_path = ROOT_DIR / folder / "ready-made"
+    for gds_file in sorted(comp_path.glob("*.gds")):
+        yaml_file = gds_file.with_suffix(".yaml")
+        output_file = output_dir /  f"{gds_file.stem}.jpg"
+        plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
+        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
+    for gds_file in sorted(readymade_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
         output_file = output_dir /  f"{gds_file.stem}.jpg"
         plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)

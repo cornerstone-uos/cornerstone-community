@@ -4,7 +4,7 @@ import subprocess
 import shutil
 from pathlib import Path
 
-PLATFORMS = ["Si_220nm_active", "SiN_300nm"]
+PLATFORMS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
 SUBFOLDERS = ["components", "ready-made"]
 DOCS_DIR = Path("docs")
 COMP_REF_DIR = Path("docs/comp_ref")
@@ -60,8 +60,7 @@ def generate_docs():
         sub_md_str = [] 
         with comp_md_path.open("w", encoding="utf-8") as md:
             md.write(f"# Platform information for \"{platform}\"\n\n")
-            md.write("```{toctree}\n:maxdepth: 2\n:caption: Platform reference\n\n")
-            md.write("[//]: # (EOF) \n")
+            md.write("```{toctree}\n:maxdepth: 2\n:caption: Platform reference\n")
            
         for subfolder in SUBFOLDERS:
             full_path = folder_path / f"{subfolder}"
@@ -72,11 +71,17 @@ def generate_docs():
             
             with md_path.open("w", encoding="utf-8") as md:
                 md.write(f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n")
+                md.write("```{toctree}\n:maxdepth: 1\n:caption: Component reference\n\n")
                 
                 
                 for gds_file in sorted(full_path.glob("*.gds")):
                     yaml_file = gds_file.with_suffix(".yaml")
                     authors = []
+                    component_md_path = comp_md_dir / f"{gds_file.stem}.md"
+                    component_md_path.parent.mkdir(parents=True, exist_ok=True)
+                    component_md=component_md_path.open("w", encoding="utf-8")
+                    
+
                     
                     
                     if yaml_file.exists():
@@ -97,23 +102,40 @@ def generate_docs():
 
                     # Format authors section
                     if not authors:
-                        author_lines = ["- Authors: N/A"]
+                        #author_lines = ["- Authors: N/A"]
+                        author_cell = "N/A"
                     else:
-                        author_lines = ["- Authors:"]
-                        for author in authors:
-                            name = author.get("name", "Unknown")
-                            org = author.get("organisation", "Unknown")
-                            author_lines.append(f"  - {name} ({org})")
+                        
+                        authors_list = [f"{author.get('name', 'Unknown')} ({author.get('organisation', 'Unknown')})"
+                                        for author in authors]
+                        authors_cell = "<br>".join(authors_list)
 
                     # Get Git info
                     sha256 = get_git_info(gds_file)
 
+                    # write to component md file
+                    component_md.write(f"# {gds_file.stem}\n")
+
+                    
+                    # Markdown table header
+                    component_md.write("| Field | Value |\n")
+                    component_md.write("|:---------|:-----|\n")
+                    # Write authors and file info
+                    component_md.write(f"| Authors|{authors_cell}|\n") # type: ignore
+                    component_md.write(f"| Last Updated | {last_updated} |\n")
+                    component_md.write(f"| SHA256 Hash | `{sha256}` |\n\n")
+                    # Import plot
+                    component_md.write(f"![Preview](./birdseye/{gds_file.stem}.jpg)\n")
+
                     # Write to Markdown
-                    md.write(f"## {gds_file.stem}\n")
-                    for line in author_lines:
-                        md.write(f"{line}\n")
-                    md.write(f"- Last updated: {last_updated}\n")
-                    md.write(f"- SHA256 Hash: {sha256}\n\n")
+                    #compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
+                    #overwrite_after_marker(md_path=md_path, new_lines = compref_appx, marker = ":caption: Component reference")
+                
+            commponents_list_for_text = [f"{gds_file.stem}.md" for gds_file in sorted(full_path.glob("*.gds"))]
+            overwrite_after_marker(md_path=md_path, new_lines = commponents_list_for_text, marker = ":caption: Component reference")
+            with md_path.open("a", encoding="utf-8") as md:
+                md.write("```")
+                    
             shutil.copy(md_path,comp_md_dir / md_path.name)
         overwrite_after_marker(md_path=comp_md_path, new_lines = sub_md_str, marker = ":caption: Platform reference")
     compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
