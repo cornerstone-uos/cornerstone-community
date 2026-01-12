@@ -86,7 +86,7 @@ any other issues related to the Community repository.
 
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :caption: Table of contents
 
 how-to/index.md

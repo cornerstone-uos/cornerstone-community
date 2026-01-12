@@ -3,7 +3,7 @@
 Here you can find information regarding the YAML files used for Wavephotonics integration.
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :caption: Repository reference
 
 ../examples/Ex0_YAMLFormat.md
