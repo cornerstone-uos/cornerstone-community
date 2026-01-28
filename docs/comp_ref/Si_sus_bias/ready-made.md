@@ -1,7 +1,7 @@
-# Component information for "Si_sus_bias", subfolder "ready-made" 
+# Ready-made 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 ```

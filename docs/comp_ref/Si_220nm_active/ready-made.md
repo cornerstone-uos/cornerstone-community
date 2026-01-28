@@ -1,7 +1,7 @@
-# Component information for "Si_220nm_active", subfolder "ready-made" 
+# Ready-made 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 SOI220_CS_OtS_March_2025_v1p1.md

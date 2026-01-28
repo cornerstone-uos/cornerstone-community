@@ -1,7 +1,7 @@
-# Component information for "Si_220nm_passive", subfolder "components" 
+# Basic components 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 Cell0_SOI220_Full_1550nm_Packaging_Template.md

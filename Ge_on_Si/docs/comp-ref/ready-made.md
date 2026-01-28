@@ -1,7 +1,7 @@
-# Component information for "Ge_on_Si", subfolder "ready-made" 
+# Ready-made 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 ```

@@ -1,7 +1,7 @@
-# Component information for "Si_sus_not_bias", subfolder "components" 
+# Basic components 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 Suspendedsilicon500nm_3800nm_TE_90_DegreeBend.md

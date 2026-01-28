@@ -60,7 +60,7 @@ def generate_docs():
         sub_md_str = [] 
         with comp_md_path.open("w", encoding="utf-8") as md:
             md.write(f"# Platform information for \"{platform}\"\n\n")
-            md.write("```{toctree}\n:maxdepth: 2\n:caption: Platform reference\n")
+            md.write("```{toctree}\n:maxdepth: 1\n:caption: Platform reference\n")
            
         for subfolder in SUBFOLDERS:
             full_path = folder_path / f"{subfolder}"
@@ -70,8 +70,14 @@ def generate_docs():
             sub_md_str.append(f"{subfolder}.md")
             
             with md_path.open("w", encoding="utf-8") as md:
-                md.write(f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n")
-                md.write("```{toctree}\n:maxdepth: 1\n:caption: Component reference\n\n")
+                if subfolder=="components":
+                    header = "# Basic components \n\n"
+                elif subfolder=="ready-made":
+                    header = "# Ready-made \n\n"
+                else:
+                    header = f"# Component information for \"{platform}\", subfolder \"{subfolder}\" \n\n"
+                md.write(header)
+                md.write("```{toctree}\n:maxdepth: 0\n:caption: Component reference\n\n")
                 
                 
                 for gds_file in sorted(full_path.glob("*.gds")):

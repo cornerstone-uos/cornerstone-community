@@ -1,7 +1,7 @@
-# Component information for "Si_220nm_active", subfolder "components" 
+# Basic components 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 Heater.md

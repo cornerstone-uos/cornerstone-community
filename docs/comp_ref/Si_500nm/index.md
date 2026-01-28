@@ -1,7 +1,7 @@
 # Platform information for "Si_500nm"
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :caption: Platform reference
 
 components.md

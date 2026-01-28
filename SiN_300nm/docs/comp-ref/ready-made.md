@@ -1,7 +1,7 @@
-# Component information for "SiN_300nm", subfolder "ready-made" 
+# Ready-made 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 SiN300_CS_OtS_March_2025_v1p0.md

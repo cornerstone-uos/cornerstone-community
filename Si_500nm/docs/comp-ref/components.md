@@ -1,7 +1,7 @@
-# Component information for "Si_500nm", subfolder "components" 
+# Basic components 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 Cell0_SOI500_Full_1550nm_Packaging_Template.md

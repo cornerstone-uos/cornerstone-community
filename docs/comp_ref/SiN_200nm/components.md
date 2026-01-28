@@ -1,7 +1,7 @@
-# Component information for "SiN_200nm", subfolder "components" 
+# Basic components 
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 0
 :caption: Component reference
 
 Heater.md
