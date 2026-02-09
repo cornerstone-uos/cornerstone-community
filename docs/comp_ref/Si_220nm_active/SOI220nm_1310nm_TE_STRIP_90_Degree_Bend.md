@@ -4,5 +4,6 @@
 | Authors|CORNERSTONE (CORNERSTONE)|
 | Last Updated | 28/07/2025 |
 | SHA256 Hash | `bc416baefe77d452de9fd4fe1fed54ea30651a55` |
+| Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_active/components/SOI220nm_1310nm_TE_STRIP_90_Degree_Bend.gds) |
 
 ![Preview](./birdseye/SOI220nm_1310nm_TE_STRIP_90_Degree_Bend.jpg)
