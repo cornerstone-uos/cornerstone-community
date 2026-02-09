@@ -2,7 +2,8 @@ import os
 import yaml
 import subprocess
 import shutil
-from pathlib import Path
+from pathlib import Path, PureWindowsPath, PurePosixPath
+from urllib.parse import urljoin, quote
 
 PLATFORMS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
 SUBFOLDERS = ["components", "ready-made"]
@@ -10,6 +11,8 @@ DOCS_DIR = Path("docs")
 COMP_REF_DIR = Path("docs/comp_ref")
 COMP_DIR_IDX = COMP_REF_DIR / "index.md"
 CONTRIB_PATH = DOCS_DIR / "contributor-list.md"
+
+REPO_LEADING_URL = "https://github.com/cornerstone-uos/cornerstone-community/tree/main/"
 
 
 
@@ -129,10 +132,12 @@ def generate_docs():
                     # Write authors and file info
                     component_md.write(f"| Authors|{authors_cell}|\n") # type: ignore
                     component_md.write(f"| Last Updated | {last_updated} |\n")
-                    component_md.write(f"| SHA256 Hash | `{sha256}` |\n\n")
+                    component_md.write(f"| SHA256 Hash | `{sha256}` |\n")
+                    tmp_link = urljoin(REPO_LEADING_URL, quote(str(gds_file).replace("\\", "/")))
+                    # this line only works for the main branch.
+                    component_md.write(f"| Raw GDS | [Download from GitHub]({tmp_link}) |\n\n")
                     # Import plot
                     component_md.write(f"![Preview](./birdseye/{gds_file.stem}.jpg)\n")
-
                     # Write to Markdown
                     #compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
                     #overwrite_after_marker(md_path=md_path, new_lines = compref_appx, marker = ":caption: Component reference")
