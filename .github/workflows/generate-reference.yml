@@ -3,7 +3,7 @@ name: Generate Docs from GDS/YAML
 on:
   push:
     branches:
-      - tidy-folders # disabled for the current branch
+      - main # disabled for the current branch
 
 jobs:
   generate-docs:
