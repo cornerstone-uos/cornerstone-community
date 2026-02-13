@@ -83,7 +83,8 @@ Hardware License](https://tapr.org/the-tapr-open-hardware-license/)
 to the your Community submissions, Community repository contents - or
 any other issues related to the Community repository.
 
-
+```{include} contributor-list.md
+```
 
 ```{toctree}
 :maxdepth: 1
@@ -93,3 +94,6 @@ how-to/index.md
 comp_ref/index.md
 rep_ref/index.md
 ```
+
+
+

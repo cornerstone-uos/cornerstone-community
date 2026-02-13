@@ -314,7 +314,6 @@ source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
     { name = "klayout" },
-    { name = "matplotlib" },
     { name = "pre-commit" },
     { name = "pytest" },
     { name = "pyyaml" },
@@ -323,6 +322,7 @@ dependencies = [
 [package.optional-dependencies]
 docs = [
     { name = "linkify-it-py" },
+    { name = "matplotlib" },
     { name = "myst-parser" },
     { name = "sphinx" },
     { name = "sphinx-book-theme" },
@@ -337,7 +337,7 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "klayout", specifier = ">=0.30.4" },
     { name = "linkify-it-py", marker = "extra == 'docs'", specifier = ">=2.0.3" },
-    { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "matplotlib", marker = "extra == 'docs'", specifier = ">=3.10.7" },
     { name = "myst-parser", marker = "extra == 'docs'", specifier = ">=4.0.1" },
     { name = "pdk-data-verifier", marker = "extra == 'validator'", specifier = ">=0.8.0" },
     { name = "pre-commit", specifier = ">=4.2.0" },
