@@ -30,8 +30,8 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra docs
       
-#      - name: Generate birdseye plots
-#        run: .venv/bin/python .github/scripts/generate-plots.py
+      - name: Generate birdseye plots
+        run: .venv/bin/python .github/scripts/generate-plots.py
 
       - name: Generate documentation
         run: .venv/bin/python .github/scripts/generate-docs.py
