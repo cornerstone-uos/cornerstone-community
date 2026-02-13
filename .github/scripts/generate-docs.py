@@ -96,29 +96,42 @@ def generate_docs():
                     if yaml_file.exists():
                         with yaml_file.open("r", encoding="utf-8") as yf:
                             data = yaml.safe_load(yf)
+
                         authors = data.get("authors", [])
-                        last_updated = data.get("last_updated",[]).strip()
+                        last_updated = data.get("last_updated", "Unknown").strip()
+                        comments = data.get("comments", [])  # <-- NEW
+
                         for author in authors:
                             name = author.get("name", "").strip()
                             org = author.get("organisation", "").strip()
 
                             if name and org and org.lower() != "cornerstone":
                                 unique_authors.add((name, org))
+
                     else:
                         authors = []
-                        last_updated=["Unknown"]
+                        last_updated = "Unknown"
+                        comments = []  # <-- NEW
                         print(f"YAML file not found for {gds_file.stem}. Using default author info.")
 
                     # Format authors section
+                    # Format authors section
                     if not authors:
-                        #author_lines = ["- Authors: N/A"]
-                        author_cell = "N/A"
+                        authors_cell = "N/A"
                     else:
-                        
-                        authors_list = [f"{author.get('name', 'Unknown')} ({author.get('organisation', 'Unknown')})"
-                                        for author in authors]
+                        authors_list = [
+                            f"{author.get('name', 'Unknown')} ({author.get('organisation', 'Unknown')})"
+                            for author in authors
+                        ]
                         authors_cell = "<br>".join(authors_list)
 
+                    # Format comments section
+                    if not comments:
+                        comments_cell = "N/A"  # Or leave None if you want to skip the row entirely
+                    else:
+                        # comments is expected to be a list of strings
+                        comments_list = [str(c).strip() for c in comments]
+                        comments_cell = "<br>".join(comments_list)
                     # Get Git info
                     sha256 = get_git_info(gds_file)
 
@@ -133,6 +146,10 @@ def generate_docs():
                     component_md.write(f"| Authors|{authors_cell}|\n") # type: ignore
                     component_md.write(f"| Last Updated | {last_updated} |\n")
                     component_md.write(f"| SHA256 Hash | `{sha256}` |\n")
+                    
+                    if comments:
+                        component_md.write(f"| Comments | {comments_cell} |\n")
+
                     tmp_link = urljoin(REPO_LEADING_URL, quote(str(gds_file).replace("\\", "/")))
                     # this line only works for the main branch.
                     component_md.write(f"| Raw GDS | [Download from GitHub]({tmp_link}) |\n\n")

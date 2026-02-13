@@ -4,4 +4,5 @@ authors:
     organisation: CORNERSTONE
 last_updated: 13/02/2026
 comments: 
-  - Manual for the educational kit can be found in ``docs/PIC_Bootcamp_Manual.pdf``
+  - While there is substantial overlap between the component designs compared to the Educational Kit, PIC Bootcamp Demo chip only contains one etch depth (120nm), and one metal layer (Ti/Al) for quick fabrication.
+  - Manual for the educational kit can be found in [docs/_static/PIC_Bootcamp_Manual.pdf](../../_static/PIC_Bootcamp_Manual.pdf) 
