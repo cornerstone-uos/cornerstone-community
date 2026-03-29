@@ -1,0 +1,35 @@
+name: SiN200nm_780nm_TE_STRIP_Splitter5959
+component_type: Splitter5050
+authors:
+- name: Skandan Chandrasekar
+  organisation: None
+  email: s39chand@uwaterloo.ca
+last_updated: 29/03/2026
+modes:                                 
+  - mode_numbers:                        
+    - 0                                     
+    - 0
+    polarisation: TE                     
+    wavelength: 780  
+ports:                                 
+- name: o1                               
+  port_type: optical                     
+  center:                                 
+  - -2.478                                    
+  - 0
+  orientation: 180                        
+  cross_section: strip_780nm
+- name: o2                                                   
+  port_type: optical                        
+  center:                                 
+  - 2.475
+  - 1.45
+  orientation: 0                                        
+  cross_section: strip_780nm         
+- name: o3
+  port_type: optical
+  center:
+  - 2.475
+  - -1.45
+  orientation: 0
+  cross_section: strip_780nm
