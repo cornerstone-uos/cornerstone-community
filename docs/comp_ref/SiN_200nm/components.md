@@ -16,5 +16,6 @@ SiN200nm_638nm_TE_STRIP_Waveguide.md
 SiN200nm_780nm_TE_STRIP_2x1_MMI.md
 SiN200nm_780nm_TE_STRIP_2x2_MMI.md
 SiN200nm_780nm_TE_STRIP_Grating_Coupler.md
+SiN200nm_780nm_TE_STRIP_Splitter5050.md
 SiN200nm_780nm_TE_STRIP_Waveguide.md
 ```

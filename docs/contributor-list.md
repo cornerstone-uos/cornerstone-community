@@ -6,4 +6,5 @@ Many thanks to all the contributors (listed without order):
 - Dr Imad Faruque (University of Sheffield)
 - Dr James O'Callaghan (Tyndall National Institute)
 - Dr Thalia Dominguez Bucio (University of Southampton)
+- Skandan Chandrasekar (None)
 - Thomas Parker (CSA Catapult)
