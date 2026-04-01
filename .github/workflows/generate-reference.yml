@@ -5,17 +5,22 @@ on:
     branches:
       - main # disabled for the current branch
 
+permissions:
+  contents: read
+
 jobs:
   generate-docs:
     if: github.actor != 'github-actions'  # prevents feedback loop - but also prevents nested Actions. useful for now but will need revision
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       
-      - name: Checkout code with PAT
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GHA_PAT_TEST }}
+          token: ${{ github.token }}
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
