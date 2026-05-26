@@ -4,7 +4,7 @@ SOI220_cband_TM_strip_apodized_GC_focusing_v1p0 — waveguide on SOI 220 nm Pass
 
 ---
 
-Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:28:34.595Z.
+Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:30:24.205Z.
 
 **Mode:** Community PDK (cornerstone-community layout)
 **Author identity:** https://github.com/AEmreKaplan/
@@ -12,7 +12,7 @@ Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:28:34.595Z.
 **Category:** passive
 **Platform:** SOI 220 nm Passive
 **Status:** available
-**Updating:** existing folder
+**Marked as:** New BB (folder created on first commit)
 
 ## Layout
 
