@@ -4,9 +4,8 @@ SOI220_cband_TM_strip_apodized_GC_focusing_v1p0 — waveguide on SOI 220 nm Pass
 
 ---
 
-Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:25:21.888Z.
+Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:44:56.316Z.
 
-**Mode:** Community PDK (cornerstone-community layout)
 **Author identity:** https://github.com/AEmreKaplan/
 **BB type:** waveguide
 **Category:** passive
@@ -14,23 +13,17 @@ Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T20:25:21.888Z.
 **Status:** available
 **Updating:** existing folder
 
-## Layout
+## Section routing
 
-```
-SOI_220_nm_Passive/
-  components/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0.gds   ← raw GDS bytes
-  components/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0.yaml  ← canonical YAML descriptor
-  s_matrix/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                    ← S-matrix tab
-  tests/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                       ← Tests tab
-  fabrication/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                 ← Fab tab
-  scripts/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                     ← Scripts tab
-  eda/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/eda_links.json           ← EDA links
-  documents/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                   ← non-YAML docs
-  variants/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/                    ← variant sub-folders (recursive)
-```
+- **layout** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/components/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
+- **sparams** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/s_matrix/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
+- **tests** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/tests/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
+- **fab** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/fabrication/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
+- **scripts** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/scripts/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
+- **eda** → `cornerstone-uos/cornerstone-community@main:SOI_220_nm_Passive/eda/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0/`
 
 ## Notes
 
-- Folder layout: matches [cornerstone-community](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_passive) — sections at the top of the platform folder, BB-named subfolders inside.
+- Each section commits to its own configured repo + folder (see above).
 - Re-running *Prepare for community PDK* is idempotent — only new / changed files are uploaded.
-- Lands in the canonical PDK structure; no further repathing needed before merging upstream.
+- The dashboard's selective-fetch / hydrate flow follows the same `repoPath` references on adopter side, so this folder layout round-trips cleanly.
