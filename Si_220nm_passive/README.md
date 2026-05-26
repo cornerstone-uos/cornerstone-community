@@ -1,31 +1,31 @@
-# SOI220nm_1550nm_TM_STRIP_focusing_GC_apodised
+# SOI220_cband_TM_strip_apodized_GC_focusing_v1p0
 
-SOI220nm_1550nm_TM_STRIP_focusing_GC_apodised — grating-coupler on SOI 220 nm Passive.
+SOI220_cband_TM_strip_apodized_GC_focusing_v1p0 — waveguide on SOI 220 nm Passive.
 
 ---
 
-Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T19:04:37.749Z.
+Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T19:59:43.504Z.
 
 **Author identity:** https://github.com/AEmreKaplan/
-**BB type:** grating-coupler
+**BB type:** waveguide
 **Category:** passive
 **Platform:** SOI 220 nm Passive
-**Status:** progress
-**Updating:** existing community PDK folder
+**Status:** available
+**Marked as:** New BB (folder created on first commit)
 
 ## Layout
 
 ```
 Si_220nm_passive/
-  layout/                 ← raw GDS / OASIS / SVG layout uploads
-  components/             ← auto-generated YAML descriptor (next to a community-PDK .gds reference)
-  sparams/                ← S-matrix tab
-  tests/                  ← Tests tab
-  fab/                    ← Fabrication tab
-  scripts/                ← Scripts tab
-  eda/                    ← EDA tab (links as eda_links.json)
-  documents/              ← non-YAML docs (PDFs, datasheets)
-  variants/               ← recursive variant sub-folders
+  PDKMonitor_layout/         ← raw GDS / OASIS / SVG layout uploads
+  PDKMonitor_components/     ← auto-generated YAML descriptor
+  PDKMonitor_sparams/        ← S-matrix tab
+  PDKMonitor_tests/          ← Tests tab
+  PDKMonitor_fab/            ← Fabrication tab
+  PDKMonitor_scripts/        ← Scripts tab
+  PDKMonitor_eda/            ← EDA tab (links as eda_links.json)
+  PDKMonitor_documents/      ← non-YAML docs (PDFs, datasheets)
+  PDKMonitor_variants/       ← recursive variant sub-folders
 ```
 
 ## Notes
