@@ -1,0 +1,474 @@
+{
+  "statuses": [
+    {
+      "id": "available",
+      "name": "Available",
+      "color": "#3fb950"
+    },
+    {
+      "id": "progress",
+      "name": "In progress",
+      "color": "#d29922"
+    },
+    {
+      "id": "planned",
+      "name": "Planned",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "discontinued",
+      "name": "Discontinued",
+      "color": "#f85149"
+    }
+  ],
+  "categories": [
+    {
+      "id": "passive",
+      "name": "Passive",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "active",
+      "name": "Active",
+      "color": "#0fc7c4"
+    },
+    {
+      "id": "packaging",
+      "name": "Packaging",
+      "color": "#a371f7"
+    },
+    {
+      "id": "detector",
+      "name": "Detector",
+      "color": "#3fb950"
+    },
+    {
+      "id": "source",
+      "name": "Laser",
+      "color": "#c84674"
+    },
+    {
+      "id": "hybrid",
+      "name": "Hybrid",
+      "color": "#8b6cf5"
+    },
+    {
+      "id": "heater",
+      "name": "Electrical",
+      "color": "#d7da4e"
+    }
+  ],
+  "bbTypes": [
+    {
+      "id": "waveguide",
+      "name": "waveguide",
+      "sketch": "waveguide"
+    },
+    {
+      "id": "mmi",
+      "name": "mmi",
+      "sketch": "mmi"
+    },
+    {
+      "id": "crossing",
+      "name": "crossing",
+      "sketch": "crossing"
+    },
+    {
+      "id": "bend",
+      "name": "bend",
+      "sketch": "bend"
+    },
+    {
+      "id": "mzi",
+      "name": "MZI",
+      "sketch": "mzi"
+    },
+    {
+      "id": "ring",
+      "name": "microring resonator",
+      "sketch": "ring"
+    },
+    {
+      "id": "directional-coupler",
+      "name": "directional coupler",
+      "sketch": "directional-coupler"
+    },
+    {
+      "id": "grating-coupler",
+      "name": "grating coupler",
+      "sketch": "grating-coupler"
+    },
+    {
+      "id": "edge-coupler",
+      "name": "edge coupler (inverse taper)",
+      "sketch": "edge-coupler"
+    },
+    {
+      "id": "spiral",
+      "name": "spiral waveguide",
+      "sketch": "spiral"
+    },
+    {
+      "id": "photodetector",
+      "name": "photodetector",
+      "sketch": "photodetector"
+    },
+    {
+      "id": "modulator",
+      "name": "modulator",
+      "sketch": "modulator"
+    },
+    {
+      "id": "custom",
+      "name": "custom (upload image)",
+      "sketch": "custom"
+    }
+  ],
+  "platforms": [
+    {
+      "id": "soi-220",
+      "name": "SOI 220 nm",
+      "material": "Si",
+      "thickness": 220,
+      "defaultWGwidth": 500,
+      "color": "#d29922"
+    },
+    {
+      "id": "soi-340",
+      "name": "SOI 340 nm",
+      "material": "Si",
+      "thickness": 340,
+      "defaultWGwidth": 800,
+      "color": "#cdb174"
+    },
+    {
+      "id": "soi-500",
+      "name": "SOI 500 nm",
+      "material": "Si",
+      "thickness": 500,
+      "defaultWGwidth": 1000,
+      "color": "#cdc3ac"
+    },
+    {
+      "id": "tfln-300",
+      "name": "TFLN 300 nm",
+      "material": "LN",
+      "thickness": 300,
+      "defaultWGwidth": 1500,
+      "color": "#7039a7"
+    },
+    {
+      "id": "sin-300",
+      "name": "SiN 300 nm",
+      "material": "SiN",
+      "thickness": 300,
+      "defaultWGwidth": 1200,
+      "color": "#58a6ff"
+    },
+    {
+      "id": "sin-200",
+      "name": "SiN 200 nm",
+      "material": "SiN",
+      "thickness": 200,
+      "defaultWGwidth": 1000,
+      "color": "#5fc8c1"
+    },
+    {
+      "id": "sus-si-500",
+      "name": "Suspended-Silicon 500 nm",
+      "material": "Si",
+      "thickness": 500,
+      "defaultWGwidth": 500,
+      "color": "#c1a96a"
+    },
+    {
+      "id": "ge-on-si",
+      "name": "GeonSi",
+      "material": "Germanium",
+      "thickness": 3000,
+      "defaultWGwidth": 2000,
+      "color": "#41c851"
+    }
+  ],
+  "edaTools": [
+    {
+      "id": "ipkiss",
+      "name": "IPKISS (Luceda Photonics)",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "gdsfactory",
+      "name": "gdsfactory",
+      "color": "#3fb950"
+    },
+    {
+      "id": "synopsys",
+      "name": "Synopsys",
+      "color": "#d29922"
+    },
+    {
+      "id": "nazca",
+      "name": "Nazca",
+      "color": "#db61a2"
+    },
+    {
+      "id": "klayout",
+      "name": "Klayout",
+      "color": "#a371f7"
+    },
+    {
+      "id": "virtuoso",
+      "name": "Virtuoso (Cadence)",
+      "color": "#f85149"
+    },
+    {
+      "id": "ledit",
+      "name": "L-Edit (Siemens)",
+      "color": "#79c0ff"
+    },
+    {
+      "id": "picstudio",
+      "name": "PIC Studio (Latitude Design Systems)",
+      "color": "#7ee48b"
+    }
+  ],
+  "cdiAxes": [
+    {
+      "id": "chip",
+      "name": "Chip level",
+      "min": 1,
+      "max": 4,
+      "color": "#58a6ff"
+    },
+    {
+      "id": "wafer",
+      "name": "Wafer level",
+      "min": 1,
+      "max": 4,
+      "color": "#3fb950"
+    },
+    {
+      "id": "packaging",
+      "name": "Assembly level",
+      "min": 1,
+      "max": 4,
+      "color": "#a371f7"
+    }
+  ],
+  "layers": [
+    {
+      "id": "l1",
+      "name": "Si full etch",
+      "layer": 3,
+      "datatype": 0,
+      "description": "Strip waveguides — silicon fully etched",
+      "color": "#d29922"
+    },
+    {
+      "id": "l2",
+      "name": "Waveguide etch",
+      "layer": 4,
+      "datatype": 0,
+      "description": "Silicon etch — defines rib waveguide regions",
+      "color": "#db61a2"
+    },
+    {
+      "id": "l3",
+      "name": "Slab etch",
+      "layer": 5,
+      "datatype": 0,
+      "description": "Partial silicon etch for slab/rib transitions",
+      "color": "#f5a83a"
+    },
+    {
+      "id": "l4",
+      "name": "Grating",
+      "layer": 6,
+      "datatype": 0,
+      "description": "Grating teeth — fibre coupler",
+      "color": "#c4742d"
+    },
+    {
+      "id": "l5",
+      "name": "Heater",
+      "layer": 22,
+      "datatype": 0,
+      "description": "TiN / NiCr metallic heater filament",
+      "color": "#3fb950"
+    },
+    {
+      "id": "l6",
+      "name": "Contact",
+      "layer": 39,
+      "datatype": 0,
+      "description": "Via / contact to underlying metal layer",
+      "color": "#db61a2"
+    },
+    {
+      "id": "l7",
+      "name": "Metal 1 (pads)",
+      "layer": 41,
+      "datatype": 0,
+      "description": "Aluminium metallisation — bond pads / routing",
+      "color": "#a371f7"
+    },
+    {
+      "id": "l8",
+      "name": "Implant n+",
+      "layer": 60,
+      "datatype": 0,
+      "description": "n+ doping implant — modulator / PD contacts",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "l9",
+      "name": "Label / text",
+      "layer": 99,
+      "datatype": 0,
+      "description": "Text labels — non-fabricated, documentation only",
+      "color": "#6e7681"
+    },
+    {
+      "id": "l10",
+      "name": "Cell outline",
+      "layer": 100,
+      "datatype": 0,
+      "description": "Logical bounding box / cell outline marker",
+      "color": "#58a6ff"
+    },
+    {
+      "id": "l11",
+      "name": "DRC waiver",
+      "layer": 203,
+      "datatype": 0,
+      "description": "DRC exemption marker",
+      "color": "#d29922"
+    },
+    {
+      "id": "l12",
+      "name": "Floorplan",
+      "layer": 204,
+      "datatype": 0,
+      "description": "Floorplan / placement helper",
+      "color": "#c4742d"
+    }
+  ],
+  "about": {
+    "title": "CORNERSTONE Open Platform",
+    "subtitle": "OPENSOURCE PDK live monitor",
+    "version": "v1.0.0",
+    "contact": "pdk.cornerstone.soton.ac.uk",
+    "notes": "Licence free PDK monitoring and management dashboard for silicon photonics rapid prototyping.\nDesigned by Emre Kaplan (beta: 01/05/2026 · official v1.0.0 public release: 26/05/2026).\n\nFEATURES\n• Multi-platform tabs with per-platform BB libraries, GDS imports, S-matrix data, tests and fabrication files.\n• Role-based access: Admin (full), User-admin (own users/<id>/ folder), Read-only (view + run scripts).\n• Real-files architecture — every uploaded item lives as a separate file in the GitHub repo; the dashboard.json stays small and pool members hydrate the real bytes on fetch.\n• Multi-user pool assembly: 📥 Fetch all enabled sources, 📚 Fetch user repos (one-click pool), 🔍 Discover user slices, 🪪 Fetch my slice.\n• Full user-admin control over their users/<id>/ folder: add, remove (auto-prune orphans on publish), nuke (🗑 Wipe my repo folder).\n• Duplicate resolver for cross-platform BB names, with user-selectable keeper and variants.\n• GDS layers list with hover descriptions and colours.\n• Augmented BB procedural sketches with material gradients.\n• Inline Python script runner with safe sandbox.\n• Local Backups (.json) on every replace.\n\nThe portal is open to everyone for further development.\n\n",
+    "logoUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABuVBMVEX///8uJHotJHosInkqIHgeEHQkGXYmG3fh4OwoHXfn5vCkocPs6/NcVpR2caWzsMw/N4YgE3X29vojF3by8fe8udJpZZ1jXZnKyNyYlLkwJn9EPIYbDHTCwNeSj7dRS41/e6k6MYNMRowRAHABZ7AQUqAGYKkpPZABcrcSTJovMolEKINTKINfJ4NvJ4PX1uX74u774+ccRJWTIIGgHYCrGYDjBnzXBn6JhbF5dKfHDX7kCHTlC2flDGCIIoHlDlLlD0nt5fD98eT9++N7JIK8EX/lEjbkFSvnRCLlDVng7/f9/OPu9eV3sTkAgMP55RPlEEDlMCHoVSPrZiLteyH1rx74vBz6zRr72hnl3RzJ0CfL4e/kEh/qXBvugxrwkBnzohm9yyOgwC2KuDRsrzpBozDI3csZjsquxS9erlKFu92ZypXynSDwjhz5wAf70ACRvVKCunWx0unmOwvyp0L4xWT504L655b656n9+MbmO0vrYHHviYLzsZ/1u7X30sToTX7sdZPuipjyp7b3zdToOonqbaPwjq7iUpW3SZXJdqvYjrrkrctkAHqZZqJcO4zOstCBmcRWmcre6Ve5AAAYqklEQVR4nO1didvjxHnX6LRk2bIOy7I9PiQRWCCJKITFJmyg5QqEpARyAIU2kKRJtiFpKYQ2R9MWegZ65C/uvDPvjEb+vm93ofnsj+fRb3ef9VjSSD+9M+81hw2jR48ePXr06NGjR48ePXr06NGjR48ePXr06NGjR48ePXr06NGjR48ePXr0OIMkbFbTaQafptNVE2SnfqA/KKa7vFrUgFFoZDn/ZFf5LkpO/WT/f4Sr9cyI6tizLYsQkzh7Y0fZ/6Zl2V5aD418twpO/ZCfHs18tKCOZwwdYgoQLzfGLivBF4TEc6N0qL2ZN6d+1E+DwXpJHd8i1oIzBFZMiIIhFk3GcGKblh/Xk/VnjGQyncWxbYGkkKEQoWDI/ge2JuEM4ZNpx3QUfXaUzyApak+0Q5N0GGqtFL4SMgS2hFheHSWDUz/6HSHcpYMiZXqFP7iQoZCZlCEXYStDfBVmPA3ibXjqx78tgh11HMFQiE2TIUFNY0pSQoameBWMYRjHdHu1VWsyJI5pxcBQPDdR/VAUBUNT1zTEFAQJY8guixfzK9wfi8phD2zRQeFY2NeI7Rpzin2NMZwZecplCKyctbGwUaLEpFFImXKyneXq1EQuQJDXrs0Qb5KwSm0E3RuN76nS0IiojwU/LYxdLQ+5k8AYOfDJq/MrqXKK5WTJMWOtLKjE5+Vkzw/J0pCVooksgqx2qsQ6YJKL0mRSnJjNuUgQ55SSOyidV8nVwnyMWENpi4UcpBbuZQlE0+TyTGiLkSztz1ZyhTANWYdyPYF6z1obxYLLvOtg6WApjVdG4aVYissB88rlZXSUdSvJpqem1WJdTzNqocI0ST0oKLf4XJfGoEulwnRBl3L7Dsco6FIiHHFi0WlYm8JwsD80WNW7K9JYkz2NV5mnnhvtoTBzaPHFZxVbkEO/FC1+asm4w0qDInXyK2Eas1FMgKEpQyRp8YUshNd24HmjtKXXJtgLiy8rAYYk3lwBLy5YpkxqwJA3Q/BiYum1cY8aZShkgz4NylR53rwsZCgKgqFF3MnJLWNYuSA1xVC1UiL5CobYMqXXJs7VZMg971A0bvgCGZre5MR+alBBm0OGRDyskqHgK1sp6cT4RDHEAspQnGYqhsQ7rRSzpSs4iX4onGhd06hWii2xjfFVfEjwxaCmkS9GMARXtjyhFJNRyh8dGHKqooEhQyGbVoaEtAxFQ1WtVPBFXWq2/ZBf5lan06hjB+P4epU5tnr9dVBQfGrTtBnDWnQ79idlDGMi+yidG6WPbda06imPLUSntGhYULQx8exUdnFXOwL1OGE0HFmaa4ecesXsiSxR0hiDkspDVWgUtSrtL6yk3p+IYTOUgNJKFnh0F8kS5NASdSJ0qVCVMr2S6BaVnCzSCCWgkATic8CbVBbqpc6JtyqdX8mpzH6Sp74Ai2SZ3cCSO2FiY0EvHmL+tBF5WIp37Lp1LC8bapV4LqtksJSVLAeHlRwdjZE7FsJOm2TiypJHsoHty1K8Maa1LUv1zpjX6rI6MmZtJW6TlG0lZdb4bSUjozm2tpnujIVFZLbJmWaptHmsNChiGWkQy8dsombxlV+6NkobP5umMw3jNgkZB4UoQZkp5Hl0XIKhJx5O8JA+jTDyrdcGBgPzpQc+jZZNlC8GvTb0Z5VPQ6TJocf1bcZMm8vXr3waxReziaTNl0rHpbX4OkOzjS2IFL2w+HgdN6qzYxIsahg2QpdSyRCdE80vbbP6QqStTyOkhn6pOCo9b1EJem1CpsDQqY8Y8yeVjwxFalfFFuZh9KQ8bxSGii00zxsPKRlqXpuMOzhDe3I8jcqEwhlK0bQy1DxvYmqtFGmo+NDUxy2kc4b9kGjREzZ1ztB05sciGDDpCRkSmbeALAaG8UqGrV+KDFU/lHFHy1CLD4XYlAy1Smz/WMpmx3SjUPQqqmfWQmZm0FqofuhjK+V/VfTEr3NkJfw6Zi2cNnAW1kJvpcxvP5J/mlEw3RGz+KZm8ZcuOc/iE2asp1RZfMosPlU2nkIl8jKw+JOuxbe1SlbgNtTHCRW3deywuMdIZnXMAfGDESypKNESHC7HwdKI+SJDiqV6a0DIEOOxoVZJfE4l9LCSenwUhgGg/cSATjOCa7xQlpJOqXPZrSpJLqjkGARFgAPPc0H0xM1WJ/DJ1ImgKgJV+hSVHMEmZhMIWWvm7Re+Cl63iRF1gte1inlZ3JHNVInFHYNKBbYHlRh6JUMtAm4roYvLj6RWNVfurCNOPCJ9Gsp0qY2mw7RoUFBp8E0fHC4iB7bjHFIf0hNVlXBPtGa61MYzZRZDVlJCKgTqpJfvgOceV+EqLOCPA5koCx0X3achHYtPTC1farb2EA2pZvFbz1tQtDGdxbiOLptgECt3pLRlplPzvDvjFqapxvHRq+l4bZrnrcbxiXSFpOfN67HVZACLXvbUIpn7lH5p69NIq677NESbi6FnE4VVN9vZJkqG8pDyvHm1SobsxrtLZlj54q7SL8WIEMeetOiJyGhRtlJTxRbSRVdeG87MaKOnNiMs5G23ldiTyw32BzVGNIKhCApM6ZfKNqvLUDUwLihNhm3OWzToth8SbdxCqwRFXV9uM5WT8BRD0aT0sac2xu9k9UW0rsYPtZw30m3jQz16UlkMZGhC6uMyMcPhCWylRIuAZaKiGz2ZHYadEVKixi0w0hBZfdEWOtETahqhhfzNZRIMiVQMYoAaM/dgDx2LyGidj3Kr+D9lHqVqwenMGKfSOJ6pJKSWDEK4UW1l6LFKsPta/mW6bqvaFYgnAyOiKZbojE8yQIiZClhIxUwFWbJXRkHSCyvZ3kkl9WUa/UZOBhlDd49UCZxtNVEE5hckcn7JGNzNgToRkvXF+ZXsoZK1Ptvkokqu5GyiHj169ODIgsHgYK1Owr4aHCMNm93RjUJ20qcOgMNhPvHjeLEcR6qOZr0hseMvxypzUGxGErlaIJGw0qY1UXDOBvJU+UjHBmJ2VZqNh9qjFtslu7c/mcHKknAz6gIH8cPhrEydtJypK+fszL1yw5MZnMve0rBbQS4OD0uHr9uxbNdZiEdPtmkMC0LYV3SDbFa1L+HFMdaeOJ7vecodhnPoln0tBzsFILWRx+pq1ynVS1nHqbi3F6c7I6Cefp3viliCP6FpmbbnTPDKLRXVIsNJ6rslY7im+uXeEg4GFVWzWohVc4PalE47A8tDN2JF5bQzPq6y5O5TAj6or2IaOCcFhlU7R12EgpgewMlDdo2B3r621MBcmhtBKv094ZPyaCnJa9tUwSLmFLfsTHxaztAmNmcYS3eZjwdUQHDiihDBttm7FNFJWPJxCCZBTL1M8enBL2Tg62HSETKEUG98liE8n3yXlDOEW/LLCZ9dAudPYaKm5bupy24FMoz5rG9Ok08GB4ZjKgakbOG38rQrYwinyPlEHYbtfUGGySgFMj51J8vlwolryPjNYBKoxZrsIuXZITsdIEOr3FTVZhnDQ0ISFxladKgYEsXQqiSWQ8HQrtjlVRlbIB3QLTN4lfFou82XKQX/c1ECYADD4p+qhHndwMx3vIXv+PyFRyhD9jaxn+oMTXu5kTeeQS4ZHHa6ieBlZMU6Zv9Pa1aPTcdFlgRDAq8+HfOnJ1w+oB0gdvJGyBAaQNogQ9IyjDv6kbVSIuLXZA0DG9AwMvbBikUnCKIKXxNrQzYEhViAMXPLqaZhEk43EEXxl7MVA+t0fsjwICOXQR7BcobtF+ydbNibsjw8LdywoNByg1Y+nAnrp5afSRkyumJylnwL0A+JcwFD8RlOC2r2cpbqFNmbM53hHKIvlZ/ZQsIGKDAZ8s5FV8jQVDLsMIT8p3yJEk0MLUeRDiD0hncg+xi+Gcg5sapdnJUQ54KhpmkOGZoqBwEvy5sJhpZ9ZtSsw3DJanJzdWzkiUuZDLl+snnAqDMkHYa7VJyvI6LQENoy1MWic72VcgaW02ArBY1kQZ5a74csbL9QhgVjBrnPDK72q+ggqtUZBinkDdqQqQCZ2Al/KtNnPciddRmaXYYj1l3owWgACDrVsnYNBbWbdFppSJjoQP+AtbCWlQ8ZwKbL0LQmiHJ1wJC9RP7SjBzSp7bjjYY6ScbQlAwLvLtEAmlMpg+BoT0CRQWDw51+aJXyvuxJSj6k2WUIU7F11oHPTG0ZKi0CgLyJXRqCoV0VYAG8ZdixFsSUS36caZdhUvlE5JSalFs6y6N01spJZxg57GXow2ozn7XDFdc0tACtbzmrDkNoUwJgxEowtAcM+aNoy6vCBRMTCThDd8tHuYZgmjhb6IfMLEdguON9x1qowW0rVgwLdnnYjPlzFYKAJ8a2TZduz9M08C5dffR37CFDZhlXAWH3sUnY0TRETuCB60qeHDuUIenIUDAU8hEZTRsMmsVNJ/RD0N5MxzGHKCr0fkh8uVxEMuSO0iKFfJuHQxDNpmZuG3dCqBTVGYa6DJnGQhmCRS7A0UpHyVL3aWy8r8Oug1dNDzIfu5SnCxUa5nfYy0R4bWLgmdtdnrmUDJOKdQnLm3utLiX2aIYOcIFPhmPa0PfaSU7NdhmDKSfKCdNbKbQKfUAGuIBOFjIUxoTEu0prpXYl78sece+1FkACMnd6WhLeIuhb7rWZMu/uijYlGRoNrCW0oFepVnqoS9HZ5P4v0dVb0gxHYKKULdJk2IDltdpmNoAsI6sZ+iEwTFhXNC2Ya3y+xY+g5fndTDmr09T1M4wygVoAa8GclzQF10maGK5puAMWQcofpKt8mjP2kL0pdjk/50xOEGQiZdWxh/z2rWrfM2bw/qUMWScSE6su8GkC6Od+d7I46CXiL2UgtnMgX9sIhvZmvVvPXDBJjWRIcLoSdEUeImwvsPjsvezXux0sdvLOTN5u6rbldBgCFSuVmo+76s5aY8iNK/fUz/VpjB1oV69coQO7WjaimZpeOYXvBmPINnO1wC3Brn0F2QFDoxLtsPVLOyyAIVdOU/CkRS828q2cObrWfA+9H8JwEHRbvj44m0M63SYDnaExFxn3830amOEE4YazWUfRcL+k0NmTCfR7m1b5eOaDg2vxqlqvbQUvMt4eMmwWPNqSDC1/PZeYIkMu+D1rSWgaR5Qu8zm7dQ460Fmfw5CdDu/NKfN9XnIuzs7oMITFxXor9cbqvqAwpxBdwt4NDMz8cie8qHlMbHuuZ7URmebTCNtQGHo/NKBXW7qmsdJYzpbZ6wxh3hjrGgk/DYJ7Bugtym51GYZLPiAET8PHu1zu4aC1EGcQHuOp+NCT941T/lhMU5tSzaGQpqmP08/40LIwuBrDZOnDwGXWlSEwJ7o9NOVImrvteN5TyCA4W3TB1DhkLUfOugxZkC4Gs3Asb8I1hM4QuiJp/VKpsuEBxOGKejhK68fYP4oJFYs9LKY80TZC25T6vHAgthgDQ1tjmMDrFgx9OT1RvjdwQaVfugerxexwUtYujpZbXq0U5gFDI5hRT4QwzL0bCxUIEXDrea2p1TI0ZbaEGSWsMBqllDqUxpXKoWXDKqaOQ51yK23RqmbeCTI0drAQto6MxEm9tFRKs1mkHmaiPA3QCmYOu6CRFNhhEEY2HZfi3u6sdRRDVkvqGRpWM4+f5efyrC17AM23zB0vXfBMlH5fz1cnDGA60qrrvg2mw2HUtBo/GegZywHO3IIvtetkVjMYdBDiN8rzhItFjjQR9+4EUAeVAoICZke1Z4V6dfhw8msNRo8ePXpcNSTPdxHo+GMND9wCf3SIPznEk09+7WtPtnjhhRfgH+JyGf7ZNxiuXbt211133X335z5374P33HPPffctFvfff//nP/+FL3zxi0899ZWHHvrSlx5++OGnn3700UcfeeSR69evfxnw2GOP3bhx47nnHn/8iSeeePHFZ5555tlnX3/99W9+86svvfTGyy9/61t//vZf/PSn3/v2t7/znZ9997s/f+WVPwW8+uqrr7322ps//vFbb33/+1//+g9+8MMf/uXlUvyRZHg3Z3jvgw9yhosOw4cEw6fPMnxOMHyxw/CryBAoHjB8lTN8U2f4k0texHazK0MQ4iHDr0iGUoZfvg3DlxTDMzJ89awM/+pyCRrPi2Z6K4YP3YLhua1UyvBtTYavXCjDS26khvH7AxmebaW3luHjF/dD3kq/Bwx/9vNOP3yTUXzrrb8G/ORvLpug8c61W7fSr5yV4dl+iAxfB4Z/y/DGGy+DCN9+991333vvvV/84v333/+7v+fgqlUMFx0LyZl+eM/tZHi9K0Og9+yzzzz7zIu//OWvfvXrX//mN//w29+CxbhkO3DHuHntk2qa66oX3rjx2I1//Kd//uCDDz5kZvCYgvkkeP52/bDbSjnB6//y7//6bx989OEDt+OUhOetVteWvF86PcDNO5Xh049yYh8+cB6xJMlCGLmKovluP85H1YRPNXFxBkYV6KvV8wSWvPt+fJx1T8/fhiH4NP/xn7/7iLlnZ2iFgdFEw/U2n1XLMq2nxrimccrCfd/2/CapUrl2zV0mA6JWqzu5saK2ZddHimdvXqRpPv7446f+63cfFWdkFg4KJqp8szRzI6+dmFGC+RbOup0OT4haf8jzK2q1Op8z4vOJxulxRMh74oEMvdS5/79nu/9pDvpJEhbTuREtPEgBpUxQqVytTrSVzmZnJrupr7fAie1iJrt1OAp4ebh5l8bwvsV9m/286A5TJwGjtt+UdV07MFlELppt13Lzueu40lnk/fR9orTV6u2qoEuepd95/h8JhozfveN5Meg0yqyJsqYqUxq7vn3hSmdt3RMORpnnrMfHRoprucsj7gDyDo8srv3vO0GXXBFtqzKuB4Vjy/0Q2j1o4a9aUSKnguFeX+2qoO5KZ5zIL9bjH3XfiN9/4+bq+c43TbTfODVNfVvbr02uezLlwHPLEBfetPu1me16i3ZFCWn7YX3pq9Y66IguKNZFRqkcB9AZkvN2u5ZLZtq9vjrrnsRl2A9x2AwYnmg/7EG03di0VqvVYSWbWK2O2sSy2112z2mlpY2LtwjubSJlKFer80Owt8nw9g9zCez2yxTapR0XSekJO0ZM3w8bDybT8IdLKzG4Jfoa3Rq7Wq7FhCXvo5h/Am3CKiEeEVPITG+RNa7cM8NMN0ZxAic2qeqa+SMMMLNsMBGf07hkzalIEQ7sfDjEQykdJzDgIY/NYddFRx5jlTTdSmK9klMgkUMD3BZm2giFNmqRdEr8us5lF1SSna3kBBhECD6ropElPsNhKktcP8gCn0SeqVJyppLiFpWcANuaCsC4XyQLMA3WWLelAuYwy0I5MIJKlWC1OqW3r+RIWymcRZLH6CbXqyzGIV+5555cr4177qEfE+fG3pFL9cyaWQtfzvGGSqhSSTasVseLTrPVF0dWpWIVZTzNxE7rRK10lqass4sSaXdoJUTfN5H7cGoNqfJphJewPOE2rSGzEUStVsfZ9O2u87ykrXQ2zfNXOpuaT4Pvol3p7C1OuoPpYOKZB+uATX0dsLbSWY8tsD3rK521HQdanwYMY3ni3/YIJp55/g6t+NzS8xYUtR14TBk9dfxS1bhxd0+vPPkw9aB09ZXORF+trjxvImeu6PtEtdGTuFT5pVr05JEr8OssYRVre9C2mgbDc0ttaaGiJ6WTVD/UNI1Y9owM0+WV+LWLLHfUnnt8EZG+B227L4apR8B6P8SZPe1+3vwyvp/36Apsdg1ItnxPdjQBMHUYVqvj4nXckx35457sOGnJwdXq6JVPg1oaEpPvyb6/EhuWcwwDY1+rGc+5kYz4gja+Qf6cdVU1eciZGqtY7p2fLhrmDchDcRVqlTA3JjxFvHQr7EYzgS2UciyMYMLYYCZL4HwW8sQZaJGhKmV6JZe9g8mnwq1+qOKOf9HiKv++RVFVG0AFKfhstBGoQBjNRpYgmTStZBECiLkqwW+UjLGOq/lTM4NZzUcdnJGRbdRyURYyNMRVyxAjYxrLRaKe3xhztSw1rQJjxtd/evXmCljBczGdQIQBvxVELZlds1P+W0EYa6jfCuJ/298KgpPht4K4C1geNW34yZCt/dRqd8LiLrS2f+lBJkr3S6VPY6Xu+ooYwQswGNepM5DbVmJ86MhZwNouu202URp5+M2utM6vagNtMdjTM3vQqrEJ/Rc89Jw3ETKk45P72XeEJilqX/7wmtVu00VIGz1xwek7JVt+HSVXX34SSbShYtWdNjLTRsBdGfKkRUqr4dXx0e4IzbasU1/JEANEbafkNqtvpzXZfha31UmKXeXS2MP9vDkrNW5BcGSmjJ202p0iof0HwiDajoyICRP3WHTGfEUGX+Tgw/ZPo2302VAut0BiJMP9qKT8V4A3oRGO+CdajvbDxPjsCu8QSTYo8Deds+l0VQyu6nShHj169OjRo0ePHj169OjRo0ePHj169OjRo0ePHj169OjRo0ePHj169OhxUvwfSrpGjqJEipkAAAAASUVORK5CYII=",
+    "links": [
+      {
+        "label": "github PDK (open platform)",
+        "url": "https://github.com/cornerstone-uos/cornerstone-community"
+      },
+      {
+        "label": "github PDK (main)",
+        "url": "https://github.com/cornerstone-uos/cornerstone-pdk"
+      },
+      {
+        "label": "website (open platform)",
+        "url": "https://cornerstone.sotonfab.co.uk/cornerstone-open-platform/"
+      },
+      {
+        "label": "CORNERSTONE website ",
+        "url": "https://cornerstone.sotonfab.co.uk"
+      }
+    ]
+  },
+  "ownership": {},
+  "labels": {},
+  "uploads": [],
+  "tabs": [
+    {
+      "id": "tab_bp0qqkv",
+      "name": "Technology Platforms",
+      "groups": [
+        {
+          "id": "g_0qijt14",
+          "name": "SOI 220 nm",
+          "platformMeta": {
+            "material": "Si",
+            "thickness": 220
+          },
+          "entities": [],
+          "githubUrl": "https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_passive",
+          "githubSubdir": "components"
+        },
+        {
+          "id": "g_prlchae",
+          "name": "SOI 340 nm",
+          "platformMeta": {
+            "material": "Si",
+            "thickness": 340
+          },
+          "entities": []
+        },
+        {
+          "id": "g_m7ugop3",
+          "name": "SOI 500 nm",
+          "platformMeta": {
+            "material": "Si",
+            "thickness": 500
+          },
+          "entities": []
+        },
+        {
+          "id": "g_j2hia3z",
+          "name": "TFLN 300 nm",
+          "platformMeta": {
+            "material": "LN",
+            "thickness": 300
+          },
+          "entities": []
+        },
+        {
+          "id": "g_ifskysn",
+          "name": "SiN 300 nm",
+          "platformMeta": {
+            "material": "SiN",
+            "thickness": 300
+          },
+          "entities": []
+        },
+        {
+          "id": "g_cfg3ruu",
+          "name": "SiN 200 nm",
+          "platformMeta": {
+            "material": "SiN",
+            "thickness": 200
+          },
+          "entities": []
+        }
+      ]
+    },
+    {
+      "id": "tab_6g30xc3",
+      "name": "Design Manual",
+      "groups": [],
+      "kind": "docs"
+    },
+    {
+      "id": "tab_i0i20vx",
+      "name": "Post-Processing",
+      "groups": []
+    }
+  ],
+  "sketchLibrary": [],
+  "_distribution": {
+    "publishedAt": "2026-05-27T19:38:46.303Z",
+    "publisherIdentity": "CS_Emre",
+    "publisherLabel": "CS_Emre",
+    "publisherRole": "user-admin",
+    "payloadKind": "user-admin-slice",
+    "appVersion": "v1.0",
+    "starter": true,
+    "seededBy": "admin",
+    "seededAt": "2026-05-27T19:38:46.303Z",
+    "note": "Starter dashboard for user 'CS_Emre' — created by admin via \"🌱 Seed user folders from sign-in list\". Edit + publish to overwrite with your real contributions."
+  }
+}
