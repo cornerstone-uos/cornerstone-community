@@ -13,8 +13,6 @@ Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T19:59:43.504Z.
 **Status:** available
 **Marked as:** New BB (folder created on first commit)
 
-# SOI220nm_1310nm_TM_STRIP_2x1_MMI
-SOI220nm_1310nm_TM_STRIP_2x1_MMI - TM 50:50 splitter
 
 ## Layout
 
