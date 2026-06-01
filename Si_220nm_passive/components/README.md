@@ -12,10 +12,3 @@ Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T21:28:41.860Z.
 **Platform:** SOI 220 nm Passive
 **Status:** available
 **Updating:** existing folder
-
-
-# Cell0_SOI220_Full_1550nm_Packaging_Template
-
-Cell0_SOI220_Full_1550nm_Packaging_Template - 
-
-Packaging template
