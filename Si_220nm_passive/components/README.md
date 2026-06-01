@@ -13,12 +13,9 @@ Prepared via CORNERSTONE PDK Monitor v1.0.0 on 2026-05-26T21:28:41.860Z.
 **Status:** available
 **Updating:** existing folder
 
-## Section routing
 
-- **layout** → `cornerstone-uos/cornerstone-community@main:Si_220nm_passive/components/`
+# Cell0_SOI220_Full_1550nm_Packaging_Template
 
-## Notes
+Cell0_SOI220_Full_1550nm_Packaging_Template - 
 
-- Each section commits to its own configured repo + folder (see above).
-- Re-running *Prepare for community PDK* is idempotent — only new / changed files are uploaded.
-- The dashboard's selective-fetch / hydrate flow follows the same `repoPath` references on adopter side, so this folder layout round-trips cleanly.
+Packaging template
