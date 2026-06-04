@@ -1,0 +1,33 @@
+name: SiN300nm_1550nm_TE_STRIP_Focused_Grating_Coupler_CSAC
+component_type: GratingCoupler1D
+authors:
+- name: Thomas Parker
+  organisation: CSA Catapult
+last_updated: 26/09/2025
+ports:
+  - center:
+    - 0.0
+    - 0.0
+    name: o1
+    orientation: 0
+    port_type: optical
+    cross_section: strip_1550nm
+    modes:
+    - mode_numbers:
+      - 0
+      - 0
+      polarisation: TE
+      wavelength: 1550
+
+  - center:
+    - -85
+    - 0
+    name: vertical_te
+    port_type: vertical_te
+    orientation: 180
+    width:  21.0
+    coupling_angle_cladding: 5.514
+    fibre_modes:
+    - fibre_type: SMF-28
+      wavelength: 1550
+
