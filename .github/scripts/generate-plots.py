@@ -12,6 +12,7 @@ import html
 ROOT_DIR = Path(".")
 FOLDERS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm","Student_SOI","TFLN_300nm"]
 SAVE_ROOT_DIR = Path(".")
+DOCS_ROOT_DIR = Path("docs/comp_ref")
 
 
 def parse_lyp_file(filepath):
@@ -274,16 +275,21 @@ for folder in FOLDERS:
     lyp_file = ROOT_DIR / folder / "layers.lyp"
     tmp_path = ROOT_DIR / folder / "components"
     output_dir = SAVE_ROOT_DIR / f"{folder}" / "sketch"
+    docout_dir = DOCS_ROOT_DIR / f"{folder}" / "sketch"
+    docout_dir.mkdir(parents=True,exist_ok=True)
     output_dir.mkdir(parents=True,exist_ok=True)
     for gds_file in sorted(tmp_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
         output_file = output_dir /  f"{gds_file.stem}.jpg"
+        doc_file = docout_dir /  f"{gds_file.stem}.jpg"
         plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
-        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
+        shutil.copy2(output_file, doc_file)
+        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR} and copied to {DOCS_ROOT_DIR}")
         
     tmp_path = ROOT_DIR / folder / "ready-made"    
     for gds_file in sorted(tmp_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
         output_file = output_dir /  f"{gds_file.stem}.jpg"
+        doc_file = docout_dir /  f"{gds_file.stem}.jpg"
         plot_gds_with_shapes_and_ports(gds_path=gds_file, yaml_path=yaml_file,lyp_path=lyp_file, output_path=output_file)
-        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR}")
+        print(f"{gds_file.stem} is plotted under {SAVE_ROOT_DIR} and copied to {DOCS_ROOT_DIR}")
