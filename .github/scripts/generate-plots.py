@@ -10,8 +10,8 @@ import xml.etree.ElementTree as ET
 import html
 
 ROOT_DIR = Path(".")
-FOLDERS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
-SAVE_ROOT_DIR = Path("docs/comp_ref")
+FOLDERS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm","Student_SOI","TFLN_300nm"]
+SAVE_ROOT_DIR = Path(".")
 
 
 def parse_lyp_file(filepath):
@@ -273,7 +273,7 @@ def plot_gds_with_shapes_and_ports(gds_path, yaml_path, output_path,lyp_path, zo
 for folder in FOLDERS:
     lyp_file = ROOT_DIR / folder / "layers.lyp"
     tmp_path = ROOT_DIR / folder / "components"
-    output_dir = SAVE_ROOT_DIR / f"{folder}" / "birdseye"
+    output_dir = SAVE_ROOT_DIR / f"{folder}" / "sketch"
     output_dir.mkdir(parents=True,exist_ok=True)
     for gds_file in sorted(tmp_path.glob("*.gds")):
         yaml_file = gds_file.with_suffix(".yaml")
