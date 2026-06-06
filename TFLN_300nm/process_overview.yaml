@@ -11,7 +11,8 @@ gds_layers:
   - name: TFLN_Waveguide_LF
     layer: [503, 0]
     description: Waveguide layer, defines both strip and rib. Layer will be protected.
-    drc: { min_feature_size: 0.35, min_gap: 0.2}
+    drc: 
+    - { min_feature_size: 0.1, min_gap: 0.1, max_area_mm2: 0.6}
     alias: wg_lf
   - name: Floorplan
     layer: [99, 0]
@@ -20,7 +21,7 @@ gds_layers:
   - name: Label_Etch_DF
     layer: [100, 0]
     description: Labels (dark), will be etched, will not be checked in DRC
-    drc: { min_feature_size: 0.25, min_gap: 0.25 }
+    drc: { min_feature_size: 0.2, min_gap: 0.25 }
 layer_stack:
   - name: BOX
     description: BOX - buried oxide
