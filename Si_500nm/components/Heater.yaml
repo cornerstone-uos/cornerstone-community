@@ -8,14 +8,15 @@ ports:
 - name: e1
   port_type: electrical_dc
   center:
-  - 75.00000
-  - 235.00400
+  - 75.0
+  - 235.004
   orientation: 90
   cross_section: dc
 - name: e2
   port_type: electrical_dc
   center:
-  - 175.00000
-  - 235.00400
+  - 175.0
+  - 235.004
   orientation: 90
   cross_section: dc
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_500nm/Heater.html

@@ -13,19 +13,18 @@ modes:
   polarisation: TE
   wavelength: 780
 ports:
-
-  - center:
-    - 0
-    - 0
-    name: o1
-    orientation: 180
-    port_type: optical
-    cross_section: strip_780nm
-
-  - center:
-    - 440
-    - 0
-    name: o2
-    orientation: 0.0
-    port_type: optical
-    cross_section: strip_780nm
+- center:
+  - 0
+  - 0
+  name: o1
+  orientation: 180
+  port_type: optical
+  cross_section: strip_780nm
+- center:
+  - 440
+  - 0
+  name: o2
+  orientation: 0.0
+  port_type: optical
+  cross_section: strip_780nm
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_200nm/SiN200nm_780nm_TE_STRIP_Waveguide.html

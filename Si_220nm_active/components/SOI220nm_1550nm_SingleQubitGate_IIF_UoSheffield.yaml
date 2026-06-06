@@ -14,29 +14,29 @@ ports:
 - name: e1
   port_type: electrical_dc
   center:
-  - 110.02500
-  - 123.00700
+  - 110.025
+  - 123.007
   orientation: 90
   cross_section: dc
 - name: e2
   port_type: electrical_dc
   center:
-  - 200.02500
-  - 123.00700
+  - 200.025
+  - 123.007
   orientation: 90
   cross_section: dc
 - name: e3
   port_type: electrical_dc
   center:
-  - 315.06700
-  - 123.00700
+  - 315.067
+  - 123.007
   orientation: 90
   cross_section: dc
 - name: e4
   port_type: electrical_dc
   center:
-  - 405.06700
-  - 123.00700
+  - 405.067
+  - 123.007
   orientation: 90
   cross_section: dc
 - name: o1
@@ -56,14 +56,15 @@ ports:
 - name: o3
   port_type: optical
   center:
-  - 404.08400
+  - 404.084
   - 42.565
   orientation: 0.0
   cross_section: strip_1550nm
 - name: o4
   port_type: optical
   center:
-  - 404.08400
+  - 404.084
   - 30.565
   orientation: 0.0
   cross_section: strip_1550nm
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_active/SOI220nm_1550nm_SingleQubitGate_IIF_UoSheffield.html

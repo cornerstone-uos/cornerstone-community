@@ -1,9 +1,10 @@
 name: SiN300nm_1550nm_TE_Education_Kit
 authors:
-  - name: Dr Shengqi Yin
-    organisation: CORNERSTONE
-  - name: Dr Francesco Floris
-    organisation: University of Pavia
+- name: Dr Shengqi Yin
+  organisation: CORNERSTONE
+- name: Dr Francesco Floris
+  organisation: University of Pavia
 last_updated: 14/07/2025
-comments: 
-  - Manual for the educational kit can be found in [docs/_static/CORNERSTONE_Educational_Kit_Manual.pdf](../../_static/CORNERSTONE_Educational_Kit_Manual.pdf)
+comments:
+- Manual for the educational kit can be found in [docs/_static/CORNERSTONE_Educational_Kit_Manual.pdf](../../_static/CORNERSTONE_Educational_Kit_Manual.pdf)
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_300nm/SiN300nm_1550nm_TE_Education_Kit.html

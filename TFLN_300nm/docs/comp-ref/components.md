@@ -1,4 +1,4 @@
-# Ready-made 
+# Basic components 
 
 ```{toctree}
 :maxdepth: 0

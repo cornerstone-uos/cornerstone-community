@@ -39,3 +39,4 @@ ports:
   - -4.5
   orientation: 270
   cross_section: strip_1550nm
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_300nm/SiN300nm_1550nm_TE_STRIP_Crossing.html
