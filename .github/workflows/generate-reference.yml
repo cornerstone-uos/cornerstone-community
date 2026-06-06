@@ -53,7 +53,7 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra docs
       
-      - name: Generate birdseye plots
+      - name: Generate sketches
         run: .venv/bin/python .github/scripts/generate-plots.py
 
       - name: Generate documentation

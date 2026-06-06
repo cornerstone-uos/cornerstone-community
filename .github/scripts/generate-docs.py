@@ -164,7 +164,7 @@ def generate_docs():
                     # this line only works for the main branch.
                     component_md.write(f"| Raw GDS | [Download from GitHub]({tmp_link}) |\n\n")
                     # Import plot
-                    component_md.write(f"![Preview](./birdseye/{gds_file.stem}.jpg)\n")
+                    component_md.write(f"![Preview](./sketch/{gds_file.stem}.jpg)\n")
                     # Write to Markdown
                     #compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
                     #overwrite_after_marker(md_path=md_path, new_lines = compref_appx, marker = ":caption: Component reference")

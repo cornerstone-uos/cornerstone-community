@@ -3,6 +3,7 @@ import yaml
 import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
+import shutil
 import matplotlib
 import matplotlib.colors as mcolors
 from matplotlib.patches import Patch
