@@ -6,6 +6,7 @@
 
 Heater.md
 SiN300_CS_OtS_March_2025_v1p0.md
+SiN300nmEduKit+TyndallPackaging.md
 SiN300nm_1310nm_TE_STRIP_2x1_MMI.md
 SiN300nm_1310nm_TE_STRIP_2x2_MMI.md
 SiN300nm_1310nm_TE_STRIP_90_Degree_Bend.md
@@ -22,5 +23,4 @@ SiN300nm_1550nm_TE_STRIP_Focused_Grating_Coupler_CSAC.md
 SiN300nm_1550nm_TE_STRIP_Grating_Coupler.md
 SiN300nm_1550nm_TE_STRIP_Grating_Coupler_v1p2.md
 SiN300nm_1550nm_TE_STRIP_Waveguide.md
-SiN300nmEduKit+TyndallPackaging.md
 ```
