@@ -1,0 +1,44 @@
+process_name: TFLN_300nm
+foundry: CORNERSTONE
+description: TFLN platform on SiOx, 300nm epi thickness, x-cut, single etch depth, no metallisation
+material: TFLN
+is_public: true
+gds_type: only_real_gds
+includes_heaters: false
+includes_rf_layers: false
+has_a_no_metals_option: true
+gds_layers:
+  - name: TFLN_Waveguide_LF
+    layer: [503, 0]
+    description: Waveguide layer, defines both strip and rib. Layer will be protected.
+    drc: { min_feature_size: 0.35, min_gap: 0.2}
+    alias: wg_lf
+  - name: Floorplan
+    layer: [99, 0]
+    is_info_only: true
+    description: Cell outline
+  - name: Label_Etch_DF
+    layer: [100, 0]
+    description: Labels (dark), will be etched, will not be checked in DRC
+    drc: { min_feature_size: 0.25, min_gap: 0.25 }
+layer_stack:
+  - name: BOX
+    description: BOX - buried oxide
+    material: SiO2
+    thickness: { value: 4.7 }
+    gds_layer: null
+  - name: Waveguide
+    description: Waveguides (rib/strip)
+    material: TFLN
+    thickness: { value: 0.2, tol: 0.02 }
+    gds_layer: (wg_lf)
+  - name: Rib_Slab
+    description: Slab portion of the rib waveguide
+    material: TFLN
+    thickness: { value: 0.1, tol: 0.02 }
+    gds_layer: null
+  - name: TOX
+    description: Top cladding layer
+    material: SiO2
+    thickness: { value: 2.0, tol: 0.2 }
+    gds_layer: null
