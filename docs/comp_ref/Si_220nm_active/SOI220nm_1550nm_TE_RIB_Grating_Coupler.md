@@ -6,4 +6,4 @@
 | SHA256 Hash | `37fed33443605397dca2cd9879368024ee5ff5f9` |
 | Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_active/components/SOI220nm_1550nm_TE_RIB_Grating_Coupler.gds) |
 
-![Preview](./birdseye/SOI220nm_1550nm_TE_RIB_Grating_Coupler.jpg)
+![Preview](./sketch/SOI220nm_1550nm_TE_RIB_Grating_Coupler.jpg)

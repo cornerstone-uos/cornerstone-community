@@ -6,4 +6,4 @@
 | SHA256 Hash | `de7ed54009d1c3283f49d8827a39af3d4187bea9` |
 | Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/SiN_200nm/components/SiN200nm_520nm_TE_STRIP_2x1_MMI.gds) |
 
-![Preview](./birdseye/SiN200nm_520nm_TE_STRIP_2x1_MMI.jpg)
+![Preview](./sketch/SiN200nm_520nm_TE_STRIP_2x1_MMI.jpg)

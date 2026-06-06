@@ -15,3 +15,5 @@ Si_500nm/index.md
 Si_sus_bias/index.md
 Si_sus_not_bias/index.md
 SiN_200nm/index.md
+Student_SOI/index.md
+TFLN_300nm/index.md
