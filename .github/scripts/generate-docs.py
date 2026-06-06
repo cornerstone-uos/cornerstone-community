@@ -14,7 +14,7 @@ CONTRIB_PATH = DOCS_DIR / "contributor-list.md"
 
 REPO_LEADING_URL = "https://github.com/cornerstone-uos/cornerstone-community/tree/main/"
 
-RTD_LEADING_URL = "https://cornerstone-community.readthedocs.io/en/stable/comp_ref/"
+RTD_LEADING_URL = "https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/"
 
 
 
