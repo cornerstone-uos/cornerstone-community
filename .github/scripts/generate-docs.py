@@ -5,7 +5,7 @@ import shutil
 from pathlib import Path, PureWindowsPath, PurePosixPath
 from urllib.parse import urljoin, quote
 
-PLATFORMS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm"]
+PLATFORMS = ["Si_220nm_active", "SiN_300nm","Ge_on_Si","Si_220nm_passive","Si_340nm","Si_500nm","Si_sus_bias","Si_sus_not_bias","SiN_200nm","Student_SOI","TFLN_300nm"]
 SUBFOLDERS = ["components", "ready-made"]
 DOCS_DIR = Path("docs")
 COMP_REF_DIR = Path("docs/comp_ref")
@@ -13,6 +13,8 @@ COMP_DIR_IDX = COMP_REF_DIR / "index.md"
 CONTRIB_PATH = DOCS_DIR / "contributor-list.md"
 
 REPO_LEADING_URL = "https://github.com/cornerstone-uos/cornerstone-community/tree/main/"
+
+RTD_LEADING_URL = "https://cornerstone-community.readthedocs.io/en/stable/comp_ref/"
 
 
 
@@ -96,6 +98,10 @@ def generate_docs():
                     if yaml_file.exists():
                         with yaml_file.open("r", encoding="utf-8") as yf:
                             data = yaml.safe_load(yf)
+                        html_string = Path(gds_file).with_suffix(".html")
+                        rtd_link = urljoin(REPO_LEADING_URL, quote(str(html_string).replace("\\", "/")))
+                        data["doclink"] = data.get("doclink", [])   # existing pattern
+                        data["doclink"].append(rtd_link)
 
                         authors = data.get("authors", [])
                         last_updated = data.get("last_updated", "Unknown").strip()
@@ -107,6 +113,10 @@ def generate_docs():
 
                             if name and org and org.lower() != "cornerstone":
                                 unique_authors.add((name, org))
+                        
+                        with yaml_file.open("w", encoding="utf-8") as yf:
+                            yaml.safe_dump(data, yf, sort_keys=False)
+
 
                     else:
                         authors = []
