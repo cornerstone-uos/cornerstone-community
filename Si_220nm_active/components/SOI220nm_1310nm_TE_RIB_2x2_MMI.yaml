@@ -39,4 +39,4 @@ ports:
   - -1.015
   orientation: 0.0
   cross_section: rib_1310nm_TE
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_active/SOI220nm_1310nm_TE_RIB_2x2_MMI.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_active/SOI220nm_1310nm_TE_RIB_2x2_MMI.html

@@ -32,4 +32,4 @@ ports:
   - -1.505
   orientation: 0.0
   cross_section: strip_1310nm
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_340nm/SOI340nm_1310nm_TE_STRIP_2x1_MMI.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_340nm/SOI340nm_1310nm_TE_STRIP_2x1_MMI.html

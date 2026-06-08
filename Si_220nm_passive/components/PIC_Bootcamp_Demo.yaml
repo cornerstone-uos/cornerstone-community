@@ -8,4 +8,4 @@ comments:
   Educational Kit, PIC Bootcamp Demo chip only contains one etch depth (120nm), and
   one metal layer (Ti/Al) for quick fabrication.
 - Manual for the educational kit can be found in [docs/_static/PIC_Bootcamp_Manual.pdf](../../_static/PIC_Bootcamp_Manual.pdf)
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_passive/PIC_Bootcamp_Demo.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_passive/PIC_Bootcamp_Demo.html

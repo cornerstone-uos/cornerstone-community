@@ -993,4 +993,4 @@ ports:
   fibre_modes:
   - fibre_type: SMF-28
     wavelength: 1550
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_passive/Cell0_SOI220_Full_1550nm_Packaging_Template.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_passive/Cell0_SOI220_Full_1550nm_Packaging_Template.html

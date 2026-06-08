@@ -53,4 +53,4 @@ ancestors:
   commit: ReferenceWithinCommit
 - name: SOI220nm_1550nm_TE_RIB_Grating_Coupler
   commit: ReferenceWithinCommit
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_active/SOI220nm_1550nm_TE_Defect_Detector.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_active/SOI220nm_1550nm_TE_Defect_Detector.html

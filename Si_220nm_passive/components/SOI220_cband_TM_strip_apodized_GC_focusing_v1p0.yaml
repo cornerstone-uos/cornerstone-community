@@ -13,4 +13,4 @@ parameters:
   length_um: 100
   thickness_nm: 220
 source_url: https://github.com/cornerstone-uos/cornerstone-community/blob/main/Si_220nm_passive/components/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0.gds
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_passive/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_passive/SOI220_cband_TM_strip_apodized_GC_focusing_v1p0.html

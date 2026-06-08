@@ -19,4 +19,4 @@ ports:
   - 235.004
   orientation: 90
   cross_section: dc
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_340nm/Heater.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_340nm/Heater.html

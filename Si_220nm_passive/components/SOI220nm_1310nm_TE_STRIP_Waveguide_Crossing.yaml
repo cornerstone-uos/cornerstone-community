@@ -39,4 +39,4 @@ ports:
   - -4.235
   orientation: 270
   cross_section: strip_1310nm
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_passive/SOI220nm_1310nm_TE_STRIP_Waveguide_Crossing.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_220nm_passive/SOI220nm_1310nm_TE_STRIP_Waveguide_Crossing.html

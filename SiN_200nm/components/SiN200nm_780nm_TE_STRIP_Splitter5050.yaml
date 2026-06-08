@@ -33,4 +33,4 @@ ports:
   - -1.45
   orientation: 0
   cross_section: strip_780nm
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_200nm/SiN200nm_780nm_TE_STRIP_Splitter5050.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/SiN_200nm/SiN200nm_780nm_TE_STRIP_Splitter5050.html

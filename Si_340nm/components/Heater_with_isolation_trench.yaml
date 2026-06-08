@@ -19,4 +19,4 @@ ports:
   - 244.572
   orientation: 90
   cross_section: dc
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_340nm/Heater_with_isolation_trench.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_340nm/Heater_with_isolation_trench.html

@@ -25,4 +25,4 @@ ports:
   - 300
   orientation: 0.0
   cross_section: rib_Ge_3800nm_TE
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Ge_on_Si/Ge_on_Si_3800nm_TE_RIB_90_Degree_Bend.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Ge_on_Si/Ge_on_Si_3800nm_TE_RIB_90_Degree_Bend.html

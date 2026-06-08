@@ -27,4 +27,4 @@ ports:
     - 0
     polarisation: TE
     wavelength: 1550
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Student_SOI/StudentSOI_1550nm_TE_rib_waveguide.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Student_SOI/StudentSOI_1550nm_TE_rib_waveguide.html

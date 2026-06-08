@@ -25,4 +25,4 @@ ports:
   - 40.75
   orientation: 0
   cross_section: sus_si_bias
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_sus_bias/Suspendedsilicon500nm_3800nm_TE_90_DegreeBend.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_sus_bias/Suspendedsilicon500nm_3800nm_TE_90_DegreeBend.html

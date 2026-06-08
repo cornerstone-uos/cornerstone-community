@@ -25,4 +25,4 @@ ports:
   - 10
   orientation: 0
   cross_section: strip_1550nm
-doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_340nm/SOI340nm_1550nm_TE_STRIP_90_Degree_Bend.html
+doclink: https://cornerstone-community.readthedocs.io/en/stable/comp_ref/Si_340nm/SOI340nm_1550nm_TE_STRIP_90_Degree_Bend.html
