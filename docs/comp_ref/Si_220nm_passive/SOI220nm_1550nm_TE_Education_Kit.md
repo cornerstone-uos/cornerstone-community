@@ -3,8 +3,8 @@
 |:---------|:-----|
 | Authors|Dr Shengqi Yin (CORNERSTONE)<br>Dr Francesco Floris (University of Pavia)|
 | Last Updated | 25/07/2025 |
-| SHA256 Hash | `30b3984934cc1cd40590de52550c5917f5159786` |
+| SHA256 Hash | `f8b07e3a1d3ab75f77b989a4d9830431080a8228` |
 | Comments | Manual for the educational kit can be found in [docs/_static/CORNERSTONE_Educational_Kit_Manual.pdf](../../_static/CORNERSTONE_Educational_Kit_Manual.pdf) |
-| Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_passive/ready-made/SOI220nm_1550nm_TE_Education_Kit.gds) |
+| Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_passive/components/SOI220nm_1550nm_TE_Education_Kit.gds) |
 
-![Preview](./birdseye/SOI220nm_1550nm_TE_Education_Kit.jpg)
+![Preview](./sketch/SOI220nm_1550nm_TE_Education_Kit.jpg)

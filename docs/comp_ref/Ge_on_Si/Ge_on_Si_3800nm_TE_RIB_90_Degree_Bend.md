@@ -6,4 +6,4 @@
 | SHA256 Hash | `013298579dd523918127aba5b3a72703b296c2e2` |
 | Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Ge_on_Si/components/Ge_on_Si_3800nm_TE_RIB_90_Degree_Bend.gds) |
 
-![Preview](./birdseye/Ge_on_Si_3800nm_TE_RIB_90_Degree_Bend.jpg)
+![Preview](./sketch/Ge_on_Si_3800nm_TE_RIB_90_Degree_Bend.jpg)

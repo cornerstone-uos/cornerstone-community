@@ -8,14 +8,15 @@ ports:
 - name: e1
   port_type: electrical_dc
   center:
-    - 73.5
-    - 237
+  - 73.5
+  - 237
   orientation: 90
   cross_section: dc
 - name: e2
   port_type: electrical_dc
   center:
-    - 173.5
-    - 237
+  - 173.5
+  - 237
   orientation: 90
   cross_section: dc
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_300nm/Heater.html

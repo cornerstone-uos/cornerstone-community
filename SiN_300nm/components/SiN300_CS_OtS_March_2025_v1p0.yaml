@@ -1,5 +1,6 @@
 name: SiN300_CS_OtS_March_2025_v1p0
 authors:
-  - name: Dr Shengqi Yin
-    organisation: CORNERSTONE
+- name: Dr Shengqi Yin
+  organisation: CORNERSTONE
 last_updated: 27/03/2025
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_300nm/SiN300_CS_OtS_March_2025_v1p0.html

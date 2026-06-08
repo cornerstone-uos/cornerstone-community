@@ -72,3 +72,4 @@ ports:
   fibre_modes:
   - fibre_type: SMF-28
     wavelength: 1310.0
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_220nm_active/SOI220nm_1310nm_TE_MZI_Modulator.html

@@ -7,28 +7,28 @@ authors:
   organisation: University of Southampton
 last_updated: 04/07/2025
 ports:
-  - center:
-    - 0.0
-    - 0.0
-    name: o1
-    orientation: 180
-    port_type: optical
-    cross_section: strip_638nm
-    modes:
-    - mode_numbers:
-      - 0
-      - 0
-      polarisation: TE
-      wavelength: 638
-
-  - center:
-    - 160.965
+- center:
+  - 0.0
+  - 0.0
+  name: o1
+  orientation: 180
+  port_type: optical
+  cross_section: strip_638nm
+  modes:
+  - mode_numbers:
     - 0
-    name: vertical_te
-    port_type: vertical_te
-    orientation: 0.0
-    width:  10.0
-    coupling_angle_cladding: 12.201
-    fibre_modes:
-    - fibre_type: S405-XP
-      wavelength: 638
+    - 0
+    polarisation: TE
+    wavelength: 638
+- center:
+  - 160.965
+  - 0
+  name: vertical_te
+  port_type: vertical_te
+  orientation: 0.0
+  width: 10.0
+  coupling_angle_cladding: 12.201
+  fibre_modes:
+  - fibre_type: S405-XP
+    wavelength: 638
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/SiN_200nm/SiN200nm_638nm_TE_STRIP_Grating_Coupler.html

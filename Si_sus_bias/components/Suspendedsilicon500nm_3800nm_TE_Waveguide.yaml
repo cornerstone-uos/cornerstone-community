@@ -5,11 +5,11 @@ authors:
   organisation: CORNERSTONE
 last_updated: 01/07/2025
 modes:
-  - mode_numbers:
-    - 0
-    - 0
-    polarisation: TE
-    wavelength: 3800
+- mode_numbers:
+  - 0
+  - 0
+  polarisation: TE
+  wavelength: 3800
 ports:
 - name: o1
   port_type: optical
@@ -25,3 +25,4 @@ ports:
   - 0.0
   orientation: 0.0
   cross_section: sus_si_bias
+doclink: https://cornerstone-community.readthedocs.io/en/doctest/comp_ref/Si_sus_bias/Suspendedsilicon500nm_3800nm_TE_Waveguide.html

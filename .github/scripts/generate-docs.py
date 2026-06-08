@@ -98,10 +98,9 @@ def generate_docs():
                     if yaml_file.exists():
                         with yaml_file.open("r", encoding="utf-8") as yf:
                             data = yaml.safe_load(yf)
-                        html_string = Path(gds_file).with_suffix(".html")
-                        rtd_link = urljoin(REPO_LEADING_URL, quote(str(html_string).replace("\\", "/")))
-                        data["doclink"] = data.get("doclink", [])   # existing pattern
-                        data["doclink"].append(rtd_link)
+                        html_string = f"{platform}/{gds_file.stem}.html"
+                        rtd_link = urljoin(RTD_LEADING_URL, quote(html_string))
+                        data["doclink"] = rtd_link   # existing pattern
 
                         authors = data.get("authors", [])
                         last_updated = data.get("last_updated", "Unknown").strip()
@@ -164,7 +163,7 @@ def generate_docs():
                     # this line only works for the main branch.
                     component_md.write(f"| Raw GDS | [Download from GitHub]({tmp_link}) |\n\n")
                     # Import plot
-                    component_md.write(f"![Preview](./birdseye/{gds_file.stem}.jpg)\n")
+                    component_md.write(f"![Preview](./sketch/{gds_file.stem}.jpg)\n")
                     # Write to Markdown
                     #compref_appx = [f"{platform}/index.md" for platform in PLATFORMS]
                     #overwrite_after_marker(md_path=md_path, new_lines = compref_appx, marker = ":caption: Component reference")

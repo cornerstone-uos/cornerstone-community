@@ -6,4 +6,4 @@
 | SHA256 Hash | `50ccb77b52d77430d4d134a8ed9cb3690110f888` |
 | Raw GDS | [Download from GitHub](https://github.com/cornerstone-uos/cornerstone-community/tree/main/Si_220nm_passive/components/SOI220nm_1310nm_TE_STRIP_Waveguide.gds) |
 
-![Preview](./birdseye/SOI220nm_1310nm_TE_STRIP_Waveguide.jpg)
+![Preview](./sketch/SOI220nm_1310nm_TE_STRIP_Waveguide.jpg)
